@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>King of Avalon Guide</title>
+<script>
+
+/*********************************************
+KING OF AVALON GUIDE ENGINE V4
+
+Created By:
+     K16103.The Winged Cradler.AMod
+     Disord User ID: 1481662452381913221
+Guide Authors:
+     <Enter Guide Maker Here>
+• Edit everything above the DO NOT EDIT line.
+• Never edit anything below the DO NOT EDIT line.
+**********************************************/
+
+//========== Guide Information ==========
+
+// Enter guide title
+const guideTitle = "Guide Title Here";
+
+// Enter guide subtitle (leave blank to hide)
+const guideSubtitle = "";
+
+//========== Universal Information ==========
+
+// Enter Universal version
+const universalVersion="Version 1.0";
+
+// Enter Universal last updated date
+const universalUpdated="July 2026";
+
+//========== Solar Information ==========
+
+// Enter Solar version
+const solarVersion="Version 1.0";
+
+// Enter Solar last updated date
+const solarUpdated="July 2026";
+
+//========== Lunar Information ==========
+
+// Enter Lunar version
+const lunarVersion="Version 1.0";
+
+// Enter Lunar last updated date
+const lunarUpdated="July 2026";
+
+//========== Available Guides ==========
+
+// Set true to enable Universal guide
+const showUniversal = true;
+
+// Set true to enable Solar guide
+const showSolar = true;
+
+// Set true to enable Lunar guide
+const showLunar = true;
+
+//========== Authors ==========
+
+// Enter Universal author (leave blank for Anonymous)
+const authorUniversal = "";
+
+// Enter Solar author (leave blank for Anonymous)
+const authorSolar = "";
+
+// Enter Lunar author (leave blank for Anonymous)
+const authorLunar = "";
+
+//========== Universal Related Guides ==========
+
+// Set true to show Related Guides
+const universalRelatedVisible = false;
+
+// Enter first related guide name
+const universalRelated1Name = "";
+
+// Enter first related guide filename
+const universalRelated1File = "";
+
+// Enter second related guide name
+const universalRelated2Name = "";
+
+// Enter second related guide filename
+const universalRelated2File = "";
+
+// Enter third related guide name
+const universalRelated3Name = "";
+
+// Enter third related guide filename
+const universalRelated3File = "";
+
+//========== Solar Related Guides ==========
+
+// Set true to show Related Guides
+const solarRelatedVisible = false;
+
+// Enter first related guide name
+const solarRelated1Name = "";
+
+// Enter first related guide filename
+const solarRelated1File = "";
+
+// Enter second related guide name
+const solarRelated2Name = "";
+
+// Enter second related guide filename
+const solarRelated2File = "";
+
+// Enter third related guide name
+const solarRelated3Name = "";
+
+// Enter third related guide filename
+const solarRelated3File = "";
+
+//========== Lunar Related Guides ==========
+
+// Set true to show Related Guides
+const lunarRelatedVisible = false;
+
+// Enter first related guide name
+const lunarRelated1Name = "";
+
+// Enter first related guide filename
+const lunarRelated1File = "";
+
+// Enter second related guide name
+const lunarRelated2Name = "";
+
+// Enter second related guide filename
+const lunarRelated2File = "";
+
+// Enter third related guide name
+const lunarRelated3Name = "";
+
+// Enter third related guide filename
+const lunarRelated3File = "";
+
+//========== Universal Guide ==========
+
+// Enter Introduction (HTML)
+const universalIntroduction = `
+<h2 class="section-title">
+Introduction
+</h2>
+<p>
+Replace this with your own guide.
+</p>
+`;
+
+//========== Universal Tab 1 ==========
+
+// Set false to hide this tab
+const universalTab1Visible = true;
+
+// Enter tab name
+const universalTab1Title = "Overview";
+
+// Enter HTML for this tab
+const universalTab1Content = `
+<h2 class="section-title">
+Overview
+</h2>
+<p>
+Replace this with your own guide.
+</p>
+`;
+
+//========== Universal Tab 2 ==========
+
+// Set false to hide this tab
+const universalTab2Visible = true;
+
+// Enter tab name
+const universalTab2Title = "Tab 2";
+
+// Enter HTML for this tab
+const universalTab2Content = `
+<p>
+Replace this with your own guide.
+</p>
+`;
+
+//========== Universal Tab 3 ==========
+
+// Set false to hide this tab
+const universalTab3Visible = true;
+
+// Enter tab name
+const universalTab3Title = "Tab 3";
+
+// Enter HTML for this tab
+const universalTab3Content = `
+<p>
+Replace this with your own guide.
+</p>
+`;
+
+//========== Universal Tab 4 ==========
+
+// Set false to hide this tab
+const universalTab4Visible = true;
+
+// Enter tab name
+const universalTab4Title = "Tab 4";
+
+// Enter HTML for this tab
+const universalTab4Content = `
+<p>
+Replace this with your own guide.
+</p>
+`;
+
+//========== Universal Tab 5 ==========
+
+// Set false to hide this tab
+const universalTab5Visible = true;
+
+// Enter tab name
+const universalTab5Title = "Tab 5";
+
+// Enter HTML for this tab
+const universalTab5Content = `
+<p>
+Replace this with your own guide.
+</p>
+`;
+
+//========== Universal Tab 6 ==========
+
+// Set false to hide this tab
+const universalTab6Visible = true;
+
+// Enter tab name
+const universalTab6Title = "Tab 6";
+
+// Enter HTML for this tab
+const universalTab6Content = `
+<p>
+Replace this with your own guide.
+</p>
+`;
+
+//========== Universal Tab 7 ==========
+
+// Set false to hide this tab
+const universalTab7Visible = true;
+
+// Enter tab name
+const universalTab7Title = "Tab 7";
+
+// Enter HTML for this tab
+const universalTab7Content = `
+<p>
+Replace this with your own guide.
+</p>
+`;
+
+//========== Solar Guide ==========
+
+// Enter Introduction (HTML)
+const solarIntroduction = `
+<h2 class="section-title">
+Introduction
+</h2>
+<p>
+Replace this with your Solar guide.
+</p>
+`;
+
+//========== Solar Tab 1 ==========
+
+// Set false to hide this tab
+const solarTab1Visible = true;
+
+// Enter tab name
+const solarTab1Title = "Overview";
+
+// Enter HTML for this tab
+const solarTab1Content = `
+<h2 class="section-title">
+Overview
+</h2>
+<p>
+Replace this with your Solar guide.
+</p>
+`;
+
+//========== Solar Tab 2 ==========
+
+// Set false to hide this tab
+const solarTab2Visible = true;
+
+// Enter tab name
+const solarTab2Title = "Tab 2";
+
+// Enter HTML for this tab
+const solarTab2Content = `
+<p>
+Replace this with your Solar guide.
+</p>
+`;
+
+//========== Solar Tab 3 ==========
+
+// Set false to hide this tab
+const solarTab3Visible = true;
+
+// Enter tab name
+const solarTab3Title = "Tab 3";
+
+// Enter HTML for this tab
+const solarTab3Content = `
+<p>
+Replace this with your Solar guide.
+</p>
+`;
+
+//========== Solar Tab 4 ==========
+
+// Set false to hide this tab
+const solarTab4Visible = true;
+
+// Enter tab name
+const solarTab4Title = "Tab 4";
+
+// Enter HTML for this tab
+const solarTab4Content = `
+<p>
+Replace this with your Solar guide.
+</p>
+`;
+
+//========== Solar Tab 5 ==========
+
+// Set false to hide this tab
+const solarTab5Visible = true;
+
+// Enter tab name
+const solarTab5Title = "Tab 5";
+
+// Enter HTML for this tab
+const solarTab5Content = `
+<p>
+Replace this with your Solar guide.
+</p>
+`;
+
+//========== Solar Tab 6 ==========
+
+// Set false to hide this tab
+const solarTab6Visible = true;
+
+// Enter tab name
+const solarTab6Title = "Tab 6";
+
+// Enter HTML for this tab
+const solarTab6Content = `
+<p>
+Replace this with your Solar guide.
+</p>
+`;
+
+//========== Solar Tab 7 ==========
+
+// Set false to hide this tab
+const solarTab7Visible = true;
+
+// Enter tab name
+const solarTab7Title = "Tab 7";
+
+// Enter HTML for this tab
+const solarTab7Content = `
+<p>
+Replace this with your Solar guide.
+</p>
+`;
+
+//========== Lunar Guide ==========
+
+// Enter Introduction (HTML)
+const lunarIntroduction = `
+<h2 class="section-title">
+Introduction
+</h2>
+<p>
+Replace this with your Lunar guide.
+</p>
+`;
+
+//========== Lunar Tab 1 ==========
+
+// Set false to hide this tab
+const lunarTab1Visible = true;
+
+// Enter tab name
+const lunarTab1Title = "Overview";
+
+// Enter HTML for this tab
+const lunarTab1Content = `
+<h2 class="section-title">
+Overview
+</h2>
+<p>
+Replace this with your Lunar guide.
+</p>
+`;
+
+//========== Lunar Tab 2 ==========
+
+// Set false to hide this tab
+const lunarTab2Visible = true;
+
+// Enter tab name
+const lunarTab2Title = "Tab 2";
+
+// Enter HTML for this tab
+const lunarTab2Content = `
+<p>
+Replace this with your Lunar guide.
+</p>
+`;
+
+//========== Lunar Tab 3 ==========
+
+// Set false to hide this tab
+const lunarTab3Visible = true;
+
+// Enter tab name
+const lunarTab3Title = "Tab 3";
+
+// Enter HTML for this tab
+const lunarTab3Content = `
+<p>
+Replace this with your Lunar guide.
+</p>
+`;
+
+//========== Lunar Tab 4 ==========
+
+// Set false to hide this tab
+const lunarTab4Visible = true;
+
+// Enter tab name
+const lunarTab4Title = "Tab 4";
+
+// Enter HTML for this tab
+const lunarTab4Content = `
+<p>
+Replace this with your Lunar guide.
+</p>
+`;
+
+//========== Lunar Tab 5 ==========
+
+// Set false to hide this tab
+const lunarTab5Visible = true;
+
+// Enter tab name
+const lunarTab5Title = "Tab 5";
+
+// Enter HTML for this tab
+const lunarTab5Content = `
+<p>
+Replace this with your Lunar guide.
+</p>
+`;
+
+//========== Lunar Tab 6 ==========
+
+// Set false to hide this tab
+const lunarTab6Visible = true;
+
+// Enter tab name
+const lunarTab6Title = "Tab 6";
+
+// Enter HTML for this tab
+const lunarTab6Content = `
+<p>
+Replace this with your Lunar guide.
+</p>
+`;
+
+//========== Lunar Tab 7 ==========
+
+// Set false to hide this tab
+const lunarTab7Visible = true;
+
+// Enter tab name
+const lunarTab7Title = "Tab 7";
+
+// Enter HTML for this tab
+const lunarTab7Content = `
+<p>
+Replace this with your Lunar guide.
+</p>
+`;
+
+/*********************************************
+GUIDE ENGINE V4 RC1
+DO NOT EDIT BELOW THIS LINE
+**********************************************/
+
+// Engine State
+const Engine={guide:null,tab:-1,initialized:false};
+
+// Utility Functions
+const $=selector=>document.querySelector(selector);
+const $$=selector=>document.querySelectorAll(selector);
+
+function isBlank(value){return value===undefined||value===null||value.trim()==="";}
+function authorName(name){return isBlank(name)?"Anonymous":name;}
+
+// Persistent Storage
+function saveCurrentGuide(name){try{localStorage.setItem("koa-current-guide",name);}catch(e){}}
+function loadCurrentGuide(){try{return localStorage.getItem("koa-current-guide");}catch(e){return null;}}
+
+// Guide Database
+const GuideDB={universal:null,solar:null,lunar:null};
+
+// Guide Builder
+function createGuide(enabled,author,version,updated,intro,relatedVisible,related,tabs){
+    return{enabled:enabled,author:authorName(author),version:version,updated:updated,intro:intro,relatedVisible:relatedVisible,related:related,tabs:tabs};
+}
+
+// Universal Guide
+GuideDB.universal=createGuide(showUniversal,authorUniversal,universalVersion,universalUpdated,universalIntroduction,universalRelatedVisible,
+    [{title:universalRelated1Name,file:universalRelated1File},{title:universalRelated2Name,file:universalRelated2File},{title:universalRelated3Name,file:universalRelated3File}],
+    [{visible:universalTab1Visible,title:universalTab1Title,html:universalTab1Content},
+     {visible:universalTab2Visible,title:universalTab2Title,html:universalTab2Content},
+     {visible:universalTab3Visible,title:universalTab3Title,html:universalTab3Content},
+     {visible:universalTab4Visible,title:universalTab4Title,html:universalTab4Content},
+     {visible:universalTab5Visible,title:universalTab5Title,html:universalTab5Content},
+     {visible:universalTab6Visible,title:universalTab6Title,html:universalTab6Content},
+     {visible:universalTab7Visible,title:universalTab7Title,html:universalTab7Content}]
+);
+
+// Solar Guide
+GuideDB.solar=createGuide(showSolar,authorSolar,solarVersion,solarUpdated,solarIntroduction,solarRelatedVisible,
+    [{title:solarRelated1Name,file:solarRelated1File},{title:solarRelated2Name,file:solarRelated2File},{title:solarRelated3Name,file:solarRelated3File}],
+    [{visible:solarTab1Visible,title:solarTab1Title,html:solarTab1Content},
+     {visible:solarTab2Visible,title:solarTab2Title,html:solarTab2Content},
+     {visible:solarTab3Visible,title:solarTab3Title,html:solarTab3Content},
+     {visible:solarTab4Visible,title:solarTab4Title,html:solarTab4Content},
+     {visible:solarTab5Visible,title:solarTab5Title,html:solarTab5Content},
+     {visible:solarTab6Visible,title:solarTab6Title,html:solarTab6Content},
+     {visible:solarTab7Visible,title:solarTab7Title,html:solarTab7Content}]
+);
+
+// Lunar Guide
+GuideDB.lunar=createGuide(showLunar,authorLunar,lunarVersion,lunarUpdated,lunarIntroduction,lunarRelatedVisible,
+    [{title:lunarRelated1Name,file:lunarRelated1File},{title:lunarRelated2Name,file:lunarRelated2File},{title:lunarRelated3Name,file:lunarRelated3File}],
+    [{visible:lunarTab1Visible,title:lunarTab1Title,html:lunarTab1Content},
+     {visible:lunarTab2Visible,title:lunarTab2Title,html:lunarTab2Content},
+     {visible:lunarTab3Visible,title:lunarTab3Title,html:lunarTab3Content},
+     {visible:lunarTab4Visible,title:lunarTab4Title,html:lunarTab4Content},
+     {visible:lunarTab5Visible,title:lunarTab5Title,html:lunarTab5Content},
+     {visible:lunarTab6Visible,title:lunarTab6Title,html:lunarTab6Content},
+     {visible:lunarTab7Visible,title:lunarTab7Title,html:lunarTab7Content}]
+);
+
+// Guide Helpers
+function enabledGuides(){return Object.keys(GuideDB).filter(name=>GuideDB[name].enabled);}
+function firstEnabledGuide(){const list=enabledGuides();return list.length?list[0]:null;}
+function getGuide(name){return GuideDB[name];}
+
+// Current Guide
+function setGuide(name){if(!GuideDB[name])return;Engine.guide=name;saveCurrentGuide(name);}
+function initializeGuide(){
+    const saved=loadCurrentGuide();
+    if(saved&&GuideDB[saved]&&GuideDB[saved].enabled){Engine.guide=saved;return;}
+    Engine.guide=firstEnabledGuide();
+}
+
+// Theme Switching
+function applyTheme(){
+    const app=$("#guideApp");
+    if(!app)return;
+    app.classList.remove("theme-universal","theme-solar","theme-lunar");
+    app.classList.add("theme-"+Engine.guide);
+}
+
+// Realm Buttons
+function updateRealmButtons(){
+    ["universal","solar","lunar"].forEach(name=>{
+        const button=$("#realm-"+name);
+        if(!button)return;
+        button.disabled=!GuideDB[name].enabled;
+        button.classList.toggle("active",Engine.guide===name);
+    });
+}
+
+// Guide Switching
+function switchGuide(name){
+    if(!GuideDB[name]||!GuideDB[name].enabled||Engine.guide===name)return;
+    const content=$("#guideContent");
+    const overlay=$("#serverTransition");
+    if(content)content.classList.add("server-out");
+    if(overlay)overlay.classList.add("active");
+    setTimeout(()=>{
+        Engine.guide=name;
+        saveCurrentGuide(name);
+        resetTab();
+        renderGuide();
+        if(content){
+            content.classList.remove("server-out");
+            content.classList.add("server-in");
+            setTimeout(()=>content.classList.remove("server-in"),450);
+        }
+        if(overlay){
+            setTimeout(()=>overlay.classList.remove("active"),600);
+        }
+    },300);
+}
+
+// Realm Events
+function initializeRealmButtons(){
+    ["universal","solar","lunar"].forEach(name=>{
+        const button=$("#realm-"+name);
+        if(!button)return;
+        button.addEventListener("click",()=>switchGuide(name));
+    });
+}
+
+// Introduction Panel
+function introductionHTML(){return `${GuideDB[Engine.guide].intro}`;}
+
+// Visible Tabs
+function visibleTabs(){return GuideDB[Engine.guide].tabs.filter(tab=>tab.visible);}
+
+// Current Tab
+function resetTab(){Engine.tab=-1;}
+
+// Render Tab Bar
+function renderTabs(){
+    const bar=$("#tabBar");
+    if(!bar)return;
+    const tabs=visibleTabs();
+    bar.innerHTML="";
+    tabs.forEach((tab,index)=>{
+        const button=document.createElement("button");
+        button.className="guide-tab";
+        button.textContent=tab.title;
+        if(index===Engine.tab)button.classList.add("active");
+        button.onclick=()=>{
+            const content=$("#guideContent");
+            if(content)content.classList.add("tab-out");
+            setTimeout(()=>{
+                Engine.tab=index;
+                renderTabs();
+                renderContent();
+                if(content){
+                    content.classList.remove("tab-out");
+                    content.classList.add("tab-in");
+                    setTimeout(()=>content.classList.remove("tab-in"),280);
+                }
+            },160);
+        };
+        bar.appendChild(button);
+    });
+}
+
+// Render Content
+function renderContent(){
+    const panel=$("#guideContent");
+    if(!panel)return;
+    const tabs=visibleTabs();
+    if(Engine.tab<0||Engine.tab>=tabs.length){panel.innerHTML=introductionHTML();return;}
+    panel.innerHTML=tabs[Engine.tab].html;
+}
+
+// Related Guides
+function renderRelatedGuides(){
+    const section=$("#relatedGuides");
+    if(!section)return;
+    const guide=GuideDB[Engine.guide];
+    if(!guide.relatedVisible){section.style.display="none";return;}
+    const links=guide.related.filter(item=>item.title.trim()!==""&&item.file.trim()!=="");
+    if(links.length===0){section.style.display="none";return;}
+    section.style.display="block";
+    section.innerHTML=`<h3 class="block-title">Related Guides</h3><div class="related-grid">${links.map(link=>`<a class="related-guide" href="${link.file}">${link.title}</a>`).join("")}</div>`;
+}
+
+// Footer
+function renderFooter(){
+    const footer=$("#guideFooter");
+    if(!footer)return;
+    const guide=GuideDB[Engine.guide];
+    footer.innerHTML=`<div class="guide-footer"><div>Author: ${guide.author}</div><div>Version: ${guide.version}</div><div>Last Updated: ${guide.updated}</div></div>`;
+}
+
+// Complete Guide Rendering
+function renderGuide(){
+    const guide=GuideDB[Engine.guide];
+    const title=$("#guideTitle");
+    const subtitle=$("#guideSubtitle");
+    if(title)title.textContent=guideTitle;
+    if(subtitle){
+        if(guideSubtitle.trim()===""){subtitle.style.display="none";}
+        else{subtitle.style.display="block";subtitle.textContent=guideSubtitle;}
+    }
+    applyTheme();
+    updateRealmButtons();
+    renderTabs();
+    renderContent();
+    renderRelatedGuides();
+    renderFooter();
+}
+
+// Validation
+function validateGuideConfiguration(){
+    const enabled=enabledGuides();
+    if(enabled.length===0){
+        document.body.innerHTML=`<div class="engine-error"><h1>Guide Configuration Error</h1><p>At least one guide must be enabled. E-mail: ContactBr0kenSt4r@gmail.com</p></div>`;
+        return false;
+    }
+    return true;
+}
+
+// Tab Visibility
+function updateTabBar(){
+    const bar=$("#tabBar");
+    if(!bar)return;
+    const count=visibleTabs().length;
+    if(count===0){bar.style.display="none";Engine.tab=-1;}
+    else{bar.style.display="flex";}
+}
+
+// Initial Guide
+function initializeCurrentGuide(){initializeGuide();if(!Engine.guide){Engine.guide=firstEnabledGuide();}}
+
+// Application Engine Startup
+function initializeEngine(){
+    if(Engine.initialized)return;
+    if(!validateGuideConfiguration())return;
+    initializeCurrentGuide();
+    initializeRealmButtons();
+    resetTab();
+    updateTabBar();
+    renderGuide();
+    Engine.initialized=true;
+}
+
+// Page Ready
+document.addEventListener("DOMContentLoaded",initializeEngine);
+
+// Horizontal Tab Scrolling
+document.addEventListener("DOMContentLoaded",()=>{
+    const bar=$("#tabBar");
+    if(!bar)return;
+    bar.addEventListener("wheel",event=>{
+        if(Math.abs(event.deltaY)>Math.abs(event.deltaX)){event.preventDefault();bar.scrollLeft+=event.deltaY;}
+    },{passive:false});
+});
+
+/*********************************************
+END OF JAVASCRIPT ENGINE
+**********************************************/
+</script>
+<style>
+:root{--background:#040609;--surface:#0b0f19;--surface2:#121829;--border:#1e293b;--text:#f1f5f9;--muted:#94a3b8;--accent:#38bdf8;--accent2:#ffcc00;--success:#10b981;--warning:#ef4444;--radius:8px;--transition:.20s ease;}
+.theme-universal{--background:#040609;--surface:#0b0f19;--surface2:#121829;--border:#1e293b;--text:#f1f5f9;--muted:#8fa6c6;--accent:#38bdf8;--accent2:#ffcc00;}
+.theme-solar{--background:#050608;--surface:#0d111e;--surface2:#161b2c;--border:#3a2f08;--text:#f3f4f6;--muted:#a5acba;--accent:#ffcc00;--accent2:#ffcc00;}
+.theme-lunar{--background:#040609;--surface:#0c0d18;--surface2:#17162b;--border:#3a2854;--text:#f1f5f9;--muted:#a3a3b7;--accent:#a855f7;--accent2:#ffcc00;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--background);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.6;}
+#guideApp{max-width:1450px;margin:auto;padding:10px;}
+#guideHeader{background:linear-gradient(180deg,#1b3158 0%,#132344 45%,#090d18 100%);border:2px solid var(--border);border-bottom:5px solid var(--accent);border-radius:10px;padding:22px 18px;margin-bottom:12px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);}
+#guideHeader h1{margin:0;color:var(--accent2);font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;}
+#guideSubtitle{margin-top:8px;color:var(--muted);font-size:.88rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+#realmSelector{display:flex;gap:8px;margin-bottom:8px;}
+#realmSelector button{flex:1;padding:10px;border:none;border-radius:10px;background:#12192a;color:var(--muted);cursor:pointer;transition:var(--transition);}
+#realmSelector button.active{background:var(--accent);border:1px solid var(--accent);color:#fff;box-shadow:0 0 12px rgba(0,0,0,.30);}
+.theme-solar #realmSelector button.active{color:#111;}
+.theme-lunar #realmSelector button.active{color:#fff;}
+.theme-universal #realmSelector button.active{color:#fff;}
+#realmSelector button:disabled{opacity:.35;cursor:default;}
+#tabBar{display:flex;overflow-x:auto;gap:6px;padding-bottom:8px;margin-bottom:12px;scrollbar-width:none;}
+#tabBar::-webkit-scrollbar{display:none;}
+.guide-tab{flex:0 0 auto;border:none;border-radius:6px;padding:10px 18px;background:#12192a;color:var(--muted);cursor:pointer;white-space:nowrap;}
+.guide-tab.active{background:var(--accent);color:white;border-color:var(--accent);box-shadow:0 0 10px rgba(0,0,0,.25);}
+.theme-solar .guide-tab.active{color:#111;}
+#guideContent{background:#12192a;border:2px solid var(--border);border-radius:10px;padding:18px;min-height:450px;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(3px);}to{opacity:1;transform:translateY(0);}}
+.section-title{color:var(--accent2);font-size:1.55rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+.section-subtitle{color:var(--accent);font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:18px;}
+.block-title{margin:22px 0 12px;padding-left:12px;border-left:5px solid var(--accent);color:var(--accent2);font-size:1.15rem;font-weight:700;}
+p{margin-bottom:14px;}
+ul,ol{margin-left:24px;margin-bottom:16px;}
+li{margin-bottom:8px;}
+.guide-divider{height:2px;margin:22px 0;background:var(--accent);border-radius:2px;}
+.guide-card{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:16px;margin:16px 0;}
+.guide-info{background:rgba(56,189,248,.07);border-left:5px solid #38bdf8;border-radius:6px;padding:14px;margin:16px 0;}
+.guide-success{background:rgba(16,185,129,.08);border-left:5px solid var(--success);border-radius:6px;padding:14px;margin:16px 0;}
+.guide-warning{background:rgba(239,68,68,.08);border-left:5px solid var(--warning);border-radius:6px;padding:14px;margin:16px 0;}
+.guide-note{background:rgba(255,204,0,.06);border-left:5px solid var(--accent2);border-radius:6px;padding:14px;margin:16px 0;}
+.guide-quote{margin:16px 0;padding:16px;border-left:5px solid var(--accent);background:var(--surface2);font-style:italic;border-radius:0 8px 8px 0;}
+.table-responsive{width:100%;overflow-x:auto;margin:18px 0;border:1px solid var(--border);border-radius:10px;}
+.guide-table{width:100%;border-collapse:collapse;background:var(--surface2);}
+.guide-table th{background:#12192a;color:var(--accent2);font-size:.75rem;font-weight:700;text-transform:uppercase;padding:12px 10px;border-bottom:1px solid var(--border);}
+.guide-table td{padding:12px 10px;border-bottom:1px solid var(--border);vertical-align:top;}
+.guide-table tr:last-child td{border-bottom:none;}
+.guide-table tbody tr:hover{background:rgba(255,255,255,.03);}
+.guide-grid{display:grid;gap:14px;margin:18px 0;}
+.guide-two-column{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0;}
+@media(min-width:900px){.guide-two-column{grid-template-columns:1fr 1fr;}}
+.guide-hero{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:18px;margin:18px 0;}
+.hero-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.hero-name{color:var(--accent2);font-size:1.1rem;font-weight:700;}
+.hero-type{color:var(--accent);font-size:.78rem;text-transform:uppercase;font-weight:700;}
+.guide-badge{display:inline-block;padding:4px 9px;border-radius:5px;font-size:.72rem;font-weight:700;}
+.badge-inf{background:#153149;color:#38bdf8;}
+.badge-cav{background:#3b2b10;color:#fb923c;}
+.badge-bow{background:#2a1839;color:#c084fc;}
+#relatedGuides{margin-top:22px;}
+.related-grid{display:grid;gap:10px;}
+.related-guide{display:block;padding:12px;border-radius:10px;background:var(--surface2);border:1px solid var(--border);color:var(--accent);font-weight:700;transition:var(--transition);}
+.related-guide:hover{border-color:var(--accent);transform:translateY(-2px);}
+#guideFooter{margin-top:24px;border-top:2px solid var(--accent);padding:14px;}
+.guide-footer{display:flex;flex-direction:column;gap:5px;color:var(--muted);text-align:center;}
+.center{text-align:center;}
+.right{text-align:right;}
+.bold{font-weight:700;}
+.hidden{display:none!important;}
+.small{font-size:.85rem;}
+@media (max-width:900px){
+    #guideApp{padding:8px;}
+    #guideHeader{padding:14px;}
+    #guideHeader h1{font-size:1.55rem;}
+    #realmSelector{flex-wrap:wrap;}
+    #realmSelector button{min-width:120px;}
+    .guide-tab{padding:10px 14px;font-size:.82rem;}
+    #guideContent{padding:14px;}
+    .section-title{font-size:1.35rem;}
+}
+@media (max-width:600px){
+    #guideHeader{margin-bottom:8px;}
+    #guideHeader h1{font-size:1.25rem;}
+    .guide-card,.guide-info,.guide-success,.guide-warning,.guide-note,.guide-hero{padding:12px;}
+    .guide-table th,.guide-table td{padding:8px;font-size:.82rem;}
+}
+.guide-image{display:block;max-width:100%;height:auto;margin:18px auto;border-radius:10px;border:1px solid var(--border);}
+.image-caption{margin-top:8px;color:var(--muted);text-align:center;font-size:.82rem;}
+pre{overflow-x:auto;padding:14px;border-radius:10px;background:var(--surface2);border:1px solid var(--border);margin:18px 0;}
+code{font-family:Consolas,monospace;}
+.guide-checklist{list-style:none;padding:0;margin:16px 0;}
+.guide-checklist li{position:relative;padding:8px 0 8px 28px;}
+.guide-checklist li::before{content:"✓";position:absolute;left:8px;color:var(--success);font-weight:700;}
+.guide-card,.guide-info,.guide-success,.guide-warning,.guide-note,.related-guide,.guide-tab,#realmSelector button{transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease;}
+.guide-card:hover,.guide-hero:hover{box-shadow:0 4px 12px rgba(0,0,0,.22);}
+::-webkit-scrollbar{width:10px;height:10px;}
+::-webkit-scrollbar-track{background:#12192a;}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:10px;}
+::-webkit-scrollbar-thumb:hover{background:var(--accent);}
+button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+::selection{background:var(--accent);color:#fff;}
+@media print{#realmSelector,#tabBar,#relatedGuides,#guideFooter{display:none!important;}}
+.white{color:#ffffff;}
+.gray{color:var(--muted);}
+.gold{color:#ffcc00;}
+.blue{color:#38bdf8;}
+.purple{color:#c084fc;}
+.green{color:#22c55e;}
+.red{color:#ef4444;}
+.large{font-size:1.2em;}
+.italic{font-style:italic;}
+.uppercase{text-transform:uppercase;}
+/* SERVER & TAB TRANSITIONS */
+#serverTransition{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0;background:radial-gradient(circle at 50% 45%,var(--accent),transparent 65%);}
+#serverTransition.active{animation:serverFlash .6s ease;}
+@keyframes serverFlash{0%{opacity:0;transform:scale(.3);}30%{opacity:.55;transform:scale(1);}100%{opacity:0;transform:scale(1.9);}}
+#guideContent.server-out{animation:serverOut .3s ease forwards;}
+#guideContent.server-in{animation:serverIn .45s cubic-bezier(.2,.8,.2,1);}
+@keyframes serverOut{from{opacity:1;transform:scale(1);filter:blur(0);}to{opacity:0;transform:scale(.9) translateY(12px);filter:blur(10px);}}
+@keyframes serverIn{from{opacity:0;transform:scale(1.06) translateY(-12px);filter:blur(10px);}to{opacity:1;transform:scale(1) translateY(0);filter:blur(0);}}
+#guideContent.tab-out{animation:tabOut .16s ease forwards;}
+#guideContent.tab-in{animation:tabIn .28s cubic-bezier(.4,0,.2,1) backwards;}
+@keyframes tabOut{from{opacity:1;transform:translateY(0);}to{opacity:0;transform:translateY(10px);}}
+@keyframes tabIn{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</head>
+<body>
+<div id="serverTransition"></div>
+<div id="guideApp" class="theme-universal">
+    <header id="guideHeader">
+      <h1 id="guideTitle"></h1>
+      <div id="guideSubtitle"></div>
+    </header>
+    <nav id="realmSelector">
+        <button id="realm-universal" type="button">Universal</button>
+        <button id="realm-solar" type="button">Solar</button>
+        <button id="realm-lunar" type="button">Lunar</button>
+    </nav>
+    <nav id="tabBar"></nav>
+    <main id="guideContent" role="main"></main>
+    <section id="relatedGuides"></section>
+    <footer id="guideFooter"></footer>
+</div>
+</body>
+</html>

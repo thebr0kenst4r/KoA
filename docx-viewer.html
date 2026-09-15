@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic DOCX Viewer</title>
+
+<!-- Mammoth JS for Client-Side DOCX Parsing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"></script>
+
+<!-- By: K16103.The Winged Cradler.AMod -->
+
+<style>
+/* CORE LCAS V4 CSS - DO NOT EDIT */
+:root{--background:#040609;--surface:#0b0f19;--surface2:#121829;--border:#1e293b;--text:#f1f5f9;--muted:#94a3b8;--accent:#38bdf8;--accent2:#ffcc00;--success:#10b981;--warning:#ef4444;--radius:8px;--transition:.20s ease;}
+.theme-universal{--background:#040609;--surface:#0b0f19;--surface2:#121829;--border:#1e293b;--text:#f1f5f9;--muted:#8fa6c6;--accent:#38bdf8;--accent2:#ffcc00;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--background);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.6;}
+#guideApp{max-width:1450px;margin:auto;padding:10px;}
+
+/* Header */
+#guideHeader{background:linear-gradient(180deg,#1b3158 0%,#132344 45%,#090d18 100%);border:2px solid var(--border);border-bottom:5px solid var(--accent);border-radius:10px;padding:22px 18px;margin-bottom:12px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);}
+#guideHeader h1{margin:0;color:var(--accent2);font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;}
+#guideSubtitle{margin-top:8px;color:var(--muted);font-size:.88rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+
+/* DOCX Control Bar */
+#docx-controls {display:flex; gap:10px; margin-bottom:12px; align-items:center; background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:12px;}
+#docxFile {flex:1; padding:10px 14px; border-radius:6px; background:var(--surface); border:1px solid var(--border); color:var(--text); font-family:inherit;}\n#docxInput {flex:1; padding:10px 14px; border-radius:6px; background:var(--surface); border:1px solid var(--border); color:var(--text); font-family:inherit;}
+#docxInput:focus {outline:2px solid var(--accent); border-color:transparent;}
+.load-btn {padding:10px 20px; background:var(--accent); color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:700; transition:var(--transition);}
+.load-btn:hover {box-shadow:0 0 12px rgba(56,189,248,.4); transform:translateY(-1px);}
+
+/* Content Container */
+#guideContent{background:#12192a;border:2px solid var(--border);border-radius:10px;padding:18px;min-height:450px;}
+
+/* Engine Typographical & Responsive Image Scaling Rules */
+.section-title{color:var(--accent2);font-size:1.55rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+.section-subtitle{color:var(--accent);font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:18px;}
+p{margin-bottom:14px;}
+ul,ol{margin-left:24px;margin-bottom:16px;}
+li{margin-bottom:8px;}
+
+/* RESPONSIVE IMAGE ENGINE: Scales Word images cleanly to browser width */
+#guideContent img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    display: block;
+    margin: 18px auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.guide-card{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:16px;margin:16px 0;}
+.guide-info{background:rgba(56,189,248,.07);border-left:5px solid #38bdf8;border-radius:6px;padding:14px;margin:16px 0;}
+.guide-success{background:rgba(16,185,129,.08);border-left:5px solid var(--success);border-radius:6px;padding:14px;margin:16px 0;}
+.guide-warning{background:rgba(239,68,68,.08);border-left:5px solid var(--warning);border-radius:6px;padding:14px;margin:16px 0;}
+.guide-note{background:rgba(255,204,0,.06);border-left:5px solid var(--accent2);border-radius:6px;padding:14px;margin:16px 0;}
+
+/* Mammoth Table Mappings */
+.guide-table{width:100%;border-collapse:collapse;background:var(--surface2); margin:18px 0; border:1px solid var(--border); border-radius:10px; overflow:hidden;}
+.guide-table th, .guide-table td {padding:12px 10px; border:1px solid var(--border); vertical-align:top;}
+.guide-table tr:first-child td, .guide-table th {background:#12192a; color:var(--accent2); font-weight:700; text-transform:uppercase; font-size:.85rem;}
+
+.center{text-align:center;}
+.hidden{display:none!important;}
+
+@media (max-width:900px){
+    #guideApp{padding:8px;}
+    #guideHeader{padding:14px;}
+    #guideHeader h1{font-size:1.55rem;}
+    #guideContent{padding:14px;}
+    .section-title{font-size:1.35rem;}
+    #docx-controls {flex-direction:column; align-items:stretch;}\n    #docxFile, #docxInput, .load-btn {width:100%;}
+}
+</style>
+</head>
+<body>
+<div id="guideApp" class="theme-universal">
+    
+    <header id="guideHeader">
+      <h1 id="guideTitle">Tactical Archive Parser</h1>
+      <div id="guideSubtitle">DOCX Interpreter Engine</div>
+    </header>
+
+    <!--
+        DOCX INPUT CONTROLS
+        The file picker is the preferred method when opening the viewer directly
+        from a phone/computer. It avoids fetch/CORS restrictions entirely.
+        The filepath loader remains available for hosted/static-site use.
+    -->
+    <!--
+        NOTE FOR GUIDE LINKS:
+        Use:
+          docx-viewer.html?file=fae-s19.docx&realm=universal
+
+        Do NOT append ?realm=universal directly to the DOCX filename.
+        The JavaScript below also repairs that older malformed format.
+    -->
+    <div id="docx-controls">
+        <input type="file" id="docxFile" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+        <button class="load-btn" onclick="loadSelectedDocx()">Open Selected DOCX</button>
+        <input type="text" id="docxInput" placeholder="Or enter filepath (e.g., data/my-guide.docx)">
+        <button class="load-btn" onclick="loadDocxFromInput()">Load Path</button>
+    </div>
+
+    <!-- Render Target -->
+    <main id="guideContent" role="main">
+        <div class="guide-info center" id="welcome-message">
+            <h2 class="section-title">Ready for Input</h2>
+            <p>Enter the path to your Microsoft Word (.docx) file above to parse and render it dynamically into the LCAS engine with responsive image scaling.</p>
+        </div>
+    </main>
+</div>
+
+<script>
+    /*
+     * ================================================================
+     * DOCX VIEWER ENGINE
+     * ================================================================
+     * Design / authorship credit:
+     * K10651.The Winged Cradler.AMod
+     *
+     * This viewer uses Mammoth.js to convert DOCX files into HTML.
+     * The engine accepts either:
+     *   1. A locally selected .docx file (no fetch/CORS required), or
+     *   2. A relative/hosted filepath loaded with fetch().
+     *
+     * Important:
+     * A browser cannot fetch arbitrary local files by pathname.
+     * Therefore the file-picker method is the safest option when the
+     * viewer is opened directly from an Android file manager.
+     * ================================================================
+     */
+
+    const $ = selector => document.querySelector(selector);
+
+    /*
+     * Shared Mammoth options.
+     *
+     * includeEmbeddedStyleMap is deliberately disabled. Some Word
+     * documents contain embedded style-map information that is not
+     * needed by this viewer and can cause Mammoth parsing failures.
+     *
+     * The normal Mammoth defaults still handle ordinary Word formatting.
+     */
+    function getMammothOptions() {
+        /*
+         * MINIMAL MAMMOTH CONFIGURATION
+         *
+         * The previous viewer supplied a custom styleMap and custom image
+         * converter directly to Mammoth. The "value.replace is not a
+         * function" exception can originate from option/style processing,
+         * so the first conversion pass intentionally uses Mammoth's native
+         * defaults only.
+         *
+         * Once the document has successfully converted, the viewer applies
+         * our LCARS presentation styling to the generated HTML.
+         */
+        return {};
+    }
+
+    /*
+     * Display errors without incorrectly blaming CORS.
+     * The previous viewer always displayed a CORS warning even when
+     * Mammoth itself was the component throwing the exception.
+     */
+    function showDocxError(err, sourceDescription) {
+        const target = $('#guideContent');
+
+        console.error("DOCX Viewer Error:", err);
+
+        let message = "Unable to read the DOCX document.";
+
+        if (err && err.message) {
+            message = String(err.message);
+        }
+
+        target.innerHTML = `
+            <div class="guide-warning">
+                <h3 class="section-subtitle">System Error</h3>
+                <p><strong>${escapeHtml(message)}</strong></p>
+                <p>
+                    Source: ${escapeHtml(sourceDescription || "DOCX document")}
+                </p>
+                <p class="small">
+                    If you opened this viewer directly from your device,
+                    use the <strong>Open Selected DOCX</strong> button instead
+                    of entering a local file path.
+                </p>
+                <p class="small">
+                    If you are loading a hosted filepath, the viewer must be
+                    running from a web server or static hosting platform.
+                    The current parser uses Mammoth's native conversion
+                    settings to avoid custom style-processing errors.
+                </p>
+            </div>`;
+    }
+
+    /*
+     * Basic HTML escaping for error text.
+     * This prevents a filename or browser error message from being
+     * interpreted as HTML.
+     */
+    function escapeHtml(value) {
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    /*
+     * Convert an ArrayBuffer containing a DOCX file.
+     * Keeping conversion separate lets both the file-picker and fetch
+     * methods use exactly the same Mammoth conversion pipeline.
+     */
+    async function convertDocxArrayBuffer(arrayBuffer, sourceDescription) {
+        const target = $('#guideContent');
+
+        if (!(arrayBuffer instanceof ArrayBuffer)) {
+            throw new TypeError("The selected document did not produce a valid ArrayBuffer.");
+        }
+
+        target.innerHTML = `
+            <div class="guide-note center">
+                <p><strong>Parsing Tactical Data &amp; Assets...</strong></p>
+            </div>`;
+
+        try {
+            /*
+             * STEP 1 — Native Mammoth conversion.
+             *
+             * Do not pass styleMap, convertImage, or any other custom
+             * options here. This isolates the DOCX parser from the LCARS
+             * presentation layer.
+             */
+            const result = await mammoth.convertToHtml({
+                arrayBuffer: arrayBuffer
+            });
+
+            if (!result || typeof result.value !== "string") {
+                throw new TypeError(
+                    "Mammoth returned an invalid HTML value. " +
+                    "Expected text but received " +
+                    typeof (result && result.value)
+                );
+            }
+
+            /*
+             * STEP 2 — Insert only verified string HTML.
+             *
+             * Mammoth's result.value is required to be a string before
+             * innerHTML is touched. This is also a useful diagnostic
+             * boundary for future maintenance.
+             */
+            target.innerHTML = result.value;
+
+            /*
+             * STEP 3 — Apply LCARS presentation after conversion.
+             *
+             * Mammoth's default output already contains normal HTML
+             * elements such as h1, h2, p, ul, ol, table and img.
+             * We style those elements here rather than asking Mammoth
+             * to interpret application-specific styles.
+             */
+            target.querySelectorAll("h1").forEach(function(el) {
+                el.classList.add("section-title");
+            });
+
+            target.querySelectorAll("h2").forEach(function(el) {
+                el.classList.add("section-title");
+            });
+
+            target.querySelectorAll("h3, h4").forEach(function(el) {
+                el.classList.add("section-subtitle");
+            });
+
+            target.querySelectorAll("table").forEach(function(table) {
+                table.classList.add("guide-table");
+            });
+
+            /*
+             * Word images remain embedded by Mammoth's normal browser
+             * conversion. Make every generated image responsive.
+             */
+            target.querySelectorAll("img").forEach(function(img) {
+                img.style.maxWidth = "100%";
+                img.style.width = "auto";
+                img.style.height = "auto";
+                img.style.display = "block";
+                img.style.margin = "18px auto";
+            });
+
+            /*
+             * Apply the normal LCARS table treatment to table cells.
+             */
+            target.querySelectorAll("table tr:first-child td").forEach(function(cell) {
+                cell.style.background = "#12192a";
+                cell.style.color = "var(--accent2)";
+                cell.style.fontWeight = "700";
+            });
+
+            /*
+             * Mammoth can report non-fatal conversion messages. Show them
+             * in the console without preventing a successful document
+             * from displaying.
+             */
+            if (result.messages && result.messages.length > 0) {
+                console.warn("Mammoth conversion messages:", result.messages);
+            }
+
+        } catch (err) {
+            /*
+             * Identify the actual parser stage instead of incorrectly
+             * reporting every exception as CORS.
+             */
+            showDocxError(
+                new Error(
+                    "Mammoth DOCX conversion failed: " +
+                    (err && err.message ? err.message : String(err))
+                ),
+                sourceDescription
+            );
+        }
+    }
+
+    /*
+     * Open a DOCX selected through the browser's file picker.
+     *
+     * This method does NOT use fetch(), so it avoids the common local-file
+     * CORS/security problem entirely.
+     */
+    async function loadSelectedDocx() {
+        const input = $('#docxFile');
+
+        if (!input || !input.files || input.files.length === 0) {
+            $('#guideContent').innerHTML = `
+                <div class="guide-note center">
+                    <h2 class="section-title">No Document Selected</h2>
+                    <p>Select a .docx file first.</p>
+                </div>`;
+            return;
+        }
+
+        const file = input.files[0];
+
+        if (!file.name.toLowerCase().endsWith(".docx")) {
+            showDocxError(
+                new Error("The selected file is not a .docx document."),
+                file.name
+            );
+            return;
+        }
+
+        try {
+            let arrayBuffer;
+
+            if (typeof file.arrayBuffer === "function") {
+                arrayBuffer = await file.arrayBuffer();
+            } else {
+                /*
+                 * Older Android WebViews may not expose File.arrayBuffer().
+                 * FileReader provides the same ArrayBuffer result.
+                 */
+                arrayBuffer = await new Promise(function(resolve, reject) {
+                    const reader = new FileReader();
+
+                    reader.onload = function() {
+                        resolve(reader.result);
+                    };
+
+                    reader.onerror = function() {
+                        reject(new Error("The browser could not read the selected DOCX file."));
+                    };
+
+                    reader.readAsArrayBuffer(file);
+                });
+            }
+
+            await convertDocxArrayBuffer(arrayBuffer, file.name);
+        } catch (err) {
+            showDocxError(err, file.name);
+        }
+    }
+
+    /*
+     * Load a hosted/relative DOCX filepath.
+     *
+     * This remains useful when the viewer is hosted on Cloudflare Pages,
+     * GitHub Pages, a web server, or another static hosting platform.
+     */
+    async function loadDocx(filePath) {
+        const target = $('#guideContent');
+
+        if (typeof filePath !== "string") {
+            showDocxError(
+                new TypeError("The DOCX filepath must be a text string."),
+                "Invalid filepath"
+            );
+            return;
+        }
+
+        filePath = filePath.trim();
+
+        if (!filePath) {
+            showDocxError(
+                new Error("No DOCX filepath was supplied."),
+                "Empty filepath"
+            );
+            return;
+        }
+
+        /*
+         * IMPORTANT URL SAFETY:
+         * The DOCX path and viewer settings are separate things.
+         *
+         * Correct:
+         *   docx-viewer.html?file=fae-s19.docx&realm=universal
+         *
+         * Older links may accidentally produce:
+         *   fae-s19.docx?realm=universal
+         *
+         * If that malformed value reaches fetch(), the browser attempts
+         * to retrieve a file literally named "fae-s19.docx?realm=universal".
+         * Strip the accidental query portion before fetching the DOCX.
+         *
+         * This also prevents realm/solar/lunar/universal state from being
+         * interpreted as part of the document filename.
+         */
+        const accidentalQuery = filePath.indexOf("?");
+        if (accidentalQuery !== -1) {
+            filePath = filePath.substring(0, accidentalQuery);
+        }
+
+        if (!filePath.toLowerCase().endsWith(".docx")) {
+            showDocxError(
+                new Error("The document path must point to a .docx file."),
+                filePath
+            );
+            return;
+        }
+
+        target.innerHTML = `
+            <div class="guide-note center">
+                <p><strong>Loading DOCX...</strong></p>
+            </div>`;
+
+        try {
+            const response = await fetch(filePath, {
+                method: "GET",
+                cache: "no-cache"
+            });
+
+            if (!response.ok) {
+                throw new Error(
+                    `HTTP ${response.status}: Unable to locate "${filePath}"`
+                );
+            }
+
+            const arrayBuffer = await response.arrayBuffer();
+
+            await convertDocxArrayBuffer(
+                arrayBuffer,
+                filePath
+            );
+
+        } catch (err) {
+            /*
+             * Fetch failures are normally caused by an incorrect path,
+             * local-file security restrictions, or server/CORS policy.
+             */
+            if (err instanceof TypeError && /fetch/i.test(String(err.message))) {
+                err = new Error(
+                    "The browser could not fetch the DOCX. Check the filepath and make sure the viewer is running from a web server or static hosting platform."
+                );
+            }
+
+            showDocxError(err, filePath);
+        }
+    }
+
+    /*
+     * Manual filepath button.
+     */
+    function loadDocxFromInput() {
+        const inputVal = String($('#docxInput').value || "").trim();
+
+        if (inputVal !== "") {
+            loadDocx(inputVal);
+        }
+    }
+
+    /*
+     * Auto-load support:
+     *   docx-viewer.html?file=data/example.docx
+     */
+    document.addEventListener("DOMContentLoaded", function() {
+        if (window !== window.parent) {
+            const header = $('#guideHeader');
+            if (header) header.classList.add('hidden');
+        }
+
+        /*
+         * URL PARAMETERS
+         *
+         * The viewer accepts independent parameters:
+         *   ?file=fae-s19.docx&realm=universal
+         *
+         * "realm" belongs to the viewer, not the DOCX filename.
+         * We intentionally read it separately so it can never be sent
+         * to fetch() as part of the document path.
+         */
+        const params = new URLSearchParams(window.location.search);
+        let autoFile = params.get('file');
+        const realm = String(params.get('realm') || 'universal').toLowerCase();
+
+        /*
+         * Support links produced by older versions where "realm" was
+         * accidentally appended to the file value.
+         *
+         * Example:
+         *   ?file=fae-s19.docx?realm=universal
+         */
+        if (autoFile) {
+            const nestedQuery = autoFile.indexOf('?');
+            if (nestedQuery !== -1) {
+                autoFile = autoFile.substring(0, nestedQuery);
+            }
+
+            autoFile = autoFile.trim();
+
+            if (autoFile) {
+                /*
+                 * Store the active realm on the application root.
+                 * The current viewer is Universal, but this makes the
+                 * value available to future Solar/Lunar rendering logic
+                 * without contaminating the DOCX path.
+                 */
+                const app = $('#guideApp');
+                if (app) {
+                    app.dataset.realm =
+                        (realm === 'solar' || realm === 'lunar' || realm === 'universal')
+                            ? realm
+                            : 'universal';
+                }
+
+                $('#docx-controls').classList.add('hidden');
+                loadDocx(autoFile);
+            }
+        }
+    });
+</script>
+</body>
+</html>
