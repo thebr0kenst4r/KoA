@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fae Realm Season 5 In-Depth Master Operations Manual</title>
+    <style>
+        :root {
+            --bg-dark: #020912;
+            --panel-bg: #0a192f;
+            --panel-border: #153258;
+            --card-bg: #0d213a;
+            --accent-gold: #f39c12;
+            --accent-gold-hover: #e67e22;
+            --accent-cyan: #00d2ff;
+            --text-main: #e0e6ed;
+            --text-muted: #8a9ba8;
+            --alert-red: #e74c3c;
+            --alert-red-bg: rgba(231, 76, 60, 0.18);
+            --alert-yellow: #f1c40f;
+            --alert-yellow-bg: rgba(241, 196, 15, 0.18);
+            --success-green: #2ecc71;
+            --success-green-bg: rgba(46, 204, 113, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            padding: 12px;
+        }
+
+        header.guideHeader {
+            background: linear-gradient(135deg, #0b1d3a 0%, #020912 100%);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            padding: 20px 16px;
+            margin-bottom: 16px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+        }
+
+        header.guideHeader h1 {
+            color: var(--accent-gold);
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 6px;
+        }
+
+        header.guideHeader p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .profileCard {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .profileItem {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .profileItem strong {
+            color: var(--accent-cyan);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .badge-universal {
+            background-color: rgba(0, 210, 255, 0.2);
+            color: var(--accent-cyan);
+            border: 1px solid var(--accent-cyan);
+        }
+
+        .realmSelector {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .realmBtn {
+            flex: 1;
+            padding: 10px;
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            color: var(--text-muted);
+            font-weight: bold;
+            font-size: 0.85rem;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .realmBtn.active {
+            background-color: var(--accent-gold);
+            color: #000;
+            border-color: var(--accent-gold);
+        }
+
+        .realmBtn.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .tabNav {
+            display: flex;
+            overflow-x: auto;
+            gap: 6px;
+            margin-bottom: 16px;
+            padding-bottom: 6px;
+            scrollbar-width: thin;
+        }
+
+        .tab-btn {
+            white-space: nowrap;
+            padding: 9px 16px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--panel-border);
+            color: var(--text-muted);
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .tab-btn.active {
+            background-color: var(--panel-border);
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+        }
+
+        .guidePage {
+            display: none;
+        }
+
+        .guidePage.active {
+            display: block;
+        }
+
+        .commandPanel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+
+        .commandPanel h2 {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .commandPanel h3 {
+            color: var(--accent-cyan);
+            font-size: 0.98rem;
+            margin: 16px 0 8px 0;
+            text-transform: uppercase;
+        }
+
+        .commandPanel p {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .warningCard {
+            background-color: var(--alert-red-bg);
+            border-left: 4px solid var(--alert-red);
+            padding: 14px;
+            border-radius: 4px;
+            margin: 14px 0;
+            font-size: 0.88rem;
+        }
+
+        .warningCard.yellow {
+            background-color: var(--alert-yellow-bg);
+            border-left-color: var(--alert-yellow);
+        }
+
+        .warningCard.green {
+            background-color: var(--success-green-bg);
+            border-left-color: var(--success-green);
+        }
+
+        .warningCard strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .tableContainer {
+            overflow-x: auto;
+            margin: 14px 0;
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+        }
+
+        .guideTable {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.84rem;
+            text-align: left;
+        }
+
+        .guideTable th {
+            background-color: var(--card-bg);
+            color: var(--accent-gold);
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--panel-border);
+            white-space: nowrap;
+        }
+
+        .guideTable td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--panel-border);
+            color: var(--text-main);
+        }
+
+        .guideTable tr:last-child td {
+            border-bottom: none;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .highlightText {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        .cyanText {
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        .redText {
+            color: var(--alert-red);
+            font-weight: bold;
+        }
+
+        .stepBlock {
+            background-color: var(--card-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-bottom: 10px;
+        }
+
+        .stepBlock h4 {
+            color: var(--accent-gold);
+            font-size: 0.88rem;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="guideHeader">
+        <h1>Fae Realm: Season 5 Master Manual</h1>
+        <p>Exhaustive Gameplay Engine, Object Database & Tactical Playbook</p>
+    </header>
+
+    <div class="profileCard">
+        <div class="profileItem">Maintainer: <strong>K10651.The Winged Cradler.AMod</strong></div>
+        <div class="profileItem">Discord ID: <strong>1481662452381913221</strong></div>
+        <div class="profileItem">Scope: <span class="badge badge-universal">Universal Guide</span></div>
+    </div>
+
+    <div class="realmSelector">
+        <button id="realm-universal" class="realmBtn active">Universal Realm</button>
+        <button id="realm-solar" class="realmBtn disabled" disabled>Solar Realm</button>
+        <button id="realm-lunar" class="realmBtn disabled" disabled>Lunar Realm</button>
+    </div>
+
+    <div class="tabNav" id="tabBar">
+        <button class="tab-btn active" onclick="showPage('overview')">1. Lifecycle & Roadmap</button>
+        <button class="tab-btn" onclick="showPage('objects')">2. Object & Structure Catalog</button>
+        <button class="tab-btn" onclick="showPage('combat')">3. Defense Wall Protocol</button>
+        <button class="tab-btn" onclick="showPage('morale')">4. Morale Engine & Deficits</button>
+        <button class="tab-btn" onclick="showPage('economy')">5. Merchant Ships & Shop</button>
+        <button class="tab-btn" onclick="showPage('rewards')">6. Ranks, Chests & Checklists</button>
+    </div>
+
+    <div class="universal-content">
+
+        <div id="overview" class="guidePage active" data-page="overview">
+            <div class="commandPanel">
+                <h2>1. Season 5 Lifecycle & Progression Roadmap</h2>
+                <p>Fae Realm Season 5 is a 30-day continuous regional war divided into four distinct Settlement Phases. Alliances compete across opening map concentric rings to secure territorial nodes, build forward tower chains, and control the central Sacred Tree of Avalon.</p>
+
+                <h3>Detailed Phase Breakdown & Timelines</h3>
+                <div class="tableContainer">
+                    <table class="guideTable">
+                        <thead>
+                            <tr>
+                                <th>Phase Stage</th>
+                                <th>Timeline</th>
+                                <th>Map Status & Gateway Unlocks</th>
+                                <th>Core Operational Focus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Phase 1: Arrival</td>
+                                <td>Days 1–5</td>
+                                <td>Outer Ring Zones open. Gateways locked.</td>
+                                <td>Establish Alliance HQ, claim Level 1–2 Fae Mines, build base tower chains.</td>
+                            </tr>
+                            <tr>
+                                <td>Phase 2: Frontier</td>
+                                <td>Days 6–12</td>
+                                <td>Outer Gateways open into Middle Ring.</td>
+                                <td>Contest Level 1 Ports, Auxiliary Temples, Level 3 Mines. First Merchant Ships land.</td>
+                            </tr>
+                            <tr>
+                                <td>Phase 3: Escalation</td>
+                                <td>Days 13–22</td>
+                                <td>Inner Gateways open into Core Ring.</td>
+                                <td>Capture Major Temples (Dionysus/Aphrodite), secure Level 2–3 Ports, level up Fae Technology.</td>
+                            </tr>
+                            <tr>
+                                <td>Phase 4: Climax</td>
+                                <td>Days 23–30</td>
+                                <td>Sacred Tree Barrier drops. Central zone open.</td>
+                                <td>Rally Sacred Tree, secure Commander of the Realm title, finalize Military Rank grinding.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Scoring Engines: Settlement Points vs. Battlefield Points</h3>
+                <p>Victory and ranking in Season 5 are calculated using two distinct scoring mechanisms. Understanding the operational difference between these two point engines is essential for alliance leadership:</p>
+                <ul>
+                    <li><span class="highlightText">Settlement Points (Passive Engine):</span> Generated continuously every minute based on total linked alliance territory, occupied temples, active ports, and controlled mines. These points accumulate toward phase settlement rewards and dictate regional dominance rankings.</li>
+                    <li><span class="highlightText">Battlefield Points (Active Engine):</span> Earned directly through player actions: defeating enemy garrisons, destroying enemy rallies, conducting 3-0 Merchant Ship raids, and clearing Fae monsters. Battlefield points directly fuel individual Military Rank progression.</li>
+                </ul>
+
+                <div class="warningCard">
+                    <strong>CRITICAL WAR MECHANIC: The Unbroken Tower Chain Rule</strong>
+                    All alliance towers MUST maintain an unbroken connected link back to the primary Alliance Fortress / Headquarters. If enemy forces sever a tower link, ALL disconnected towers downstream instantly enter a "Suppressed State"—ceasing Settlement Point accrual, disabling mine protection shields, and rendering attached temples vulnerable to immediate seizure!
+                </div>
+
+                <h3>Step-by-Step Day 1–30 Strategic Playbook</h3>
+                
+                <div class="stepBlock">
+                    <h4>Step 1: Days 1–5 (Base Foundation)</h4>
+                    <p>Construct Alliance HQ in the outer safe zone. Direct all alliance members to build towers rapidly along high-density mine clusters. Do not waste alliance resources building toward locked gateways until Day 4.</p>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Step 2: Days 6–12 (Frontier Breakthrough)</h4>
+                    <p>Anchor forward towers directly against Outer Gateways 3 hours prior to unlock. The moment gateways open, send primary rally teams to capture Auxiliary Temples (Apollo) to boost troop recovery speeds for upcoming battles.</p>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Step 3: Days 13–22 (Temple Wars)</h4>
+                    <p>Launch synchronized coalition rallies against Major Temples (Dionysus and Aphrodite). Enforce strict 3-march defense walls instantly upon taking any structure to prevent instant enemy recapture.</p>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Step 4: Days 23–30 (Sacred Tree & Final Settlement)</h4>
+                    <p>Focus full coalition power on holding the Sacred Tree. Simultaneously audit all alliance members to ensure everyone has reached the mandatory <span class="cyanText">Bronze Knight 4 Stars</span> threshold before the final settlement clock hits zero.</p>
+                </div>
+
+                <div class="warningCard yellow">
+                    <strong>MAJOR PITFALL: "The Dead Branch Extension"</strong>
+                    Avoid building long, single-line tower chains ("snake towers") deep into enemy territory without building parallel support towers. A single enemy rally on an isolated tower can sever your entire forward network, stripping thousands of Settlement Points in a single fight.
+                </div>
+            </div>
+        </div>
+        <div id="objects" class="guidePage" data-page="objects">
+            <div class="commandPanel">
+                <h2>2. Map Objects, Structures & Relics Catalog</h2>
+                <p>Every structure, port, mine, and relic in Fae Season 5 possesses specific mechanical attributes, contestation windows, and stat multipliers. Below is the exhaustive database of all game objects on the map.</p>
+
+                <h3>1. Temple Structure Classifications</h3>
+                <div class="tableContainer">
+                    <table class="guideTable">
+                        <thead>
+                            <tr>
+                                <th>Structure Name</th>
+                                <th>Primary Stat Boost</th>
+                                <th>Holding Buff / Effect</th>
+                                <th>Garrison Cap</th>
+                                <th>Contestation Window</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Major Temple: Dionysus</td>
+                                <td>+10% Final Damage Dealt</td>
+                                <td>Increases total coalition damage output in all combat zones.</td>
+                                <td>3 Marches (Front) + 27 Reserve</td>
+                                <td>15 mins continuous hold to lock</td>
+                            </tr>
+                            <tr>
+                                <td>Major Temple: Aphrodite</td>
+                                <td>+5 Morale Rating</td>
+                                <td>Boosts coalition Morale bracket, unlocking combat damage shields.</td>
+                                <td>3 Marches (Front) + 27 Reserve</td>
+                                <td>15 mins continuous hold to lock</td>
+                            </tr>
+                            <tr>
+                                <td>Auxiliary Temple: Apollo</td>
+                                <td>+10% Wounded Recovery</td>
+                                <td>Converts 10% of dead troops into wounded upon march return.</td>
+                                <td>3 Marches (Front) + 17 Reserve</td>
+                                <td>10 mins continuous hold to lock</td>
+                            </tr>
+                            <tr>
+                                <td>Auxiliary Temple: Hermes</td>
+                                <td>+15% March Speed</td>
+                                <td>Increases overall march velocity across the Fae map.</td>
+                                <td>3 Marches (Front) + 17 Reserve</td>
+                                <td>10 mins continuous hold to lock</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>2. Fae Harbors & Ports (Tiers 1–3)</h3>
+                <p>Ports act as crucial economic hubs and cross-water navigation nodes:</p>
+                <ul>
+                    <li><span class="highlightText">Tier 1 Coastal Ports:</span> Located in the Outer Ring. Spawns Tier 1 Merchant Ships (Lower Crystal yield). Allows basic water tower connection.</li>
+                    <li><span class="highlightText">Tier 2 Regional Harbors:</span> Located in the Middle Ring. Spawns Tier 2 Merchant Ships with high-value Fae Crystal chests.</li>
+                    <li><span class="highlightText">Tier 3 Central Ports:</span> Surrounds the Sacred Tree zone. Spawns Elite Merchant Ships with rare Hero Equipment materials and maximum point yields.</li>
+                </ul>
+
+                <h3>3. Fae Mines (Levels 1–5)</h3>
+                <p>Mines generate Fae Crystals for shop spending and Exploration Points for alliance research progression:</p>
+                <div class="tableContainer">
+                    <table class="guideTable">
+                        <thead>
+                            <tr>
+                                <th>Mine Tier</th>
+                                <th>Crystals / Hour</th>
+                                <th>Protection Duration</th>
+                                <th>Contested Rules</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Level 1–2 Mines</td>
+                                <td>250 – 500</td>
+                                <td>6 Hours Protected</td>
+                                <td>Non-pillagable once depleted.</td>
+                            </tr>
+                            <tr>
+                                <td>Level 3–4 Mines</td>
+                                <td>800 – 1,200</td>
+                                <td>4 Hours Protected</td>
+                                <td>Enemies can attack gathering marches to steal remaining 50% node resources.</td>
+                            </tr>
+                            <tr>
+                                <td>Level 5 Core Mines</td>
+                                <td>2,000</td>
+                                <td>2 Hours Protected</td>
+                                <td>High-risk nodes in central map. Continuous combat zone.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>4. The Sacred Tree & Kingdom Relics</h3>
+                <p>Unlocking in Phase 4, the <span class="cyanText">Sacred Tree of Avalon</span> represents the supreme objective of Season 5. Holding the Sacred Tree continuously for 30 minutes earns the leading coalition leader the title of <span class="highlightText">Commander of the Realm</span>.</p>
+                
+                <p>The Commander of the Realm gains exclusive access to the Realm Relic Vault, granting authority to distribute three powerful seasonal relics:</p>
+                <ul>
+                    <li><span class="highlightText">Relic of Supreme Might:</span> Grants +15% Troop Attack and +10% Lethality to the assigned player.</li>
+                    <li><span class="highlightText">Relic of Iron Fortitude:</span> Grants +15% Troop Defense and +10% Damage Reduction to the assigned player.</li>
+                    <li><span class="highlightText">Relic of the Celestial Harvest:</span> Grants +30% Mining Speed and +20% Merchant Raid Point Yield across the recipient's entire alliance.</li>
+                </ul>
+
+                <div class="warningCard red">
+                    <strong>WAR PITFALL: Unclaimed Relic Expiration</strong>
+                    Relics distributed by the Commander of the Realm must be claimed by recipient players within 24 hours via system mail. Failure to claim before the timer expires causes the relic to return to the vault, forfeiting its stat bonuses for the remainder of the settlement phase!
+                </div>
+            </div>
+        </div>
+        <div id="combat" class="guidePage" data-page="combat">
+            <div class="commandPanel">
+                <h2>3. Rigid 3-March Defense Wall Protocol</h2>
+                <p>Combat garrisons in Fae Season 5 operate under a unique engine rule: <span class="redText">The 3-March Defense Wall</span>. Unlike standard gameplay where all reinforcing troops merge into a single massive defense pool, Fae structures process combat sequentially through the first three marches present.</p>
+
+                <div class="warningCard">
+                    <strong>MANDATORY COMBAT RULE: Strict March Insertion Order</strong>
+                    The first three marches inside ANY temple or structure form the active frontline wall. Incoming enemy rallies hit ONLY these three marches. Marches 4 through 30 sit in a non-combat reinforcement queue behind the wall.
+                </div>
+
+                <h3>How the 3-March Defense Wall Works Mathematically</h3>
+                <ul>
+                    <li><span class="highlightText">Active Frontline Wall (Slots 1, 2 & 3):</span> Absorbs 100% of incoming damage. Combat stats, troop tier mix, damage reduction, and hero skills are calculated EXCLUSIVELY from these three specific marches.</li>
+                    <li><span class="highlightText">Reserve Reinforcement Queue (Slots 4–30):</span> Takes zero damage while queued. When one of the three frontline marches is completely wiped out or recalled, Slot 4 instantly steps forward to fill the vacant wall position.</li>
+                </ul>
+
+                <h3>Step-by-Step Frontline Defense Setup</h3>
+                <div class="stepBlock">
+                    <h4>Step 1: Declare Primary Defenders (Tanks)</h4>
+                    <p>Leadership assigns designated high-stat players (P1, P2, P3) as primary structure anchors. No other players are permitted to send marches until these tanks land.</p>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Step 2: Execute Primary Landing</h4>
+                    <p>Designated primary tanks launch their best defensive marches (heavy Infantry/Cavalry mix with defensive gear) into the vacant structure.</p>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Step 3: Verify Garrison Wall via Structure UI</h4>
+                    <p>Structure leader opens the Garrison Detail tab to verify that Slots 1, 2, and 3 belong strictly to the assigned primary defenders.</p>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Step 4: Open Secondary Support Reinforcements</h4>
+                    <p>Once the wall is verified, general alliance members are authorized to send reinforcing marches to fill Queue Slots 4 through 30.</p>
+                </div>
+
+                <div class="warningCard yellow">
+                    <strong>CATASTROPHIC WAR ERROR: "Scout / Weak March Intrusion"</strong>
+                    If a low-power player or a weak scout march lands inside a structure BEFORE the assigned primary tanks, that weak march occupies Slot 1, 2, or 3 on the frontline wall. An incoming enemy rally will instantly obliterate that weak march, resulting in massive loss of structure durability and a immediate coalition Morale drop!
+                </div>
+
+                <h3>Step-by-Step Protocol to Fix Wall Intrusion</h3>
+                <ol>
+                    <li>Garrison monitor identifies a weak/unassigned march in Slots 1–3.</li>
+                    <li>Immediately post in Alliance War Chat: <code>"RECALL [Player Name] FROM [Structure Name] IMMEDIATELY!"</code></li>
+                    <li>The designated primary tank launches their march to land the exact moment the weak march exits.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="morale" class="guidePage" data-page="morale">
+            <div class="commandPanel">
+                <h2>4. Dynamic Morale Engine & Deficit Recovery</h2>
+                <p>Morale is the overarching combat balance engine in Season 5. Morale fluctuates dynamically based on structure ownership, victory streaks, and loss penalties, applying massive direct stat modifiers to all troops fighting across the map.</p>
+
+                <h3>Morale Multiplier & Debuff Tiers Matrix</h3>
+                <div class="tableContainer">
+                    <table class="guideTable">
+                        <thead>
+                            <tr>
+                                <th>Morale Rating Range</th>
+                                <th>Status Classification</th>
+                                <th>Final Damage Dealt</th>
+                                <th>Damage Reduction</th>
+                                <th>Combat Impact Summary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>+11 to +20</td>
+                                <td>Dominant Morale</td>
+                                <td>+15% Final Damage</td>
+                                <td>+10% Reduction</td>
+                                <td>Supreme combat advantage; high rally wipe rate.</td>
+                            </tr>
+                            <tr>
+                                <td>+1 to +10</td>
+                                <td>High Morale</td>
+                                <td>+8% Final Damage</td>
+                                <td>+5% Reduction</td>
+                                <td>Moderate combat advantage across all rallies.</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>Neutral Morale</td>
+                                <td>Baseline (0%)</td>
+                                <td>Baseline (0%)</td>
+                                <td>Standard player vs player stat calculations.</td>
+                            </tr>
+                            <tr>
+                                <td>-1 to -10</td>
+                                <td>Morale Deficit</td>
+                                <td>-10% Final Damage</td>
+                                <td>-10% Reduction</td>
+                                <td>Noticeable stat decay; troops suffer higher casualties.</td>
+                            </tr>
+                            <tr>
+                                <td>-11 to -20</td>
+                                <td>Severe Morale Crisis</td>
+                                <td>-20% Final Damage</td>
+                                <td>-15% Reduction</td>
+                                <td>Critical debuff bracket; rallies fail against equal power.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>The Morale Snowball Effect</h3>
+                <p>Controlling Morale Temples (Aphrodite) increases your rating. Conversely, losing consecutive battles drops your morale score. If your rating falls below 0, your troops enter a <span class="redText">Morale Deficit</span>, reducing damage output and making it harder to win subsequent battles.</p>
+
+                <h3>Step-by-Step Morale Deficit Recovery Protocol</h3>
+                <div class="stepBlock">
+                    <h4>Step 1: Cease Direct Rallies on Major Temples</h4>
+                    <p>Do NOT launch rallies against enemy Major Temples (Dionysus) while suffering from a -10 or worse Morale Deficit. The stat penalty will cause your rallies to fail, worsening the deficit.</p>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Step 2: Pivot Focus to Morale Temples (Aphrodite)</h4>
+                    <p>Redirect full alliance power to capture minor Auxiliary Morale Temples or unfortified ports to gain immediate +5 Morale points.</p>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Step 3: Farm Merchant Ship Victories</h4>
+                    <p>Execute guaranteed 3-0 Crushing Victories against NPC Merchant Ships. Winning ship raids awards minor positive morale ticks, helping reset your rating back to Neutral (0).</p>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Step 4: Resume Major Offensives</h4>
+                    <p>Once Morale reaches neutral (0) or positive territory, re-engage primary enemy Major Temples with full coalition rallies.</p>
+                </div>
+            </div>
+        </div>
+        <div id="economy" class="guidePage" data-page="economy">
+            <div class="commandPanel">
+                <h2>5. Merchant Ship Raids & Fae Shop Optimization</h2>
+                <p>Merchant Ships spawn continuously from controlled Fae Harbors. Raiding ships is the primary method for acquiring individual <span class="cyanText">Fae Crystals</span> and grinding Military Experience points.</p>
+
+                <h3>Merchant Ship Raiding Rules</h3>
+                <p>When targeting Merchant Ships along coastal ports, players must adhere to strict hull inspection rules:</p>
+
+                <div class="warningCard">
+                    <strong>RAID RULE: Clean Hulls vs. Burning Hulls</strong>
+                    Always target Clean (Unlooted) Merchant Ships. Attacking a ship that is already burning or damaged by another player incurs a mandatory <strong>50% PENALTY</strong> on Fae Crystal loot yield and cuts earned Military Experience in half!
+                </div>
+
+                <h3>3-0 Crushing Victory Execution Protocol</h3>
+                <p>To maximize point yields from merchant raids, players should aim for a <span class="highlightText">3-0 Crushing Victory</span> sweep against NPC ship guardians:</p>
+                <ol>
+                    <li>Deploy three balanced marches featuring your strongest heroes.</li>
+                    <li>Ensure march speeds are synchronized using march speedups so all three marches land simultaneously.</li>
+                    <li>Defeating all three guardian waves without losing a single march awards the +25% Bonus Completion Chest containing rare Hero Crest fragments.</li>
+                </ol>
+
+                <h3>Fae Shop Priority Redemption Matrix</h3>
+                <div class="tableContainer">
+                    <table class="guideTable">
+                        <thead>
+                            <tr>
+                                <th>Priority Tier</th>
+                                <th>Item Category</th>
+                                <th>Recommended Purchase Order</th>
+                                <th>Strategic Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tier 1 (Mandatory)</td>
+                                <td>Seasonal Hero Fragments</td>
+                                <td>Buy all available daily stock first.</td>
+                                <td>Permanent account power upgrade.</td>
+                            </tr>
+                            <tr>
+                                <td>Tier 2 (High Priority)</td>
+                                <td>Exclusive Hero Equipment Materials</td>
+                                <td>Clear weekly allocated chest limits.</td>
+                                <td>Essential for crafting S5 gear sets.</td>
+                            </tr>
+                            <tr>
+                                <td>Tier 3 (Medium Priority)</td>
+                                <td>Research & Construction Speedups</td>
+                                <td>Redeem remaining Crystal surplus.</td>
+                                <td>Accelerates Fae Tech tree research.</td>
+                            </tr>
+                            <tr>
+                                <td>Tier 4 (Low Priority)</td>
+                                <td>Basic RSS Packs (Food/Wood/Iron)</td>
+                                <td>Only redeem in emergency shortages.</td>
+                                <td>Incomplete Crystal conversion value.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="rewards" class="guidePage" data-page="rewards">
+            <div class="commandPanel">
+                <h2>6. Military Ranks, Chest Eligibility & Checklists</h2>
+                <p>Individual settlement chests, alliance mail rewards, and final victory packs are strictly gated by individual Military Rank progression.</p>
+
+                <div class="warningCard">
+                    <strong>MANDATORY QUALIFICATION THRESHOLD</strong>
+                    Phase Settlement Mail Rewards and Alliance Victory Chests are ONLY distributed to players who achieve a minimum rank of <strong>BRONZE KNIGHT 4 STARS</strong> before the phase timer ends. Players below this rank receive ZERO settlement mail rewards!
+                </div>
+
+                <h3>Military Rank Hierarchy & Requirements</h3>
+                <div class="tableContainer">
+                    <table class="guideTable">
+                        <thead>
+                            <tr>
+                                <th>Military Rank Title</th>
+                                <th>Star Rating</th>
+                                <th>Required Military Exp</th>
+                                <th>Reward Eligibility Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Page / Squire</td>
+                                <td>1–3 Stars</td>
+                                <td>0 – 15,000 Exp</td>
+                                <td><span class="redText">INELIGIBLE</span> (No mail chests)</td>
+                            </tr>
+                            <tr>
+                                <td>Knight</td>
+                                <td>1–3 Stars</td>
+                                <td>15,001 – 45,000 Exp</td>
+                                <td><span class="redText">INELIGIBLE</span> (No mail chests)</td>
+                            </tr>
+                            <tr>
+                                <td>Bronze Knight</td>
+                                <td>1–3 Stars</td>
+                                <td>45,001 – 85,000 Exp</td>
+                                <td><span class="redText">INELIGIBLE</span> (Partial local chests only)</td>
+                            </tr>
+                            <tr>
+                                <td>Bronze Knight</td>
+                                <td>4 Stars (QUALIFIED)</td>
+                                <td>85,001+ Exp</td>
+                                <td><span class="highlightText">FULLY ELIGIBLE</span> for all settlement rewards</td>
+                            </tr>
+                            <tr>
+                                <td>Silver / Gold Knight</td>
+                                <td>1–5 Stars</td>
+                                <td>150,000+ Exp</td>
+                                <td>Elite Tier: Grants bonus seasonal title badges</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Master Daily & Phase Checklist</h3>
+                <div class="stepBlock">
+                    <h4>Daily Operational Routine</h4>
+                    <ul>
+                        <li>[ ] Complete 5/5 daily Fae Mine gathering collections.</li>
+                        <li>[ ] Execute 3 Clean Hull Merchant Ship raids (target 3-0 Crushing Victories).</li>
+                        <li>[ ] Check Alliance HQ tower chain connectivity to prevent disconnected suppressed nodes.</li>
+                        <li>[ ] Clear daily allotted Fae monsters for Military Exp grinding.</li>
+                    </ul>
+                </div>
+
+                <div class="stepBlock">
+                    <h4>Phase Settlement Preparation Checklist</h4>
+                    <ul>
+                        <li>[ ] Verify Military Rank is at or above <span class="cyanText">Bronze Knight 4 Stars</span>.</li>
+                        <li>[ ] Audit frontline 3-march defense walls on all held Major Temples.</li>
+                        <li>[ ] Spend accrued Fae Crystals on Tier 1 Hero Fragments in Fae Shop.</li>
+                        <li>[ ] Claim active distributed Relics from system mail within 24 hours.</li>
+                    </ul>
+                </div>
+
+                <h3>Summary of Major Season 5 War Errors</h3>
+                <div class="warningCard red">
+                    <strong>TOP 4 CATASTROPHIC WAR ERRORS TO AVOID</strong>
+                    <ol>
+                        <li><strong>Scout Intrusion:</strong> Landing weak marches into temples before primary tanks arrive, ruining the 3-march defense wall.</li>
+                        <li><strong>Raiding Burning Ships:</strong> Wasting raid stamina on damaged ship hulls, suffering a 50% penalty on Crystal yields.</li>
+                        <li><strong>Disconnected Snake Towers:</strong> Extending single-line towers that get severed, deactivating downstream territory points.</li>
+                        <li><strong>Unranked Settlement Failure:</strong> Ending a settlement phase below Bronze Knight 4 Stars, forfeiting mail chests.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Engine Configuration Variables (Universal Lock Protocol)
+        const showUniversal = true;
+        const showSolar = false;
+        const showLunar = false;
+
+        // Initialize Engine State
+        document.addEventListener('DOMContentLoaded', function() {
+            initRealmState();
+            parseUrlParameters();
+        });
+
+        // Tab Switching Engine
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.guidePage');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            pages.forEach(page => {
+                if (page.getAttribute('data-page') === pageId || page.id === pageId) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(pageId)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Reset View to First Available Tab Function
+        function resetToFirstTab() {
+            const firstTab = document.querySelector('.tab-btn');
+            if (firstTab) {
+                const pageId = firstTab.getAttribute('onclick').match(/'([^']+)'/)[1];
+                showPage(pageId);
+            }
+        }
+
+        // Realm Control & Workspace Lock Logic
+        function initRealmState() {
+            const universalBtn = document.getElementById('realm-universal');
+            const solarBtn = document.getElementById('realm-solar');
+            const lunarBtn = document.getElementById('realm-lunar');
+
+            if (showUniversal && !showSolar && !showLunar) {
+                if (universalBtn) universalBtn.classList.add('active');
+                if (solarBtn) {
+                    solarBtn.classList.add('disabled');
+                    solarBtn.disabled = true;
+                }
+                if (lunarBtn) {
+                    lunarBtn.classList.add('disabled');
+                    lunarBtn.disabled = true;
+                }
+            }
+        }
+
+        // URL Parameter Parsing & LocalStorage Safety Guard
+        function parseUrlParameters() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const pageParam = urlParams.get('page');
+
+                if (pageParam) {
+                    showPage(pageParam);
+                }
+            } catch (e) {
+                console.warn('URL parameter parsing fallback triggered:', e);
+            }
+        }
+    </script>
+</body>
+</html>

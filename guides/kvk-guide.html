@@ -1,0 +1,9233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>King of Avalon Guide</title>
+
+<script>
+
+/*********************************************
+
+KING OF AVALON GUIDE ENGINE V4
+
+Created By:
+     10651.The Winged Cradler.AMod
+     Disord User ID: 1481662452381913221
+
+Guide Authors:
+
+• Edit everything above the DO NOT EDIT line.
+
+• Never edit anything below the DO NOT EDIT line.
+
+**********************************************/
+
+//========== Guide Information ==========
+
+// Enter guide title
+const guideTitle = "Kingdom Vs. Kingdom";
+
+// Enter guide subtitle (leave blank to hide)
+const guideSubtitle = "Excalibur Invasion (Solar) & Wheel War (Lunar)";
+
+  
+//========== Universal Information ==========
+
+// Enter Universal version
+const universalVersion="Version 1.0";
+
+// Enter Universal last updated date
+const universalUpdated="July 2026";
+
+  
+//========== Solar Information ==========
+
+// Enter Solar version
+const solarVersion="Version 1.0";
+
+// Enter Solar last updated date
+const solarUpdated="July 2026";
+
+
+//========== Lunar Information ==========
+
+// Enter Lunar version
+const lunarVersion="Version 1.0";
+
+// Enter Lunar last updated date
+const lunarUpdated="July 2026";
+
+  
+//========== Available Guides ==========
+
+// Set true to enable Universal guide
+const showUniversal = false;
+
+// Set true to enable Solar guide
+const showSolar = true;
+
+// Set true to enable Lunar guide
+const showLunar = true;
+
+
+//========== Authors ==========
+
+// Enter Universal author (leave blank for Anonymous)
+const authorUniversal = "";
+
+// Enter Solar author (leave blank for Anonymous)
+const authorSolar = "K10651.The Winged Cradler.AMod <p> With help from:<br>K10157.Bodmoun Berylbeard<br>K15003.Acot the Heartbreaker</p>";
+
+
+// Enter Lunar author (leave blank for Anonymous)
+const authorLunar = "K10651.The Winged Cradler.AMod <p>With help from:<br>K5216.Thrardraetalin Redthane<br>K5309.Alson of the Forest<br>K5363.The Planet Grower<br>K5097.Giso.Brown</p>";
+
+
+//========== Universal Related Guides ==========
+
+// Set true to show Related Guides
+const universalRelatedVisible = false;
+
+  
+// Enter first related guide name
+const universalRelated1Name = "";
+  
+// Enter first related guide filename
+const universalRelated1File = "";
+
+  
+// Enter second related guide name
+const universalRelated2Name = "";
+
+// Enter second related guide filename
+const universalRelated2File = "";
+
+  
+// Enter third related guide name
+const universalRelated3Name = "";
+
+// Enter third related guide filename
+const universalRelated3File = "";
+
+
+//========== Solar Related Guides ==========
+
+// Set true to show Related Guides
+const solarRelatedVisible = false;
+
+  
+// Enter first related guide name
+const solarRelated1Name = "";
+
+// Enter first related guide filename
+const solarRelated1File = "";
+
+  
+// Enter second related guide name
+const solarRelated2Name = "";
+
+// Enter second related guide filename
+const solarRelated2File = "";
+
+  
+// Enter third related guide name
+const solarRelated3Name = "";
+
+// Enter third related guide filename
+const solarRelated3File = "";
+
+
+//========== Lunar Related Guides ==========
+
+// Set true to show Related Guides
+const lunarRelatedVisible = false;
+
+  
+// Enter first related guide name
+const lunarRelated1Name = "";
+
+// Enter first related guide filename
+const lunarRelated1File = "";
+
+  
+// Enter second related guide name
+const lunarRelated2Name = "";
+
+// Enter second related guide filename
+const lunarRelated2File = "";
+
+  
+// Enter third related guide name
+const lunarRelated3Name = "";
+
+// Enter third related guide filename
+const lunarRelated3File = "";
+
+
+//========== Universal Guide ==========
+
+// Enter Introduction (HTML)
+const universalIntroduction = `
+
+<h2 class="section-title">
+
+Introduction
+
+</h2>
+
+<p>
+
+Replace this with your own guide.
+
+</p>
+
+`;
+
+
+
+//========== Universal Tab 1 ==========
+
+// Set false to hide this tab
+const universalTab1Visible = true;
+
+// Enter tab name
+const universalTab1Title = "Overview";
+
+// Enter HTML for this tab
+const universalTab1Content = `
+
+<h2 class="section-title">
+
+Overview
+
+</h2>
+
+<p>
+
+Replace this with your own guide.
+
+</p>
+
+`;
+
+
+
+//========== Universal Tab 2 ==========
+
+// Set false to hide this tab
+const universalTab2Visible = true;
+
+// Enter tab name
+const universalTab2Title = "Tab 2";
+
+// Enter HTML for this tab
+const universalTab2Content = `
+
+<p>
+
+Replace this with your own guide.
+
+</p>
+
+`;
+
+  //========== Universal Tab 3 ==========
+
+// Set false to hide this tab
+const universalTab3Visible = true;
+
+// Enter tab name
+const universalTab3Title = "Tab 3";
+
+// Enter HTML for this tab
+const universalTab3Content = `
+
+<p>
+
+Replace this with your own guide.
+
+</p>
+
+`;
+
+
+
+//========== Universal Tab 4 ==========
+
+// Set false to hide this tab
+const universalTab4Visible = true;
+
+// Enter tab name
+const universalTab4Title = "Tab 4";
+
+// Enter HTML for this tab
+const universalTab4Content = `
+
+<p>
+
+Replace this with your own guide.
+
+</p>
+
+`;
+
+
+
+//========== Universal Tab 5 ==========
+
+// Set false to hide this tab
+const universalTab5Visible = true;
+
+// Enter tab name
+const universalTab5Title = "Tab 5";
+
+// Enter HTML for this tab
+const universalTab5Content = `
+
+<p>
+
+Replace this with your own guide.
+
+</p>
+
+`;
+
+
+
+//========== Universal Tab 6 ==========
+
+// Set false to hide this tab
+const universalTab6Visible = true;
+
+// Enter tab name
+const universalTab6Title = "Tab 6";
+
+// Enter HTML for this tab
+const universalTab6Content = `
+
+<p>
+
+Replace this with your own guide.
+
+</p>
+
+`;
+
+
+
+//========== Universal Tab 7 ==========
+
+// Set false to hide this tab
+const universalTab7Visible = true;
+
+// Enter tab name
+const universalTab7Title = "Tab 7";
+
+// Enter HTML for this tab
+const universalTab7Content = `
+
+<p>
+
+Replace this with your own guide.
+
+</p>
+
+`;
+
+//========== Solar Guide ==========
+
+// Enter Introduction (HTML)
+const solarIntroduction = `
+
+<h2 class="section-title">
+
+Excalibur Invasion
+
+</h2>
+
+<h3 class="section-subtitle">
+
+Solar Kingdoms
+
+</h3>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/solar1.jpg"
+alt="Excalibur Invasion Battlefield">
+
+<div class="image-caption">
+
+Figure S1-1 — Excalibur Invasion battlefield overview.
+
+</div>
+
+<p>
+
+Excalibur Invasion is the Solar Kingdom variant of Kingdom vs. Kingdom (KvK)
+and remains one of the largest and most strategically demanding events in
+<b>King of Avalon</b>. Entire kingdoms compete for control of Avalon, the four
+surrounding Towers, and ultimately the right to rule defeated kingdoms.
+Although powerful players provide the strength needed to win battles, victory
+is almost always determined by organization, communication, preparation, and
+teamwork.
+
+</p>
+
+<p>
+
+Unlike most events, Excalibur Invasion is fought across multiple kingdoms at
+once. Thousands of players participate simultaneously, requiring alliances to
+coordinate rallies, defend strategic objectives, manage resources, and adapt
+continuously as the battlefield changes.
+
+</p>
+
+<div class="guide-info">
+
+<b>Guide Purpose</b>
+
+<p>
+
+This guide is designed as a complete reference for both new and experienced
+players. Whether you are participating in your very first Kingdom vs. Kingdom
+event or leading an alliance during competitive seasonal play, this guide
+explains the mechanics, strategies, and leadership concepts required for
+success.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="block-title">
+
+What You Will Learn
+
+</h3>
+
+<ul class="guide-checklist">
+
+<li>How Excalibur Invasion works.</li>
+
+<li>How Avalon and Towers determine victory.</li>
+
+<li>Building mechanics and occupation rules.</li>
+
+<li>Battlefield shields and troop loss mechanics.</li>
+
+<li>Kingdom leadership responsibilities.</li>
+
+<li>Royal Titles and King Skills.</li>
+
+<li>Scoring, rewards, and Royal Packages.</li>
+
+<li>Advanced alliance and kingdom strategy.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Guide Navigation
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Tab</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Overview</td>
+
+<td>Battlefield layout, objectives, Avalon, Towers, Black Forest, and event fundamentals.</td>
+
+</tr>
+
+<tr>
+
+<td>Buildings</td>
+
+<td>Detailed mechanics for Avalon, Towers, occupation, Garrison Buffs, and battlefield structures.</td>
+
+</tr>
+
+<tr>
+
+<td>Battle Mechanics</td>
+
+<td>Combat rules, shields, troop losses, reclaim mechanics, and battlefield timing.</td>
+
+</tr>
+
+<tr>
+
+<td>Scoring & Rewards</td>
+
+<td>Occupation points, troop points, milestone rewards, and kingdom victory rewards.</td>
+
+</tr>
+
+<tr>
+
+<td>Kingdom Leadership</td>
+
+<td>Royal Titles, Great Hall, Royal Packages, kingdom management, and leadership responsibilities.</td>
+
+</tr>
+
+<tr>
+
+<td>King Skills</td>
+
+<td>Royal Coins, kingdom-wide buffs, administrative abilities, and recommended activation priorities.</td>
+
+</tr>
+
+<tr>
+
+<td>Advanced Strategy</td>
+
+<td>Alliance organization, battlefield planning, veteran tactics, and common mistakes.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Before You Begin
+
+</h3>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Recommended Preparation
+
+</h3>
+
+<ul class="guide-checklist">
+
+<li>Heal all wounded troops.</li>
+
+<li>Complete troop training.</li>
+
+<li>Prepare healing resources.</li>
+
+<li>Create march presets.</li>
+
+<li>Review Dragon Skills.</li>
+
+<li>Check Hero equipment.</li>
+
+<li>Prepare teleports.</li>
+
+<li>Confirm alliance assignments.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+During The Event
+
+</h3>
+
+<ul class="guide-checklist">
+
+<li>Follow alliance leadership.</li>
+
+<li>Join scheduled rallies.</li>
+
+<li>Reinforce occupied buildings.</li>
+
+<li>Watch hospital capacity.</li>
+
+<li>Communicate enemy movements.</li>
+
+<li>Avoid unnecessary troop losses.</li>
+
+<li>Prioritize objectives over kills.</li>
+
+<li>Remain active throughout the battle.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Important Notes
+
+</h3>
+
+<div class="guide-warning">
+
+This guide reflects the current Solar Kingdom version of Excalibur Invasion.
+While the core mechanics remain consistent, event rewards, balancing values,
+and kingdom features may change as future game updates are released.
+
+</div>
+
+<div class="guide-success">
+
+The strongest kingdoms are rarely those with the most powerful individual
+players. They are the kingdoms that communicate effectively, prepare before the
+battle begins, assign responsibilities clearly, and execute their strategy as a
+single coordinated force.
+
+</div>
+
+`;
+
+//========== Solar Tab 1 ==========
+
+// Set false to hide this tab
+const solarTab1Visible = true;
+
+// Enter tab name
+const solarTab1Title = "Overview";
+
+// Enter HTML for this tab
+const solarTab1Content = `
+
+<h2 class="section-title">
+
+Excalibur Invasion Overview
+
+</h2>
+
+<p>
+
+Excalibur Invasion is the traditional Solar Kingdom version of Kingdom vs.
+Kingdom (KvK). During the event, multiple kingdoms are matched together and
+battle for control of Avalon, the four surrounding Towers, and ultimately the
+right to rule victorious kingdoms. Success requires coordination between
+alliances, effective communication, and careful resource management rather than
+individual power alone.
+
+</p>
+
+<div class="guide-info">
+
+<b>Also Known As</b>
+
+<ul>
+
+<li>Kingdom vs. Kingdom (KvK)</li>
+
+<li>Excalibur Invasion</li>
+
+<li>Avalon</li>
+
+</ul>
+
+These names all refer to the same Solar battlefield event.
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="block-title">
+
+Primary Objective
+
+</h3>
+
+<p>
+
+The objective is to capture and defend Avalon, located at the center of each
+kingdom map.
+
+</p>
+
+<ul>
+
+<li>Occupy Avalon continuously for <b>8 hours</b> to achieve an immediate
+victory.</li>
+
+<li>If no kingdom reaches 8 consecutive hours, the kingdom with the
+<b>longest total occupation time</b> during the event is declared the winner.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Battlefield Layout
+
+</h3>
+
+<p>
+
+Every participating kingdom contains the same strategic objectives.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li><b>Avalon</b> — The central throne and primary objective.</li>
+
+<li><b>North Tower</b></li>
+
+<li><b>South Tower</b></li>
+
+<li><b>East Tower</b></li>
+
+<li><b>West Tower</b></li>
+
+</ul>
+
+<p>
+
+These structures together form the battlefield around Avalon.
+
+</p>
+
+</div>
+
+<div class="guide-note">
+
+<b>Image Placeholder</b><br>
+
+solar1 — Complete Excalibur Invasion battlefield showing Avalon, all four
+Towers, and the surrounding Black Forest.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+The Black Forest
+
+</h3>
+
+<p>
+
+Surrounding Avalon is the Black Forest. This dangerous region plays an
+important role during every invasion.
+
+</p>
+
+<div class="guide-warning">
+
+March speed is dramatically reduced while travelling through the Black Forest.
+
+</div>
+
+<p>
+
+Unlike cities outside the forest, strongholds teleported inside the Black Forest
+can be attacked by enemy kingdoms.
+
+</p>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+If Your Stronghold Is Defeated
+
+</h3>
+
+<ul>
+
+<li>Troops may be wounded or killed.</li>
+
+<li>Resources can be plundered.</li>
+
+<li>Your city is returned to your home kingdom if invading.</li>
+
+<li>Your city is randomly relocated after returning.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-warning">
+
+The Alliance Hospital does <b>NOT</b> function while invading another kingdom.
+Only your normal Hospital capacity protects wounded troops.
+
+</div>
+
+<div class="guide-note">
+
+<b>Image Placeholder</b><br>
+
+solar2 — Black Forest boundaries.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Teleport Rules
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Location</th>
+
+<th>Can Enemy Attack?</th>
+
+<th>Notes</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Outside Black Forest</td>
+
+<td>No</td>
+
+<td>Enemy kingdoms cannot attack your city.</td>
+
+</tr>
+
+<tr>
+
+<td>Inside Black Forest</td>
+
+<td>Yes</td>
+
+<td>Your city becomes vulnerable to enemy attacks.</td>
+
+</tr>
+
+<tr>
+
+<td>Avalon Buildings</td>
+
+<td>Always</td>
+
+<td>Buildings remain contestable regardless of city location.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<p>
+
+Teleporting between kingdoms requires Gold. The official guide lists the cost as
+<b>1,000 Gold</b> for each cross-kingdom teleport.
+
+</p>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+The Four Towers
+
+</h3>
+
+<p>
+
+Although Avalon determines victory, the Towers provide significant tactical
+advantages.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Increase combat effectiveness.</li>
+
+<li>Contribute toward Garrison Buff Levels.</li>
+
+<li>Protect allied occupation of Avalon.</li>
+
+<li>Threaten enemy occupation of Avalon.</li>
+
+</ul>
+
+</div>
+
+<p>
+
+After holding Towers continuously, your alliance gains increasing battlefield
+bonuses that apply during combat at Avalon structures.
+
+</p>
+
+<div class="guide-success">
+
+Holding Avalon while also controlling multiple Towers provides a substantial
+advantage over opponents attempting to defend Avalon alone.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+How Kingdoms Win
+
+</h3>
+
+<div class="guide-card">
+
+<ol>
+
+<li>Capture Avalon.</li>
+
+<li>Defend Avalon.</li>
+
+<li>Control Towers whenever possible.</li>
+
+<li>Prevent enemy occupation.</li>
+
+<li>Maintain continuous occupation for eight hours whenever possible.</li>
+
+<li>If no kingdom reaches eight hours, finish with the greatest accumulated
+occupation time.</li>
+
+</ol>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Your First Excalibur Invasion
+
+</h3>
+
+<p>
+
+The first Excalibur Invasion experienced by a new kingdom differs from later
+events.
+
+</p>
+
+<div class="guide-info">
+
+Instead of fighting enemy kingdoms, alliances compete only against other
+alliances within the same kingdom.
+
+</div>
+
+<p>
+
+This introductory event allows kingdoms to learn the mechanics before true
+cross-kingdom warfare begins.
+
+</p>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Primary Goals During First KvK
+
+</h3>
+
+<ul>
+
+<li>Learn tower mechanics.</li>
+
+<li>Practice rallies.</li>
+
+<li>Coordinate reinforcements.</li>
+
+<li>Capture Avalon.</li>
+
+<li>Understand occupation timing.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Recommended Strategy
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+For New Players
+
+</h3>
+
+<ul>
+
+<li>Join alliance rallies.</li>
+
+<li>Reinforce experienced leaders.</li>
+
+<li>Avoid unnecessary solo attacks.</li>
+
+<li>Keep hospitals available.</li>
+
+<li>Watch experienced commanders.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+For Experienced Players
+
+</h3>
+
+<ul>
+
+<li>Assign dedicated Tower teams.</li>
+
+<li>Rotate reinforcements.</li>
+
+<li>Maintain communication between alliances.</li>
+
+<li>Protect rally leaders.</li>
+
+<li>Monitor enemy teleport locations.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-note">
+
+This overview introduces the battlefield. The following tabs explain buildings,
+combat mechanics, shields, rewards, King mechanics, scoring, advanced
+strategies, and optimization in significantly greater detail.
+
+</div>
+
+`;
+
+//========== Solar Tab 2 ==========
+
+// Set false to hide this tab
+const solarTab2Visible = true;
+
+// Enter tab name
+const solarTab2Title = "Battlefield Buildings";
+
+// Enter HTML for this tab
+const solarTab2Content = `
+
+<h2 class="section-title">
+
+Battlefield Buildings
+
+</h2>
+
+<p>
+
+The Excalibur Invasion battlefield is built around five strategic objectives:
+Avalon and the four surrounding Towers. While Avalon determines victory,
+control of the Towers greatly increases an alliance's ability to defend the
+Throne and defeat enemy occupiers. Understanding how these buildings interact
+is one of the most important aspects of Kingdom vs. Kingdom.
+
+</p>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/solar3.jpg"
+alt="Avalon and Tower Layout">
+
+<div class="image-caption">
+
+Figure S2-1 — Avalon surrounded by the North, East, South, and West Towers.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Avalon
+
+</h3>
+
+<div class="guide-card">
+
+<p>
+
+Avalon is the central objective of every Excalibur Invasion. Only one alliance
+may occupy Avalon at any time, and the amount of time it remains under your
+kingdom's control ultimately determines the winner of the event.
+
+</p>
+
+<ul class="guide-checklist">
+
+<li>Can be occupied by only one alliance.</li>
+
+<li>May be attacked through solo attacks or rallies.</li>
+
+<li>May be reinforced by allied players.</li>
+
+<li>May be scouted.</li>
+
+<li>Counts as one occupied building when calculating Garrison Buff Levels.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-note">
+
+Although Avalon determines victory, defending it without controlling Towers is
+significantly more difficult.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+The Four Towers
+
+</h3>
+
+<p>
+
+The North, East, South and West Towers surround Avalon. Each Tower can be
+occupied independently and contributes toward powerful battlefield bonuses.
+
+</p>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Tower Benefits
+
+</h3>
+
+<ul>
+
+<li>Increase Garrison Buff Level.</li>
+
+<li>Improve troop combat statistics.</li>
+
+<li>Strengthen Avalon defenses.</li>
+
+<li>Attack enemy occupiers under specific conditions.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Tower Rules
+
+</h3>
+
+<ul>
+
+<li>One alliance occupies each Tower.</li>
+
+<li>Towers may be rallied.</li>
+
+<li>Towers may be reinforced.</li>
+
+<li>Towers may be scouted.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Garrison Buff Levels
+
+</h3>
+
+<p>
+
+After your kingdom continuously controls Avalon and/or Towers for twenty
+minutes, Garrison Buff Levels begin activating. These bonuses apply to troops
+occupying battlefield structures.
+
+</p>
+
+<div class="guide-warning">
+
+The occupation timer resets whenever control is lost.
+
+</div>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Buff Level</th>
+
+<th>Buildings Controlled</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>I</td>
+
+<td>1 Building</td>
+
+<td>Basic Garrison Buff</td>
+
+</tr>
+
+<tr>
+
+<td>II</td>
+
+<td>2 Buildings</td>
+
+<td>Improved Buff</td>
+
+</tr>
+
+<tr>
+
+<td>III</td>
+
+<td>3 Buildings</td>
+
+<td>Major Buff</td>
+
+</tr>
+
+<tr>
+
+<td>IV</td>
+
+<td>4 Buildings</td>
+
+<td>Maximum Buff</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-info">
+
+Avalon counts as one occupied building. Therefore, controlling Avalon plus
+three Towers is sufficient to reach the maximum Garrison Buff Level.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Garrison Buff Effects
+
+</h3>
+
+<p>
+
+Each Garrison Buff Level increases the combat effectiveness of troops defending
+battlefield objectives.
+
+</p>
+
+<div class="guide-card">
+
+<ul class="guide-checklist">
+
+<li>Troop Attack</li>
+
+<li>Troop Defense</li>
+
+<li>Troop Health</li>
+
+<li>Infantry Attack, Defense and Health</li>
+
+<li>Cavalry Attack, Defense and Health</li>
+
+<li>Bowmen Attack, Defense and Health</li>
+
+</ul>
+
+</div>
+
+<div class="guide-note">
+
+These bonuses are added directly to your existing troop statistics rather than
+multiplying them.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Tower Attacks
+
+</h3>
+
+<p>
+
+One of the least understood mechanics is that Towers may attack Avalon.
+
+</p>
+
+<div class="guide-warning">
+
+If one alliance occupies Avalon while another alliance occupies one or more
+Towers, those Towers periodically attack the troops stationed inside Avalon.
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Example
+
+</h3>
+
+<p>
+
+Alliance A controls Avalon while Alliance B controls the East and South Towers.
+Even if both alliances belong to the same kingdom, those Towers will continue
+attacking Alliance A until ownership changes.
+
+</p>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Combat Rules
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Allowed
+
+</h3>
+
+<ul>
+
+<li>Solo attacks</li>
+
+<li>Alliance rallies</li>
+
+<li>Reinforcements</li>
+
+<li>Scouting</li>
+
+<li>Mega Garrisons</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Restrictions
+
+</h3>
+
+<ul>
+
+<li>Only one occupying march per structure.</li>
+
+<li>Every player must choose where to commit their battlefield march.</li>
+
+<li>Strong coordination is required during heavy fighting.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Strategic Priorities
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Early Battle
+
+</h3>
+
+<p>
+
+Capture Towers quickly before committing to prolonged Avalon defense.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Mid Battle
+
+</h3>
+
+<p>
+
+Rotate reinforcements while maintaining maximum Garrison Buff Levels.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Late Battle
+
+</h3>
+
+<p>
+
+Protect continuous Avalon occupation while preventing enemy Tower control.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-success">
+
+Successful kingdoms treat Avalon and the Towers as a single objective.
+Controlling both simultaneously provides a decisive battlefield advantage and
+greatly increases the likelihood of maintaining long occupation times.
+
+</div>
+
+`;
+
+//========== Solar Tab 3 ==========
+
+// Set false to hide this tab
+const solarTab3Visible = true;
+
+// Enter tab name
+const solarTab3Title = "Battle Mechanics";
+
+// Enter HTML for this tab
+const solarTab3Content = `
+
+<h2 class="section-title">
+
+Battle Mechanics
+
+</h2>
+
+<p>
+
+Winning Excalibur Invasion is not simply a matter of defeating enemy troops.
+Successful kingdoms understand when Avalon can be attacked, how battlefield
+shields function, and how occupation timing influences the flow of battle.
+Knowing these mechanics prevents wasted rallies and allows alliances to
+coordinate attacks at the most effective moments.
+
+</p>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/solar4.jpg"
+alt="Avalon Shield States">
+
+<div class="image-caption">
+
+Figure S3-1 — Peace Shield, Invasion Shield and Reclaim Shield.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+The Three Avalon Shields
+
+</h3>
+
+<p>
+
+Throughout Excalibur Invasion, Avalon cycles through three different shield
+states. Understanding each shield allows alliances to properly time attacks,
+avoid wasting rallies, and prepare for changing battlefield conditions.
+
+</p>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Shield</th>
+
+<th>Purpose</th>
+
+<th>Avalon Attackable?</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Peace Shield</td>
+
+<td>Protects Avalon before the event begins.</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>Invasion Shield</td>
+
+<td>Protects invading occupiers.</td>
+
+<td>No*</td>
+
+</tr>
+
+<tr>
+
+<td>Reclaim Shield</td>
+
+<td>Protects defenders after reclaiming Avalon.</td>
+
+<td>No</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-note">
+
+*The Invasion Shield remains active until every invading troop has been removed
+from Avalon. 0
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Peace Shield
+
+</h3>
+
+<div class="guide-card">
+
+<p>
+
+The Peace Shield protects Avalon before Excalibur Invasion officially begins.
+
+</p>
+
+<ul>
+
+<li>Avalon cannot be attacked.</li>
+
+<li>No occupation is possible.</li>
+
+<li>The timer above Avalon displays the remaining time until the event opens.</li>
+
+<li>All kingdoms use this period to organize alliances and prepare troops.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-info">
+
+When the countdown reaches zero, the Peace Shield disappears and Excalibur
+Invasion officially begins. 1
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Invasion Shield
+
+</h3>
+
+<p>
+
+When a kingdom successfully occupies another kingdom's Avalon, an Invasion
+Shield immediately protects the occupying force.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Enemy kingdoms cannot attack Avalon while the shield remains active.</li>
+
+<li>The shield cannot be manually removed.</li>
+
+<li>The shield disappears only after every invading troop has left or been defeated.</li>
+
+<li>Members of the occupying kingdom may continue sending marches normally.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-warning">
+
+The Invasion Shield does <b>not</b> prevent civil wars.
+
+If multiple alliances from the same kingdom compete for Avalon or the Towers,
+they may still attack each other while the Invasion Shield is active. 2
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Rallies Already Underway
+
+</h3>
+
+<p>
+
+If a rally is launched before the Invasion Shield activates, the rally still
+resolves normally.
+
+</p>
+
+<ul>
+
+<li>If the defenders successfully hold Avalon, the Invasion Shield activates.</li>
+
+<li>If the attackers capture Avalon, the shield never activates because the
+occupying force has already been defeated.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Reclaim Shield
+
+</h3>
+
+<p>
+
+When defenders successfully recover their own Avalon through combat, Merlin
+grants a temporary Reclaim Shield.
+
+</p>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Important Rules
+
+</h3>
+
+<ul>
+
+<li>Duration ranges from approximately <b>1 minute to 1 hour</b>.</li>
+
+<li>Longer enemy occupation creates a longer Reclaim Shield.</li>
+
+<li>A successful battle must occur.</li>
+
+<li>If invaders voluntarily withdraw before combat, no Reclaim Shield appears.</li>
+
+<li>Even defeating a single occupying troop activates the shield.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-note">
+
+If both the Invasion Shield and Reclaim Shield would activate simultaneously,
+the Invasion Shield always takes priority. 3
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Battle Timing
+
+</h3>
+
+<p>
+
+Successful kingdoms coordinate attacks around shield timers instead of launching
+constant assaults.
+
+</p>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Good Timing
+
+</h3>
+
+<ul>
+
+<li>Coordinate rally arrivals.</li>
+
+<li>Synchronize reinforcements.</li>
+
+<li>Monitor shield expiration.</li>
+
+<li>Capture Towers before long Avalon defenses.</li>
+
+<li>Rotate defenders before hospitals fill.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Poor Timing
+
+</h3>
+
+<ul>
+
+<li>Launching rallies into active shields.</li>
+
+<li>Ignoring reclaim protection.</li>
+
+<li>Late reinforcements.</li>
+
+<li>Random solo attacks.</li>
+
+<li>Splitting alliance strength across multiple objectives.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+City Combat
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Inside the Black Forest
+
+</h3>
+
+<ul>
+
+<li>Enemy cities may attack you.</li>
+
+<li>Resources may be plundered.</li>
+
+<li>Troops may be permanently lost.</li>
+
+<li>Invading cities return home when defeated.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Outside the Black Forest
+
+</h3>
+
+<ul>
+
+<li>Enemy kingdoms cannot directly attack your city.</li>
+
+<li>You remain protected while preparing marches.</li>
+
+<li>You may still participate in rallies and reinforcements.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Battlefield Priorities
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Priority 1
+
+</h3>
+
+<p>
+
+Maintain communication between alliance leadership.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Priority 2
+
+</h3>
+
+<p>
+
+Capture and defend the Towers before committing to extended Avalon occupations.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Priority 3
+
+</h3>
+
+<p>
+
+Rotate rally leaders and reinforcements to keep hospitals under control.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Priority 4
+
+</h3>
+
+<p>
+
+Attack only when shield mechanics favor your kingdom.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-success">
+
+The strongest kingdoms rarely waste troops attacking into unfavorable shield
+timers. They monitor battlefield mechanics continuously, coordinate rallies with
+precision, and exploit every opportunity created when enemy protection expires.
+
+</div>
+
+`;
+  
+//========== Solar Tab 4 ==========
+
+// Set false to hide this tab
+const solarTab4Visible = true;
+
+// Enter tab name
+const solarTab4Title = "Scoring & Rewards";
+
+// Enter HTML for this tab
+const solarTab4Content = `
+
+<h2 class="section-title">
+
+Scoring & Rewards
+
+</h2>
+
+<p>
+
+Excalibur Invasion rewards active participation. Individual points are earned
+through occupation of Avalon buildings and by defeating enemy troops. Kingdom
+victory provides additional benefits through royal authority, kingdom buffs, and
+exclusive rewards.
+
+</p>
+
+<div class="guide-info">
+
+Occupying Avalon buildings provides occupation points, while combat against
+enemy kingdoms provides troop point rewards. Battles against members of your
+own kingdom do <b>not</b> award individual points.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Occupation Points
+
+</h3>
+
+<p>
+
+Every minute spent occupying Avalon or its surrounding Towers contributes
+toward your individual score.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Occupation points are capped.</li>
+
+<li>Combat points have no practical limit.</li>
+
+<li>Long occupations produce the greatest passive score.</li>
+
+<li>Remaining active throughout the event is strongly encouraged.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-note">
+
+Players who actively defend occupied buildings generally earn substantially more
+points than players who only participate in isolated attacks.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Combat Points
+
+</h3>
+
+<p>
+
+Additional points are earned whenever enemy troops are defeated. You also
+receive points for your own troop losses against enemy kingdoms, encouraging
+active participation throughout the event.
+
+</p>
+
+<div class="guide-warning">
+
+Battles against members of your own kingdom never award KvK points.
+
+</div>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Troop Tier</th>
+
+<th>Points Per Loss</th>
+
+<th>Points Per Kill</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>T13</td>
+
+<td>180</td>
+
+<td>540</td>
+
+</tr>
+
+<tr>
+
+<td>T12</td>
+
+<td>150</td>
+
+<td>450</td>
+
+</tr>
+
+<tr>
+
+<td>T11</td>
+
+<td>120</td>
+
+<td>360</td>
+
+</tr>
+
+<tr>
+
+<td>T10</td>
+
+<td>90</td>
+
+<td>270</td>
+
+</tr>
+
+<tr>
+
+<td>T9</td>
+
+<td>60</td>
+
+<td>180</td>
+
+</tr>
+
+<tr>
+
+<td>T8</td>
+
+<td>40</td>
+
+<td>120</td>
+
+</tr>
+
+<tr>
+
+<td>T7</td>
+
+<td>27</td>
+
+<td>81</td>
+
+</tr>
+
+<tr>
+
+<td>T6</td>
+
+<td>18</td>
+
+<td>54</td>
+
+</tr>
+
+<tr>
+
+<td>T5</td>
+
+<td>12</td>
+
+<td>36</td>
+
+</tr>
+
+<tr>
+
+<td>T4</td>
+
+<td>8</td>
+
+<td>24</td>
+
+</tr>
+
+<tr>
+
+<td>T3</td>
+
+<td>4</td>
+
+<td>12</td>
+
+</tr>
+
+<tr>
+
+<td>T2</td>
+
+<td>2</td>
+
+<td>6</td>
+
+</tr>
+
+<tr>
+
+<td>T1</td>
+
+<td>1</td>
+
+<td>3</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-note">
+
+The official guide notes these values were created before Tier 14 troops were
+introduced. Future game updates may adjust point values for newer troop tiers.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Individual Rewards
+
+</h3>
+
+<p>
+
+Individual milestone rewards are unlocked automatically as your total score
+increases.
+
+</p>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Primary Sources of Points
+
+</h3>
+
+<ul>
+
+<li>Holding Avalon.</li>
+
+<li>Holding Towers.</li>
+
+<li>Defeating enemy troops.</li>
+
+<li>Losing troops against enemy kingdoms.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-success">
+
+Even players who cannot compete for top rankings should participate
+throughout the event to maximize milestone rewards.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Winning the Kingdom
+
+</h3>
+
+<p>
+
+Capturing your kingdom's Avalon grants control of the kingdom after the event
+ends.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>The winning alliance R5 gains the right to crown the King.</li>
+
+<li>If no King is selected within two hours, the alliance R5 automatically
+becomes King.</li>
+
+<li>The King may leave the alliance and retain the crown.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Royal Packages
+
+</h3>
+
+<p>
+
+Every conquered kingdom awards one complete set of Royal Packages for the
+King to distribute.
+
+</p>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Package</th>
+
+<th>Quantity</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Royal Support Packs</td>
+
+<td>15</td>
+
+</tr>
+
+<tr>
+
+<td>Defender Packs</td>
+
+<td>5</td>
+
+</tr>
+
+<tr>
+
+<td>Conqueror Pack</td>
+
+<td>1</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-note">
+
+Package contents occasionally change with game updates. Always inspect the
+current reward list before distributing packages.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Resource Tax
+
+</h3>
+
+<p>
+
+Kingdoms that lose Avalon become subject to a Resource Tax.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Taxes are collected through player trading.</li>
+
+<li>The King allocates collected resources.</li>
+
+<li>Higher Trading Post levels reduce the amount collected through taxation.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Strategic Advice
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Do
+
+</h3>
+
+<ul>
+
+<li>Stay active.</li>
+
+<li>Occupy buildings.</li>
+
+<li>Join rallies.</li>
+
+<li>Defend teammates.</li>
+
+<li>Fight enemy kingdoms.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Avoid
+
+</h3>
+
+<ul>
+
+<li>Fighting your own kingdom.</li>
+
+<li>Leaving buildings undefended.</li>
+
+<li>Ignoring occupation opportunities.</li>
+
+<li>Waiting until late in the event to participate.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-success">
+
+The highest-scoring players combine continuous building occupation with steady
+participation in organized kingdom combat rather than focusing exclusively on
+either objective.
+
+</div>
+
+`;
+  
+//========== Solar Tab 5 ==========
+
+// Set false to hide this tab
+const solarTab5Visible = true;
+
+// Enter tab name
+const solarTab5Title = "Kingdom Leadership";
+
+// Enter HTML for this tab
+const solarTab5Content = `
+
+<h2 class="section-title">
+
+Kingdom Leadership
+
+</h2>
+
+<p>
+
+Victory in Excalibur Invasion grants far more than battlefield prestige. The
+alliance that conquers Avalon gains control of the kingdom, allowing it to
+appoint a King, distribute Royal Packages, assign Royal Titles, activate King
+Skills, and manage kingdom-wide administration through the Great Hall. Strong
+leadership after KvK is just as important as victory during the battle itself.
+
+</p>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/solar5.jpg"
+alt="Kingdom Leadership">
+
+<div class="image-caption">
+
+Figure S5-1 — Kingdom leadership interface after a successful Excalibur
+Invasion.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Choosing a King
+
+</h3>
+
+<div class="guide-card">
+
+<p>
+
+When Excalibur Invasion concludes, the R5 of the alliance occupying Avalon gains
+the authority to appoint the kingdom's King.
+
+</p>
+
+<ul>
+
+<li>The King may be any eligible player.</li>
+
+<li>The King does not have to remain in the conquering alliance.</li>
+
+<li>If no King is appointed within two hours, the alliance R5 automatically
+becomes King.</li>
+
+<li>Only one King may exist at a time.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-info">
+
+The King becomes the administrative leader of the entire kingdom rather than
+only a single alliance.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Great Hall
+
+</h3>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/solar6.jpg"
+alt="Great Hall">
+
+<div class="image-caption">
+
+Figure S5-2 — The Great Hall provides access to kingdom administration.
+
+</div>
+
+<p>
+
+Every kingdom member can access the Great Hall to review important kingdom
+information.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Current King.</li>
+
+<li>Kingdom Name.</li>
+
+<li>Kingdom Message.</li>
+
+<li>Kingdom Banner.</li>
+
+<li>King Skill History.</li>
+
+<li>Royal Title assignments.</li>
+
+<li>Quick access to Avalon.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Royal Packages
+
+</h3>
+
+<p>
+
+Each conquered kingdom generates one complete set of Royal Packages for the
+King to distribute as rewards.
+
+</p>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Package</th>
+
+<th>Quantity</th>
+
+<th>Typical Use</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Royal Support</td>
+
+<td>15</td>
+
+<td>General kingdom rewards.</td>
+
+</tr>
+
+<tr>
+
+<td>Defender</td>
+
+<td>5</td>
+
+<td>Major battlefield contributors.</td>
+
+</tr>
+
+<tr>
+
+<td>Conqueror</td>
+
+<td>1</td>
+
+<td>Highest-value reward package.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-note">
+
+Package contents may change between game updates. Always review current rewards
+before distributing them.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Royal Titles
+
+</h3>
+
+<p>
+
+The King may assign beneficial Knight Titles and punitive Fool Titles.
+Titles may only be changed once every 24 hours, encouraging thoughtful
+distribution rather than constant reassignment.
+
+</p>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Knight Titles
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Title</th>
+
+<th>Primary Benefit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr><td>Humility</td><td>Construction, Research and Training Speed</td></tr>
+<tr><td>Honesty</td><td>Resource Production</td></tr>
+<tr><td>Compassion</td><td>Training Speed and Reduced Troop Upkeep</td></tr>
+<tr><td>Valor</td><td>Troop Attack</td></tr>
+<tr><td>Justice</td><td>Infantry Damage</td></tr>
+<tr><td>Sacrifice</td><td>Healing Speed and Reduced Healing Cost</td></tr>
+<tr><td>Honor</td><td>March Capacity and Troop Health</td></tr>
+<tr><td>Spirituality</td><td>March Speed and Reduced Training Cost</td></tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-success">
+
+Experienced kingdoms rotate Knight Titles to match current kingdom objectives.
+Development titles are often assigned during Growth events, while combat titles
+are reserved for Kingdom vs. Kingdom and Ultimate Alliance Conquest.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Fool Titles
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Title</th>
+
+<th>Penalty</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr><td>Pride</td><td>Reduced March Speed and Increased Training Cost</td></tr>
+<tr><td>Envy</td><td>Reduced Troop Attack</td></tr>
+<tr><td>Wrath</td><td>Reduced Construction, Research and Training Speed</td></tr>
+<tr><td>Sloth</td><td>Reduced March Speed</td></tr>
+<tr><td>Greed</td><td>Reduced Training Speed</td></tr>
+<tr><td>Gluttony</td><td>Reduced March Capacity and Troop Health</td></tr>
+<tr><td>Lust</td><td>Reduced Healing Efficiency</td></tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-warning">
+
+Although often assigned humorously, Fool Titles apply genuine gameplay
+penalties. Most kingdoms reserve them for special events or internal jokes
+rather than routine administration.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Resource Tax
+
+</h3>
+
+<p>
+
+Following a successful invasion, defeated kingdoms become subject to Resource
+Tax whenever players trade resources.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Taxes are collected automatically.</li>
+
+<li>The King controls tax distribution.</li>
+
+<li>Higher Trading Post levels reduce trade fees and therefore reduce taxation.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Characteristics of Strong Leadership
+
+</h3>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Effective Kings
+
+</h3>
+
+<ul>
+
+<li>Communicate clearly.</li>
+
+<li>Reward battlefield participation.</li>
+
+<li>Rotate Knight Titles fairly.</li>
+
+<li>Schedule kingdom buffs.</li>
+
+<li>Support long-term kingdom growth.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Poor Leadership
+
+</h3>
+
+<ul>
+
+<li>Hoard Royal Packages.</li>
+
+<li>Ignore active contributors.</li>
+
+<li>Assign titles unfairly.</li>
+
+<li>Waste Royal Coins.</li>
+
+<li>Create unnecessary kingdom conflict.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-success">
+
+A successful King strengthens the entire kingdom long after Excalibur Invasion
+ends. Fair leadership, transparent communication, and thoughtful distribution
+of titles and rewards build stronger alliances and improve participation in
+future Kingdom vs. Kingdom events.
+
+</div>
+
+`;
+
+//========== Solar Tab 6 ==========
+
+// Set false to hide this tab
+const solarTab6Visible = true;
+
+// Enter tab name
+const solarTab6Title = "King Skills";
+
+// Enter HTML for this tab
+const solarTab6Content = `
+
+<h2 class="section-title">
+
+King Skills
+
+</h2>
+
+<p>
+
+After a King has been appointed, they gain access to a collection of powerful
+King Skills that can benefit the entire kingdom or assist with kingdom
+administration. These abilities are activated using <b>Royal Coins</b>, which
+are earned collectively by the kingdom through defeating Monsters and
+Barbarian Camps.
+
+</p>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/solar7.jpg"
+alt="King Skills">
+
+<div class="image-caption">
+
+Figure S6-1 — The King Skills interface within the Great Hall.
+
+</div>
+
+<div class="guide-info">
+
+Royal Coins belong to the kingdom rather than the King personally. Wise Kings
+coordinate buffs with alliance leadership to maximize their benefit across the
+entire kingdom.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Royal Coins
+
+</h3>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Collected by defeating Monsters.</li>
+
+<li>Collected by defeating Barbarian Camps.</li>
+
+<li>Shared across the kingdom.</li>
+
+<li>Consumed whenever a King Skill is activated.</li>
+
+<li>Every activation is recorded in the Great Hall.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-note">
+
+King Skill History allows every player to review previously activated skills,
+promoting transparency and helping alliances plan around future buffs.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+King Skill Reference
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Skill</th>
+
+<th>Effect</th>
+
+<th>Royal Coins</th>
+
+<th>Cooldown</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Black Market Contracts</td>
+<td>Exchange Royal Coins for Gold.</td>
+<td>3,000</td>
+<td>24 Hours</td>
+</tr>
+
+<tr>
+<td>Rapid Training</td>
+<td>Accelerates troop retraining after major battles.</td>
+<td>10,000</td>
+<td>336 Hours</td>
+</tr>
+
+<tr>
+<td>Forced Teleport</td>
+<td>Randomly relocates a selected city within the kingdom.</td>
+<td>3,000</td>
+<td>2 Hours</td>
+</tr>
+
+<tr>
+<td>Attack Ban</td>
+<td>Temporarily prevents Lords from attacking one another.</td>
+<td>5,000</td>
+<td>2 Hours</td>
+</tr>
+
+<tr>
+<td>Eagle Eye</td>
+<td>Locate any city within the kingdom.</td>
+<td>2,000</td>
+<td>2 Hours</td>
+</tr>
+
+<tr>
+<td>Troop Surge</td>
+<td>Training Speed +30%.</td>
+<td>5,000</td>
+<td>168 Hours</td>
+</tr>
+
+<tr>
+<td>Age of Development</td>
+<td>Construction Speed +20%.</td>
+<td>3,000</td>
+<td>168 Hours</td>
+</tr>
+
+<tr>
+<td>Guided Recovery</td>
+<td>Healing Cost -30%.</td>
+<td>3,000</td>
+<td>168 Hours</td>
+</tr>
+
+<tr>
+<td>Prosperous Land</td>
+<td>Additional Gold from purchases.</td>
+<td>10,000</td>
+<td>168 Hours</td>
+</tr>
+
+<tr>
+<td>Land of Learning</td>
+<td>Research Speed +20%.</td>
+<td>3,000</td>
+<td>168 Hours</td>
+</tr>
+
+<tr>
+<td>Bountiful Kingdom</td>
+<td>Gathering Speed +20%.</td>
+<td>2,000</td>
+<td>2 Hours</td>
+</tr>
+
+<tr>
+<td>Recruitment Drive</td>
+<td>Troop Training Cost -30%.</td>
+<td>3,000</td>
+<td>168 Hours</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Recommended Buff Rotation
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Kingdom Situation</th>
+
+<th>Recommended Skill</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Immediately after KvK</td>
+<td>Guided Recovery</td>
+</tr>
+
+<tr>
+<td>Retraining armies</td>
+<td>Troop Surge</td>
+</tr>
+
+<tr>
+<td>Growth Event</td>
+<td>Recruitment Drive</td>
+</tr>
+
+<tr>
+<td>Research Event</td>
+<td>Land of Learning</td>
+</tr>
+
+<tr>
+<td>Construction Event</td>
+<td>Age of Development</td>
+</tr>
+
+<tr>
+<td>Gathering Event</td>
+<td>Bountiful Kingdom</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-success">
+
+Coordinating kingdom-wide buffs with scheduled events dramatically increases
+their overall value. Announcing activations several hours in advance allows
+players to prepare construction, research, troop training, or healing before
+the buff begins.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Administrative Skills
+
+</h3>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Attack Ban
+
+</h3>
+
+<p>
+
+Temporarily prevents Lords from attacking one another. Commonly used during
+migration periods, diplomatic negotiations, or after Kingdom vs. Kingdom to
+reduce unnecessary internal conflict.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Forced Teleport
+
+</h3>
+
+<p>
+
+Randomly relocates a selected city within the kingdom. This administrative tool
+is generally reserved for resolving map congestion or handling disruptive
+players.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Eagle Eye
+
+</h3>
+
+<p>
+
+Instantly locates any city within the kingdom. Useful for tracking inactive
+players, migration targets, or resolving kingdom disputes.
+
+</p>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Kingdom Management Tips
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Plan Ahead
+
+</h3>
+
+<p>
+
+Publish a weekly kingdom buff schedule whenever possible.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Communicate
+
+</h3>
+
+<p>
+
+Notify alliance leaders before activating expensive skills.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Spend Carefully
+
+</h3>
+
+<p>
+
+Royal Coins are a shared kingdom resource and should never be wasted.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Coordinate Events
+
+</h3>
+
+<p>
+
+Synchronize buffs with Growth, Research, Construction, and KvK rebuilding.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Common Mistakes
+
+</h3>
+
+<div class="guide-warning">
+
+<ul>
+
+<li>Activating buffs without advance notice.</li>
+
+<li>Using expensive skills during low player activity.</li>
+
+<li>Spending Royal Coins on unnecessary administrative actions.</li>
+
+<li>Ignoring cooldown timers when planning kingdom events.</li>
+
+<li>Failing to coordinate with alliance leadership.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Final Thoughts
+
+</h3>
+
+<div class="guide-success">
+
+King Skills are one of the greatest long-term advantages earned through
+Excalibur Invasion. While individual buffs may appear modest, coordinated use
+over weeks or months significantly accelerates kingdom development, strengthens
+future KvK performance, and rewards the entire player base. Effective Kings view
+Royal Coins as a strategic kingdom investment rather than a personal resource.
+
+</div>
+
+`;
+
+//========== Solar Tab 7 ==========
+
+// Set false to hide this tab
+const solarTab7Visible = true;
+
+// Enter tab name
+const solarTab7Title = "Advanced Strategy";
+
+// Enter HTML for this tab
+const solarTab7Content = `
+
+<h2 class="section-title">
+
+Advanced Strategy
+
+</h2>
+
+<p>
+
+Once players understand the battlefield mechanics, victory becomes a matter of
+coordination, communication, and endurance. The strongest kingdoms rarely win
+through superior statistics alone—they win by executing a strategy that allows
+thousands of players to fight as a single force.
+
+</p>
+
+<div class="guide-info">
+
+Excalibur Invasion is not won by the alliance with the strongest player.
+It is won by the kingdom that coordinates its players most effectively.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Kingdom Organization
+
+</h3>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Before KvK
+
+</h3>
+
+<ul>
+
+<li>Assign rally leaders.</li>
+
+<li>Assign primary garrison leaders.</li>
+
+<li>Create reinforcement groups.</li>
+
+<li>Assign Tower responsibilities.</li>
+
+<li>Prepare communication channels.</li>
+
+<li>Review march presets.</li>
+
+<li>Confirm online schedules.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+During KvK
+
+</h3>
+
+<ul>
+
+<li>Maintain centralized leadership.</li>
+
+<li>Rotate defenders.</li>
+
+<li>Track occupation timers.</li>
+
+<li>Watch enemy teleports.</li>
+
+<li>Coordinate rallies.</li>
+
+<li>Keep reserve troops available.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Recommended Roles
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Role</th>
+
+<th>Primary Responsibility</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Main Rally Leader</td>
+
+<td>Launch primary attacks on Avalon and Towers.</td>
+
+</tr>
+
+<tr>
+
+<td>Garrison Leader</td>
+
+<td>Defend occupied objectives.</td>
+
+</tr>
+
+<tr>
+
+<td>Reinforcement Team</td>
+
+<td>Maintain troop numbers inside occupied buildings.</td>
+
+</tr>
+
+<tr>
+
+<td>Scout</td>
+
+<td>Monitor enemy movement and rally activity.</td>
+
+</tr>
+
+<tr>
+
+<td>Support Players</td>
+
+<td>Join rallies, reinforce buildings, and provide healing support.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Opening Strategy
+
+</h3>
+
+<div class="guide-card">
+
+<ol>
+
+<li>Move alliances into position before objectives open.</li>
+
+<li>Capture assigned Towers immediately.</li>
+
+<li>Prepare reinforcement marches before combat begins.</li>
+
+<li>Coordinate the first Avalon rally.</li>
+
+<li>Establish communication between every participating alliance.</li>
+
+</ol>
+
+</div>
+
+<div class="guide-success">
+
+The first thirty minutes frequently determine the pace of the entire event.
+Early organization often provides a lasting advantage.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Mid-Battle Strategy
+
+</h3>
+
+<p>
+
+Once both kingdoms have established control of various objectives, the battle
+becomes one of endurance.
+
+</p>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Rotate Defenders
+
+</h3>
+
+<p>
+
+Replace weakened marches before hospitals become overwhelmed.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Maintain Towers
+
+</h3>
+
+<p>
+
+Never sacrifice every Tower simply to reinforce Avalon.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Protect Rally Leaders
+
+</h3>
+
+<p>
+
+Allow your strongest commanders to remain available for major engagements.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Conserve Resources
+
+</h3>
+
+<p>
+
+Avoid unnecessary solo attacks that generate casualties without improving
+occupation time.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Late Battle Strategy
+
+</h3>
+
+<p>
+
+As the event approaches its conclusion, every minute of occupation becomes more
+valuable.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Maintain continuous occupation whenever possible.</li>
+
+<li>Rotate reinforcements aggressively.</li>
+
+<li>Coordinate simultaneous rallies.</li>
+
+<li>Protect remaining healing resources.</li>
+
+<li>Monitor enemy rally timers continuously.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Common Mistakes
+
+</h3>
+
+<div class="guide-warning">
+
+<ul>
+
+<li>Launching solo attacks instead of joining rallies.</li>
+
+<li>Ignoring Tower occupations.</li>
+
+<li>Teleporting into the Black Forest without alliance support.</li>
+
+<li>Overfilling hospitals early in the event.</li>
+
+<li>Failing to reinforce occupied buildings.</li>
+
+<li>Ignoring alliance communication.</li>
+
+<li>Leaving objectives undefended after capture.</li>
+
+<li>Focusing on kill counts instead of occupation time.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Veteran Tips
+
+</h3>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Prepare multiple troop presets before the event begins.</li>
+
+<li>Keep one march available for emergency reinforcement.</li>
+
+<li>Watch enemy rally timers instead of reacting after rallies launch.</li>
+
+<li>Track hospital capacity throughout the battle.</li>
+
+<li>Rotate high-power players before they become exhausted.</li>
+
+<li>Maintain kingdom-wide communication rather than alliance-only chat.</li>
+
+<li>Save healing speedups for prolonged engagements.</li>
+
+<li>Coordinate every major teleport with alliance leadership.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Final Thoughts
+
+</h3>
+
+<div class="guide-success">
+
+Excalibur Invasion rewards preparation, discipline, and teamwork. Every player,
+from the newest recruit to the strongest rally leader, contributes to victory.
+Kingdoms that communicate effectively, assign responsibilities before battle,
+and adapt quickly to changing conditions consistently outperform kingdoms with
+greater individual power but weaker coordination.
+
+</div>
+
+<div class="guide-note">
+
+This concludes the Solar Kingdom guide. The Lunar Kingdom guide introduces the
+Wheel War battlefield, which uses completely different mechanics including
+Forts, Lone March Stamina, Convergence, sequential one-versus-one combat, and
+Fort Occupation Shields.
+
+</div>
+
+`;
+  
+//========== Lunar Guide ==========
+
+// Enter Introduction (HTML)
+const lunarIntroduction = `
+
+<h2 class="section-title">
+
+Lunar Kingdoms
+
+</h2>
+
+<h3 class="section-subtitle">
+
+Wheel War
+
+</h3>
+
+<p>
+
+Wheel War is the Lunar Kingdom version of Kingdom vs. Kingdom and represents
+the largest redesign of Avalon warfare since the original Excalibur Invasion.
+While Avalon and the four Towers remain the primary objectives, four additional
+Forts introduce an entirely new battlefield built around individual duels,
+coordinated assaults, and continuous battlefield control.
+
+</p>
+
+<p>
+
+Unlike the traditional Solar battlefield, Fort combat does not use rallies or
+mega garrisons. Instead, every battle is fought as a sequence of individual
+one-versus-one engagements, requiring careful timing, coordination, and troop
+management.
+
+</p>
+
+<div class="guide-info">
+
+The information contained in this section applies <b>only</b> to Lunar Kingdoms
+participating in Wheel War. Although both Solar and Lunar kingdoms participate
+in Kingdom vs. Kingdom, their battlefield mechanics are completely different.
+
+</div>
+
+<div class="guide-note">
+
+<b>Image Placeholder</b><br>
+
+<b>lunar1</b> — Complete Wheel War battlefield showing Avalon, Towers, and all
+four Forts.
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="block-title">
+
+Major Differences From Solar KvK
+
+</h3>
+
+<ul>
+
+<li>Four new Forts surround Avalon.</li>
+
+<li>Forts use sequential one-versus-one battles.</li>
+
+<li>Lone March Stamina replaces unlimited Fort attacks.</li>
+
+<li>Convergence replaces traditional rally mechanics.</li>
+
+<li>Fort Occupation Shields introduce additional strategic timing.</li>
+
+<li>Most Fort casualties become wounded instead of permanent losses.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-success">
+
+Players familiar with traditional Excalibur Invasion should avoid assuming Solar
+mechanics apply here. Wheel War rewards coordination and timing much more than
+continuous rally combat.
+
+</div>
+
+`;
+
+
+
+//========== Lunar Tab 1 ==========
+
+// Set false to hide this tab
+const lunarTab1Visible = true;
+
+// Enter tab name
+const lunarTab1Title = "Overview";
+
+// Enter HTML for this tab
+const lunarTab1Content = `
+
+<h2 class="section-title">
+
+Wheel War Overview
+
+</h2>
+
+<p>
+
+Wheel War expands the traditional Avalon battlefield by introducing four
+strategic Forts positioned around Avalon and its Towers. These Forts create a
+second battlefield operating simultaneously with the normal Avalon battle.
+
+</p>
+
+<div class="guide-info">
+
+According to the official Wheel War guide, players may simultaneously occupy
+Avalon (or a Tower) while also maintaining one march in each of the four Forts,
+allowing participation in up to five strategic objectives at once. 0
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Battlefield Objectives
+
+</h3>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Traditional Objectives
+
+</h3>
+
+<ul>
+
+<li>Avalon</li>
+
+<li>North Tower</li>
+
+<li>East Tower</li>
+
+<li>South Tower</li>
+
+<li>West Tower</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+New Objectives
+
+</h3>
+
+<ul>
+
+<li>Fort I</li>
+
+<li>Fort II</li>
+
+<li>Fort III</li>
+
+<li>Fort IV</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-note">
+
+<b>Image Placeholder</b><br>
+
+<b>lunar2</b> — Numbered battlefield showing every Fort and Tower.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Why Forts Matter
+
+</h3>
+
+<p>
+
+Forts are not simply additional buildings. They accelerate Avalon occupation and
+introduce entirely new strategic decisions.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Generate additional occupation time.</li>
+
+<li>Increase maximum Garrison Buff levels.</li>
+
+<li>Provide additional Invasion Points.</li>
+
+<li>Create additional battlefronts.</li>
+
+<li>Reward coordinated alliances.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-success">
+
+Occupying Avalon while simultaneously controlling one or more Forts accelerates
+the Throne occupation process, making Fort control one of the most important
+objectives in Wheel War. 1
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Expanded Garrison Buffs
+
+</h3>
+
+<p>
+
+Traditional Excalibur Invasion uses five Garrison Buff levels.
+
+</p>
+
+<p>
+
+Wheel War increases this to <b>nine</b> possible levels through the addition of
+the four Forts.
+
+</p>
+
+<div class="guide-card">
+
+<p>
+
+Every additional occupied Fort contributes toward stronger battlefield bonuses,
+making widespread map control significantly more valuable than in Solar
+Kingdoms.
+
+</p>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Victory Philosophy
+
+</h3>
+
+<p>
+
+Unlike traditional KvK, Wheel War encourages kingdoms to spread experienced
+players across multiple objectives instead of concentrating everyone inside a
+single mega rally.
+
+</p>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Traditional Thinking
+
+</h3>
+
+<p>
+
+Build one overwhelming rally.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Wheel War Thinking
+
+</h3>
+
+<p>
+
+Coordinate dozens of independent attacks arriving together.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-warning">
+
+Kingdoms that ignore Forts usually lose significant occupation time even if they
+temporarily control Avalon.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Preparation Checklist
+
+</h3>
+
+<ul class="guide-checklist">
+
+<li>Prepare multiple solo march presets.</li>
+
+<li>Understand Wheel War combat order.</li>
+
+<li>Monitor Lone March Stamina.</li>
+
+<li>Coordinate Convergence timing.</li>
+
+<li>Assign Fort responsibilities before battle begins.</li>
+
+<li>Maintain communication between all participating alliances.</li>
+
+</ul>
+
+<div class="guide-note">
+
+The following tabs explain every Fort mechanic, Wheel War battle sequence,
+Occupation Shields, Convergence, scoring, and advanced strategy in detail.
+
+</div>
+
+`;
+
+//========== Lunar Tab 2 ==========
+
+// Set false to hide this tab
+const lunarTab2Visible = true;
+
+// Enter tab name
+const lunarTab2Title = "Fort Mechanics";
+
+// Enter HTML for this tab
+const lunarTab2Content = `
+
+<h2 class="section-title">
+
+Fort Mechanics
+
+</h2>
+
+<p>
+
+The four Forts are the defining feature of Wheel War and introduce an entirely
+new layer of strategy to Lunar Kingdoms. Unlike Avalon and the Towers, Forts
+use their own combat rules, Occupation Shield mechanics, and Lone March Stamina
+system. Although they do not replace Avalon as the primary objective, they
+provide valuable battlefield bonuses, additional occupation time, and
+opportunities to divide enemy attention.
+
+</p>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/lunar3.jpg"
+alt="Wheel War Fort Layout">
+
+<div class="image-caption">
+
+Figure L2-1 — The four Forts surrounding Avalon during Wheel War.
+
+</div>
+
+<div class="guide-info">
+
+Every Lord may simultaneously occupy Avalon (or one Tower) while also sending
+one march to <b>each</b> of the four Forts. This allows participation in up to
+five battlefield objectives at the same time. 0
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Purpose of the Forts
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Increase Occupation
+
+</h3>
+
+<p>
+
+Each occupied Fort contributes additional occupation progress toward Avalon,
+allowing kingdoms to reach victory more quickly when Forts are maintained
+throughout the battle.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Improve Garrison Buffs
+
+</h3>
+
+<p>
+
+Wheel War expands the maximum Garrison Buff Level by incorporating Fort
+ownership, rewarding kingdoms that control multiple objectives instead of only
+Avalon.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Earn Invasion Points
+
+</h3>
+
+<p>
+
+Holding Forts contributes additional Invasion Points while forcing opponents to
+split their attention across the battlefield.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Create New Battlefronts
+
+</h3>
+
+<p>
+
+Rather than concentrating every player into a single rally, Forts create
+multiple simultaneous objectives requiring coordination across the kingdom.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Fort Rules
+
+</h3>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/lunar4.jpg"
+alt="Fort Rules">
+
+<div class="image-caption">
+
+Figure L2-2 — Fort occupation rules and battlefield mechanics.
+
+</div>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Rule</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Combat Style</td>
+
+<td>Sequential one-versus-one Wheel War battles.</td>
+
+</tr>
+
+<tr>
+
+<td>Mega Garrisons</td>
+
+<td>Not permitted.</td>
+
+</tr>
+
+<tr>
+
+<td>Rallies</td>
+
+<td>Not permitted.</td>
+
+</tr>
+
+<tr>
+
+<td>March Speedups</td>
+
+<td>Cannot be used while marching toward a Fort.</td>
+
+</tr>
+
+<tr>
+
+<td>Return Speedups</td>
+
+<td>May be used after a march has been defeated.</td>
+
+</tr>
+
+<tr>
+
+<td>March Speed</td>
+
+<td>Natural march speed toward Forts is increased.</td>
+
+</tr>
+
+<tr>
+
+<td>Maximum Participation</td>
+
+<td>One march in Avalon (or a Tower) plus one march in each Fort.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-warning">
+
+Forts are designed around independent solo combat. Kingdoms attempting to use
+traditional rally tactics will generally perform poorly compared with kingdoms
+using coordinated Wheel War strategies.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Occupation Shield
+
+</h3>
+
+<p>
+
+Each Fort uses an Occupation Shield to prevent ownership from changing
+continuously throughout the battle.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Newly opened Forts remain available for capture during an initial five-minute period.</li>
+
+<li>After capture, a 30-minute Occupation Shield protects the Fort.</li>
+
+<li>When a foreign kingdom captures a neutral Fort, a 300-minute Occupation Shield is applied.</li>
+
+<li>If another alliance from the same kingdom captures the Fort, the shield timer does not reset.</li>
+
+<li>If the Fort becomes neutral, the Occupation Shield is removed immediately.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-note">
+
+Occupation Shields stabilize battlefield control while still allowing ownership
+to change through successful coordinated attacks. 1
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Occupation Progress
+
+</h3>
+
+<p>
+
+Every occupied Fort contributes additional occupation progress throughout the
+battle.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Approximately 30 seconds of occupation progress is awarded every six minutes.</li>
+
+<li>Earlier captures provide greater cumulative value over the course of the event.</li>
+
+<li>Maintaining Fort control is generally more valuable than repeatedly trading ownership.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-success">
+
+A kingdom that consistently controls multiple Forts can significantly accelerate
+its overall battlefield progress while simultaneously strengthening its Garrison
+Buffs.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Same-Kingdom Combat
+
+</h3>
+
+<p>
+
+Alliances from the same kingdom are <b>not</b> exempt from Fort combat.
+
+</p>
+
+<div class="guide-warning">
+
+If two allied alliances attempt to occupy the same Fort, Wheel War combat still
+determines which alliance becomes the occupier. Assigning Fort responsibilities
+before the event begins helps prevent unnecessary conflicts.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Strategic Recommendations
+
+</h3>
+
+<ul class="guide-checklist">
+
+<li>Assign every Fort to a specific alliance before the event begins.</li>
+
+<li>Capture Forts early to maximize accumulated occupation progress.</li>
+
+<li>Coordinate Fort ownership with Avalon and Tower control.</li>
+
+<li>Replace defeated defenders immediately.</li>
+
+<li>Avoid competing with allied alliances for the same objective.</li>
+
+<li>Treat every Fort as part of the overall Avalon strategy rather than an isolated objective.</li>
+
+</ul>
+
+<div class="guide-success">
+
+The strongest Lunar kingdoms rarely leave Fort ownership to chance. Leadership
+assigns every objective before the battle begins, coordinates Convergences, and
+maintains continuous communication so each Fort contributes to the kingdom's
+overall strategy.
+
+</div>
+
+`;
+
+//========== Lunar Tab 3 ==========
+
+// Set false to hide this tab
+const lunarTab3Visible = true;
+
+// Enter tab name
+const lunarTab3Title = "Wheel War Combat";
+
+// Enter HTML for this tab
+const lunarTab3Content = `
+
+<h2 class="section-title">
+
+Wheel War Combat
+
+</h2>
+
+<p>
+
+Wheel War replaces traditional rallies and Mega Garrisons with a unique combat
+system based on sequential one-versus-one battles. Every attack on a Fort is
+resolved as an individual duel, rewarding coordination, endurance, and proper
+timing rather than overwhelming numbers. Understanding these mechanics is
+essential for both attackers and defenders.
+
+</p>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/lunar5.jpg"
+alt="Wheel War Combat">
+
+<div class="image-caption">
+
+Figure L3-1 — Sequential Wheel War combat inside a Fort.
+
+</div>
+
+<div class="guide-info">
+
+Unlike Solar Kingdoms, Forts cannot be attacked using rallies. Every player
+contributes by sending individual marches coordinated through the Convergence
+system. 0
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Battle Sequence
+
+</h3>
+
+<p>
+
+Every Fort battle follows the same combat sequence.
+
+</p>
+
+<div class="guide-card">
+
+<ol>
+
+<li>An attacking march enters the Fort.</li>
+
+<li>The attacker fights the first defending march.</li>
+
+<li>If victorious, the surviving troops immediately engage the next defender.</li>
+
+<li>This continues until every defender is defeated or the attacker is eliminated.</li>
+
+<li>The final surviving march occupies the Fort.</li>
+
+</ol>
+
+</div>
+
+<div class="guide-note">
+
+Because surviving troops continue fighting, balanced marches with good
+endurance usually outperform formations designed only for burst damage.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Lone March Stamina
+
+</h3>
+
+<p>
+
+Every Fort attack consumes <b>Lone March Stamina</b>, a resource unique to Wheel
+War that limits continuous solo attacks.
+
+</p>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Mechanic</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Cost Per Attack</td>
+
+<td>10 Lone March Stamina.</td>
+
+</tr>
+
+<tr>
+
+<td>Recovery</td>
+
+<td>Recovers naturally over time.</td>
+
+</tr>
+
+<tr>
+
+<td>Before Arrival Recall</td>
+
+<td>Stamina is refunded if the march is recalled before reaching the Fort.</td>
+
+</tr>
+
+<tr>
+
+<td>Purpose</td>
+
+<td>Prevents unlimited attacks while rewarding efficient coordination.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-warning">
+
+Avoid wasting Lone March Stamina on poorly coordinated attacks. Every failed
+assault reduces your kingdom's ability to contest important objectives later in
+the battle.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Merlin's Protection
+
+</h3>
+
+<p>
+
+To encourage participation, Wheel War significantly reduces permanent troop
+losses during Fort combat.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Most defeated troops become wounded.</li>
+
+<li>Most wounded troops recover automatically after returning home.</li>
+
+<li>Remaining wounded receive priority treatment in the Alliance Hospital.</li>
+
+<li>Permanent troop losses are greatly reduced compared with traditional KvK.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-success">
+
+Merlin's Protection allows players to participate more aggressively in Fort
+combat without suffering the severe troop losses normally associated with large
+battlefield engagements. 1
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Convergence
+
+</h3>
+
+<img
+class="guide-image"
+src="https://mod.koa-guides.workers.dev/images/kvk-guide/lunar6.jpg"
+alt="Convergence">
+
+<div class="image-caption">
+
+Figure L3-2 — Coordinating multiple solo marches using Convergence.
+
+</div>
+
+<p>
+
+Convergence replaces traditional rally mechanics by allowing R4 and R5 leaders
+to synchronize multiple independent marches toward the same Fort.
+
+</p>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Only R4 and R5 may initiate a Convergence.</li>
+
+<li>Players launch independent solo marches.</li>
+
+<li>Marches arrive within seconds of each other.</li>
+
+<li>Continuous pressure overwhelms defenders more effectively than random attacks.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Recommended Attack Flow
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Wave One
+
+</h3>
+
+<p>
+
+Strong attackers weaken the defending garrison.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Wave Two
+
+</h3>
+
+<p>
+
+Additional attackers eliminate the remaining defenders and secure occupation.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Wave Three
+
+</h3>
+
+<p>
+
+Fresh marches reinforce the Fort before the enemy can organize a counterattack.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Battlefield Recommendations
+
+</h3>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Recommended
+
+</h3>
+
+<ul>
+
+<li>Coordinate every attack through Convergence.</li>
+
+<li>Use balanced marches capable of multiple victories.</li>
+
+<li>Monitor Lone March Stamina.</li>
+
+<li>Replace defeated defenders quickly.</li>
+
+<li>Communicate successful captures immediately.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Avoid
+
+</h3>
+
+<ul>
+
+<li>Random individual attacks.</li>
+
+<li>Using fragile "glass cannon" marches.</li>
+
+<li>Ignoring Fort ownership after capture.</li>
+
+<li>Competing with allied alliances.</li>
+
+<li>Allowing Lone March Stamina to become exhausted.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Common Mistakes
+
+</h3>
+
+<div class="guide-warning">
+
+<ul>
+
+<li>Treating Forts like traditional rally objectives.</li>
+
+<li>Launching attacks before the Convergence timer.</li>
+
+<li>Sending weak marches one at a time.</li>
+
+<li>Ignoring Occupation Shield timers.</li>
+
+<li>Failing to reinforce newly captured Forts.</li>
+
+<li>Overcommitting every strong player to a single objective.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Veteran Advice
+
+</h3>
+
+<div class="guide-success">
+
+The most successful Lunar kingdoms view Wheel War as a coordinated campaign
+rather than a series of isolated battles. Leadership assigns objectives before
+the event begins, synchronizes attacks through Convergence, carefully manages
+Lone March Stamina, and continuously rotates attackers and defenders to
+maintain pressure across the entire battlefield. Mastering these fundamentals
+turns Forts from secondary objectives into one of the greatest strategic
+advantages available during Lunar Kingdom vs. Kingdom.
+
+</div>
+
+`;
+
+//========== Lunar Tab 4 ==========
+
+// Set false to hide this tab
+const lunarTab4Visible = true;
+
+// Enter tab name
+const lunarTab4Title = "Convergence";
+
+// Enter HTML for this tab
+const lunarTab4Content = `
+
+<h2 class="section-title">
+
+Convergence
+
+</h2>
+
+<p>
+
+Because rallies cannot be used against Forts, Wheel War introduces
+<b>Convergence</b>, a battlefield coordination system that allows alliances to
+launch multiple independent attacks which arrive simultaneously. Proper use of
+Convergence is one of the defining skills that separates experienced kingdoms
+from inexperienced ones.
+
+</p>
+
+<div class="guide-info">
+
+Only Alliance R5 and R4 members may initiate a Convergence. Alliance members
+can then synchronize their marches to arrive at the selected target at the same
+time. 0
+
+</div>
+
+<div class="guide-note">
+
+<b>Image Placeholder</b><br>
+
+<b>lunar5</b> — Convergence interface showing synchronized arrival timer.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Why Convergence Exists
+
+</h3>
+
+<p>
+
+Without rallies, independent players would normally arrive one at a time,
+allowing defenders to defeat each attacker individually. Convergence solves this
+problem by concentrating offensive pressure through synchronized arrivals.
+
+</p>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Benefits
+
+</h3>
+
+<ul>
+
+<li>Multiple attackers arrive together.</li>
+
+<li>Defenders have less time to reinforce.</li>
+
+<li>Enemy garrisons are overwhelmed more quickly.</li>
+
+<li>Alliance attacks become predictable and organized.</li>
+
+<li>Communication requirements are greatly reduced.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+How Convergence Works
+
+</h3>
+
+<div class="guide-card">
+
+<ol>
+
+<li>An R4 or R5 selects a Fort.</li>
+
+<li>A desired arrival time is chosen.</li>
+
+<li>The countdown becomes visible to alliance members.</li>
+
+<li>Each player launches their solo march using the displayed timer.</li>
+
+<li>All marches arrive within seconds of each other.</li>
+
+</ol>
+
+</div>
+
+<div class="guide-success">
+
+Although every battle remains one-versus-one, synchronized arrivals prevent
+defenders from comfortably rebuilding their defenses between attacks.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Example Timeline
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Time</th>
+
+<th>Event</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>00:00</td>
+
+<td>R5 creates Convergence.</td>
+
+</tr>
+
+<tr>
+
+<td>00:30</td>
+
+<td>Alliance members prepare marches.</td>
+
+</tr>
+
+<tr>
+
+<td>01:00</td>
+
+<td>First attackers arrive.</td>
+
+</tr>
+
+<tr>
+
+<td>01:02</td>
+
+<td>Second wave reaches the Fort.</td>
+
+</tr>
+
+<tr>
+
+<td>01:05</td>
+
+<td>Reinforcement wave follows immediately.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Convergence vs Random Attacks
+
+</h3>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Random Attacks
+
+</h3>
+
+<ul>
+
+<li>Players arrive individually.</li>
+
+<li>Defenders recover between battles.</li>
+
+<li>Poor communication.</li>
+
+<li>Higher stamina consumption.</li>
+
+<li>Lower capture rate.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Convergence
+
+</h3>
+
+<ul>
+
+<li>Coordinated arrivals.</li>
+
+<li>Continuous offensive pressure.</li>
+
+<li>Efficient stamina usage.</li>
+
+<li>Rapid Fort captures.</li>
+
+<li>Much higher success rate.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Alliance Responsibilities
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+R4 / R5
+
+</h3>
+
+<ul>
+
+<li>Select targets.</li>
+
+<li>Create Convergences.</li>
+
+<li>Assign attackers.</li>
+
+<li>Coordinate follow-up waves.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Attackers
+
+</h3>
+
+<ul>
+
+<li>Launch on time.</li>
+
+<li>Use assigned march presets.</li>
+
+<li>Report results immediately.</li>
+
+<li>Prepare another march if defeated.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Support Players
+
+</h3>
+
+<ul>
+
+<li>Track enemy movement.</li>
+
+<li>Monitor occupied Forts.</li>
+
+<li>Prepare replacement attackers.</li>
+
+<li>Watch stamina availability.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Example Alliance Assignment
+
+</h3>
+
+<div class="guide-card">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Group</th>
+
+<th>Assignment</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Alliance A</td>
+
+<td>Fort I</td>
+
+</tr>
+
+<tr>
+
+<td>Alliance B</td>
+
+<td>Fort II</td>
+
+</tr>
+
+<tr>
+
+<td>Alliance C</td>
+
+<td>Fort III</td>
+
+</tr>
+
+<tr>
+
+<td>Alliance D</td>
+
+<td>Fort IV</td>
+
+</tr>
+
+<tr>
+
+<td>Main Alliance</td>
+
+<td>Avalon & Towers</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<p>
+
+This type of assignment minimizes confusion, reduces accidental conflicts
+between allied alliances, and ensures every objective receives continuous
+attention.
+
+</p>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Common Mistakes
+
+</h3>
+
+<div class="guide-warning">
+
+<ul>
+
+<li>Launching before the countdown.</li>
+
+<li>Launching after the countdown.</li>
+
+<li>Ignoring R4/R5 assignments.</li>
+
+<li>Changing targets without notifying leadership.</li>
+
+<li>Attacking an allied alliance's assigned Fort.</li>
+
+<li>Failing to send immediate follow-up waves.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Veteran Strategy
+
+</h3>
+
+<div class="guide-success">
+
+Elite kingdoms often maintain multiple Convergences simultaneously. While one
+group captures a Fort, another prepares the next synchronized assault, ensuring
+continuous pressure across the battlefield and forcing opponents to divide their
+attention.
+
+</div>
+
+<div class="guide-note">
+
+Remember that Convergence is not a rally—it is a coordination tool. Victory
+still depends upon the strength of each individual march and the timing of every
+participant.
+
+</div>
+
+`;
+
+//========== Lunar Tab 5 ==========
+
+// Set false to hide this tab
+const lunarTab5Visible = true;
+
+// Enter tab name
+const lunarTab5Title = "Scoring & Rewards";
+
+// Enter HTML for this tab
+const lunarTab5Content = `
+
+<h2 class="section-title">
+
+Scoring & Rewards
+
+</h2>
+
+<p>
+
+Wheel War rewards players who actively contribute to battlefield objectives
+rather than simply participating in isolated combat. Capturing and defending
+Forts, supporting Avalon occupations, and coordinating successful attacks all
+contribute toward individual and kingdom success.
+
+</p>
+
+<div class="guide-info">
+
+Unlike Solar Kingdoms, Fort participation contributes directly toward Invasion
+Points while also accelerating overall Avalon occupation through Fort control.
+0
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Sources of Points
+
+</h3>
+
+<div class="guide-card">
+
+<ul>
+
+<li>Occupying Avalon.</li>
+
+<li>Occupying Towers.</li>
+
+<li>Occupying Forts.</li>
+
+<li>Defeating enemy troops.</li>
+
+<li>Participating in successful Fort assaults.</li>
+
+<li>Maintaining long occupation periods.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-note">
+
+Successful kingdoms score consistently across every objective instead of relying
+on a single source of points.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Why Forts Matter
+
+</h3>
+
+<p>
+
+Many new players underestimate the value of Forts because each individual Fort
+appears less important than Avalon. In practice, Forts influence nearly every
+major scoring category.
+
+</p>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Direct Benefits
+
+</h3>
+
+<ul>
+
+<li>Generate Invasion Points.</li>
+
+<li>Increase occupation time.</li>
+
+<li>Increase Garrison Buff levels.</li>
+
+<li>Create additional strategic objectives.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Indirect Benefits
+
+</h3>
+
+<ul>
+
+<li>Split enemy attention.</li>
+
+<li>Create multiple battlefronts.</li>
+
+<li>Support Avalon control.</li>
+
+<li>Increase battlefield pressure.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-success">
+
+Kingdoms that consistently maintain Fort control generally accumulate more
+points over the course of the event than kingdoms focused exclusively on
+Avalon.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Occupation Strategy
+
+</h3>
+
+<p>
+
+Occupation points accumulate throughout the event. Maintaining ownership is
+usually more valuable than repeatedly exchanging control of the same objective.
+
+</p>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Priority Order
+
+</h3>
+
+<ol>
+
+<li>Avalon.</li>
+
+<li>Forts supporting Avalon.</li>
+
+<li>Towers.</li>
+
+<li>Remaining Forts.</li>
+
+</ol>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Individual Participation
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Play Style</th>
+
+<th>Contribution</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Frontline Fighter</td>
+
+<td>Captures and contests Forts.</td>
+
+</tr>
+
+<tr>
+
+<td>Defender</td>
+
+<td>Maintains occupied objectives.</td>
+
+</tr>
+
+<tr>
+
+<td>Support Player</td>
+
+<td>Provides replacement marches and coordination.</td>
+
+</tr>
+
+<tr>
+
+<td>Leadership</td>
+
+<td>Organizes Convergences and battlefield assignments.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<p>
+
+Every role contributes to kingdom victory. Not every player must be the
+strongest attacker to have a meaningful impact on the final result.
+
+</p>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Maximizing Rewards
+
+</h3>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Stay Active
+
+</h3>
+
+<p>
+
+Long periods of inactivity dramatically reduce individual rewards.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Protect Objectives
+
+</h3>
+
+<p>
+
+Defending occupied Forts often produces more value than repeatedly attacking.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Coordinate Attacks
+
+</h3>
+
+<p>
+
+Successful Convergences generate better long-term results than isolated
+individual assaults.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Manage Stamina
+
+</h3>
+
+<p>
+
+Avoid exhausting Lone March Stamina on low-value attacks early in the event.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Common Scoring Mistakes
+
+</h3>
+
+<div class="guide-warning">
+
+<ul>
+
+<li>Ignoring Forts after capturing Avalon.</li>
+
+<li>Attacking without Convergence.</li>
+
+<li>Wasting Lone March Stamina on heavily defended Forts.</li>
+
+<li>Abandoning occupied objectives too early.</li>
+
+<li>Focusing only on personal combat instead of kingdom objectives.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Veteran Advice
+
+</h3>
+
+<div class="guide-success">
+
+The highest-ranking kingdoms treat Wheel War as a continuous resource
+management exercise. Every Fort, every point of Lone March Stamina, every
+Convergence, and every occupied minute contributes toward the final outcome.
+Kingdoms that make disciplined decisions throughout the event consistently
+outperform kingdoms relying solely on stronger individual players.
+
+</div>
+
+`;
+
+//========== Lunar Tab 6 ==========
+
+// Set false to hide this tab
+const lunarTab6Visible = true;
+
+// Enter tab name
+const lunarTab6Title = "Advanced Strategy";
+
+// Enter HTML for this tab
+const lunarTab6Content = `
+
+<h2 class="section-title">
+
+Advanced Strategy
+
+</h2>
+
+<p>
+
+Wheel War rewards planning far more than reaction. While powerful players remain
+important, the kingdoms that consistently dominate are those that prepare their
+alliances before the battlefield opens and execute coordinated plans throughout
+the event.
+
+</p>
+
+<div class="guide-info">
+
+The official Wheel War guide explains the mechanics. This section focuses on
+applying those mechanics to maximize battlefield efficiency.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Pre-Battle Planning
+
+</h3>
+
+<p>
+
+Preparation should begin well before the battlefield opens.
+
+</p>
+
+<div class="guide-two-column">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Leadership Responsibilities
+
+</h3>
+
+<ul>
+
+<li>Assign every Fort to an alliance.</li>
+
+<li>Select Convergence leaders.</li>
+
+<li>Assign backup attackers.</li>
+
+<li>Create communication channels.</li>
+
+<li>Determine Avalon priorities.</li>
+
+<li>Prepare reinforcement rotations.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Player Responsibilities
+
+</h3>
+
+<ul>
+
+<li>Create multiple march presets.</li>
+
+<li>Heal every wounded troop.</li>
+
+<li>Prepare teleport items.</li>
+
+<li>Study Fort assignments.</li>
+
+<li>Understand Convergence timing.</li>
+
+<li>Remain available during scheduled attacks.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Opening Phase
+
+</h3>
+
+<p>
+
+The opening minutes establish battlefield momentum.
+
+</p>
+
+<div class="guide-card">
+
+<ol>
+
+<li>Occupy assigned Forts immediately.</li>
+
+<li>Avoid attacking allied objectives.</li>
+
+<li>Protect early occupations.</li>
+
+<li>Launch planned Convergences.</li>
+
+<li>Prepare Avalon support once Forts are secured.</li>
+
+</ol>
+
+</div>
+
+<div class="guide-success">
+
+Kingdoms that secure multiple Forts during the opening phase often maintain
+control for the remainder of the event.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Mid-Battle Management
+
+</h3>
+
+<p>
+
+As casualties increase, organization becomes more important than raw strength.
+
+</p>
+
+<div class="guide-grid">
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Rotate Attackers
+
+</h3>
+
+<p>
+
+Replace exhausted players before their effectiveness declines.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Monitor Stamina
+
+</h3>
+
+<p>
+
+Ensure key attackers retain enough Lone March Stamina for important objectives.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Maintain Communication
+
+</h3>
+
+<p>
+
+Continuously update Fort ownership, enemy movements, and Convergence schedules.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Protect Captures
+
+</h3>
+
+<p>
+
+Every captured Fort should immediately receive replacement defenders when
+necessary.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Lone March Stamina Management
+
+</h3>
+
+<p>
+
+Unlike normal marches, Fort assaults consume Lone March Stamina. Managing this
+resource efficiently often determines which kingdom controls the battlefield
+during the later stages of Wheel War.
+
+</p>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Recommendation</th>
+
+<th>Reason</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Avoid unnecessary attacks.</td>
+
+<td>Preserves stamina for priority objectives.</td>
+
+</tr>
+
+<tr>
+
+<td>Attack with Convergence.</td>
+
+<td>Improves capture efficiency.</td>
+
+</tr>
+
+<tr>
+
+<td>Recall failed marches early.</td>
+
+<td>Returns stamina if recalled before arrival.</td>
+
+</tr>
+
+<tr>
+
+<td>Save reserves.</td>
+
+<td>Allows rapid response to changing objectives.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-note">
+
+Lone March Stamina naturally regenerates over time and may also be purchased if
+necessary. Every Fort attack consumes 10 stamina. 0
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Alliance Rotation Example
+
+</h3>
+
+<div class="guide-card">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Alliance</th>
+
+<th>Primary Duty</th>
+
+<th>Secondary Duty</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Alliance A</td>
+
+<td>Fort I</td>
+
+<td>Avalon Support</td>
+
+</tr>
+
+<tr>
+
+<td>Alliance B</td>
+
+<td>Fort II</td>
+
+<td>Tower Defense</td>
+
+</tr>
+
+<tr>
+
+<td>Alliance C</td>
+
+<td>Fort III</td>
+
+<td>Reserve Assaults</td>
+
+</tr>
+
+<tr>
+
+<td>Alliance D</td>
+
+<td>Fort IV</td>
+
+<td>Emergency Reinforcement</td>
+
+</tr>
+
+<tr>
+
+<td>Main Alliance</td>
+
+<td>Avalon</td>
+
+<td>Kingdom Coordination</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Common Strategic Errors
+
+</h3>
+
+<div class="guide-warning">
+
+<ul>
+
+<li>Ignoring assigned objectives.</li>
+
+<li>Launching attacks without Convergence.</li>
+
+<li>Sending multiple players to the wrong Fort.</li>
+
+<li>Failing to replace defeated defenders.</li>
+
+<li>Allowing Lone March Stamina to reach zero.</li>
+
+<li>Overcommitting every strong player to Avalon.</li>
+
+<li>Ignoring enemy Fort captures.</li>
+
+</ul>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Veteran Strategy
+
+</h3>
+
+<div class="guide-success">
+
+The strongest Lunar kingdoms rarely react to the enemy—they force the enemy to
+react to them. Continuous Convergences, disciplined stamina management,
+predetermined alliance assignments, and immediate replacement of defeated
+marches create constant battlefield pressure that becomes increasingly difficult
+for opponents to overcome.
+
+</div>
+
+<div class="guide-note">
+
+Advanced coordination is built through preparation rather than improvisation.
+Kingdoms that practice together before Wheel War consistently outperform
+stronger but less organized opponents.
+
+</div>
+
+`;
+
+//========== Lunar Tab 7 ==========
+
+// Set false to hide this tab
+const lunarTab7Visible = true;
+
+// Enter tab name
+const lunarTab7Title = "Reference & Tips";
+
+// Enter HTML for this tab
+const lunarTab7Content = `
+
+<h2 class="section-title">
+
+Reference & Veteran Tips
+
+</h2>
+
+<p>
+
+This section serves as a quick-reference guide for commanders during Wheel War.
+Rather than explaining every mechanic in detail, it summarizes the most
+important rules, answers common questions, and highlights mechanics that are
+frequently misunderstood.
+
+</p>
+
+<div class="guide-info">
+
+Even experienced players often overlook small Wheel War mechanics that can have
+a significant impact on the outcome of a battle.
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Wheel War Quick Reference
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Mechanic</th>
+
+<th>Summary</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Battle Type</td>
+
+<td>Sequential 1 vs. 1 combat.</td>
+
+</tr>
+
+<tr>
+
+<td>Rallies</td>
+
+<td>Not allowed inside Forts.</td>
+
+</tr>
+
+<tr>
+
+<td>Mega Garrison</td>
+
+<td>Not allowed inside Forts.</td>
+
+</tr>
+
+<tr>
+
+<td>March Speedups</td>
+
+<td>Cannot be used while marching toward a Fort.</td>
+
+</tr>
+
+<tr>
+
+<td>Return Speedups</td>
+
+<td>Allowed after defeat.</td>
+
+</tr>
+
+<tr>
+
+<td>Lone March Stamina</td>
+
+<td>10 stamina consumed per Fort attack.</td>
+
+</tr>
+
+<tr>
+
+<td>Stamina Recovery</td>
+
+<td>1 stamina every 3 minutes.</td>
+
+</tr>
+
+<tr>
+
+<td>Recall Before Arrival</td>
+
+<td>Stamina refunded.</td>
+
+</tr>
+
+<tr>
+
+<td>Alliance Hospital</td>
+
+<td>Receives remaining wounded after battle.</td>
+
+</tr>
+
+<tr>
+
+<td>Occupation Shield</td>
+
+<td>Protects newly occupied Forts.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Frequently Asked Questions
+
+</h3>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Can I rally a Fort?
+
+</h3>
+
+<p>
+
+No. Every Fort battle uses independent solo marches coordinated through
+Convergence.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Can I send multiple marches?
+
+</h3>
+
+<p>
+
+Yes. A Lord may participate in Avalon (or a Tower) while simultaneously sending
+one march to each of the four Forts.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Can allied alliances fight each other?
+
+</h3>
+
+<p>
+
+Yes. If two alliances from the same kingdom attempt to occupy the same Fort,
+combat still determines which alliance controls the objective.
+
+</p>
+
+</div>
+
+<div class="guide-card">
+
+<h3 class="section-subtitle">
+
+Do I permanently lose troops?
+
+</h3>
+
+<p>
+
+Most casualties become wounded. Most recover automatically after returning to
+your city, while the remainder receive priority treatment in the Alliance
+Hospital.
+
+</p>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+What Happens If...
+
+</h3>
+
+<div class="table-responsive">
+
+<table class="guide-table">
+
+<thead>
+
+<tr>
+
+<th>Situation</th>
+
+<th>Result</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Your march is recalled before arriving.</td>
+
+<td>Lone March Stamina is refunded.</td>
+
+</tr>
+
+<tr>
+
+<td>Your march loses a Fort battle.</td>
+
+<td>The march immediately returns home.</td>
+
+</tr>
+
+<tr>
+
+<td>Your march wins several battles.</td>
+
+<td>The surviving troops continue fighting the next defender.</td>
+
+</tr>
+
+<tr>
+
+<td>All defenders are defeated.</td>
+
+<td>Your surviving march occupies the Fort.</td>
+
+</tr>
+
+<tr>
+
+<td>The Fort becomes neutral.</td>
+
+<td>Its Occupation Shield is removed.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Top Ten Veteran Tips
+
+</h3>
+
+<div class="guide-card">
+
+<ol>
+
+<li>Never waste Lone March Stamina on poorly coordinated attacks.</li>
+
+<li>Always attack through Convergence whenever possible.</li>
+
+<li>Assign each alliance a permanent Fort before the event begins.</li>
+
+<li>Track Occupation Shield timers continuously.</li>
+
+<li>Protect occupied Forts with immediate replacement marches.</li>
+
+<li>Coordinate Avalon and Fort assaults together.</li>
+
+<li>Use balanced marches capable of surviving multiple battles.</li>
+
+<li>Communicate every successful capture immediately.</li>
+
+<li>Avoid competing with allied alliances for the same objective.</li>
+
+<li>Remember that consistent occupation usually wins more battles than
+constant attacking.</li>
+
+</ol>
+
+</div>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Commander Checklist
+
+</h3>
+
+<ul class="guide-checklist">
+
+<li>Troops healed.</li>
+
+<li>March presets prepared.</li>
+
+<li>Lone March Stamina available.</li>
+
+<li>Alliance assignments confirmed.</li>
+
+<li>Convergence leaders identified.</li>
+
+<li>Communication channel active.</li>
+
+<li>Teleport items available.</li>
+
+<li>Hero formations verified.</li>
+
+<li>Dragon skills reviewed.</li>
+
+<li>Objective priorities understood.</li>
+
+</ul>
+
+<div class="guide-divider"></div>
+
+<h3 class="block-title">
+
+Final Thoughts
+
+</h3>
+
+<div class="guide-success">
+
+Wheel War transforms Kingdom vs. Kingdom from a battle dominated by large
+rallies into one centered on precision, timing, and teamwork. Kingdoms that
+master Fort control, Convergence, and Lone March Stamina management consistently
+gain advantages that compound throughout the event. Every coordinated attack,
+every occupied Fort, and every correctly timed Convergence contributes toward
+the ultimate objective—controlling Avalon and leading your kingdom to victory.
+
+</div>
+
+<div class="guide-note">
+
+This concludes the Lunar Kingdom guide. Together, the Universal, Solar, and
+Lunar sections provide a complete reference covering both modern Kingdom vs.
+Kingdom formats currently available in King of Avalon.
+
+</div>
+
+`;
+
+
+
+/*********************************************
+GUIDE ENGINE V4 RC1
+DO NOT EDIT BELOW THIS LINE
+**********************************************/
+
+/*********************************************
+Engine State
+**********************************************/
+
+const Engine={
+
+    guide:null,
+    tab:-1,
+    initialized:false
+};
+
+/*********************************************
+Utility Functions
+**********************************************/
+
+const $=selector=>document.querySelector(selector);
+const $$=selector=>document.querySelectorAll(selector);
+
+function isBlank(value){
+
+    return value===undefined
+        ||value===null
+        ||value.trim()==="";
+}
+
+function authorName(name){
+  
+    return isBlank(name)
+        ?"Anonymous"
+        :name;
+}
+
+/*********************************************
+Persistent Storage
+**********************************************/
+
+function saveCurrentGuide(name){
+
+    try{
+        localStorage.setItem(
+            "koa-current-guide",
+            name
+        );
+    }
+    catch(e){}
+}
+
+function loadCurrentGuide(){
+
+    try{
+        return localStorage.getItem(
+            "koa-current-guide"
+        );
+    }
+    catch(e){
+        return null;
+    }
+}
+
+/*********************************************
+Guide Database
+**********************************************/
+
+const GuideDB={
+
+    universal:null,
+    solar:null,
+    lunar:null
+};
+
+/*********************************************
+Guide Builder
+**********************************************/
+
+function createGuide(
+
+    enabled,
+    author,
+    version,
+    updated,
+    intro,
+    relatedVisible,
+    related,
+    tabs
+){
+
+    return{
+        enabled:enabled,
+        author:authorName(author),
+        version:version,
+        updated:updated,
+        intro:intro,
+        relatedVisible:relatedVisible,
+        related:related,
+        tabs:tabs
+    };
+}
+
+/*********************************************
+Universal Guide
+**********************************************/
+
+GuideDB.universal=createGuide(
+
+    showUniversal,
+    authorUniversal,
+    universalVersion,
+    universalUpdated,
+    universalIntroduction,
+    universalRelatedVisible,
+    [
+        {
+            title:universalRelated1Name,
+            file:universalRelated1File
+        },
+        {
+            title:universalRelated2Name,
+            file:universalRelated2File
+        },
+        {
+            title:universalRelated3Name,
+            file:universalRelated3File
+        }
+    ],
+    [
+        {
+            visible:universalTab1Visible,
+            title:universalTab1Title,
+            html:universalTab1Content
+        },
+        {
+
+            visible:universalTab2Visible,
+            title:universalTab2Title,
+            html:universalTab2Content
+        },
+        {
+            visible:universalTab3Visible,
+            title:universalTab3Title,
+            html:universalTab3Content
+
+        },
+        {
+
+            visible:universalTab4Visible,
+            title:universalTab4Title,
+            html:universalTab4Content
+
+        },
+        {
+
+            visible:universalTab5Visible,
+            title:universalTab5Title,
+            html:universalTab5Content
+
+        },
+        {
+            visible:universalTab6Visible,
+            title:universalTab6Title,
+            html:universalTab6Content
+        },
+        {
+            visible:universalTab7Visible,
+            title:universalTab7Title,
+            html:universalTab7Content
+        }
+    ]
+);
+
+/*********************************************
+Solar Guide
+**********************************************/
+
+GuideDB.solar=createGuide(
+
+    showSolar,
+    authorSolar,
+    solarVersion,
+    solarUpdated,
+    solarIntroduction,
+    solarRelatedVisible,
+    [
+        {
+            title:solarRelated1Name,
+            file:solarRelated1File
+        },
+        {
+            title:solarRelated2Name,
+
+            file:solarRelated2File
+
+        },
+
+        {
+
+            title:solarRelated3Name,
+
+            file:solarRelated3File
+
+        }
+
+    ],
+
+    [
+
+        {
+
+            visible:solarTab1Visible,
+
+            title:solarTab1Title,
+
+            html:solarTab1Content
+
+        },
+
+        {
+
+            visible:solarTab2Visible,
+
+            title:solarTab2Title,
+
+            html:solarTab2Content
+
+        },
+
+        {
+
+            visible:solarTab3Visible,
+
+            title:solarTab3Title,
+
+            html:solarTab3Content
+
+        },
+
+        {
+
+            visible:solarTab4Visible,
+
+            title:solarTab4Title,
+
+            html:solarTab4Content
+
+        },
+
+        {
+
+            visible:solarTab5Visible,
+
+            title:solarTab5Title,
+
+            html:solarTab5Content
+
+        },
+
+        {
+
+            visible:solarTab6Visible,
+
+            title:solarTab6Title,
+
+            html:solarTab6Content
+
+        },
+
+        {
+
+            visible:solarTab7Visible,
+
+            title:solarTab7Title,
+
+            html:solarTab7Content
+
+        }
+
+    ]
+
+);
+
+
+
+/*********************************************
+Lunar Guide
+**********************************************/
+
+GuideDB.lunar=createGuide(
+
+    showLunar,
+
+    authorLunar,
+
+    lunarVersion,
+
+    lunarUpdated,
+
+    lunarIntroduction,
+
+    lunarRelatedVisible,
+
+    [
+
+        {
+
+            title:lunarRelated1Name,
+
+            file:lunarRelated1File
+
+        },
+
+        {
+
+            title:lunarRelated2Name,
+
+            file:lunarRelated2File
+
+        },
+
+        {
+
+            title:lunarRelated3Name,
+
+            file:lunarRelated3File
+
+        }
+
+    ],
+
+    [
+
+        {
+
+            visible:lunarTab1Visible,
+
+            title:lunarTab1Title,
+
+            html:lunarTab1Content
+
+        },
+
+        {
+
+            visible:lunarTab2Visible,
+
+            title:lunarTab2Title,
+
+            html:lunarTab2Content
+
+        },
+
+        {
+
+            visible:lunarTab3Visible,
+
+            title:lunarTab3Title,
+
+            html:lunarTab3Content
+
+        },
+
+        {
+
+            visible:lunarTab4Visible,
+
+            title:lunarTab4Title,
+
+            html:lunarTab4Content
+
+        },
+
+        {
+
+            visible:lunarTab5Visible,
+
+            title:lunarTab5Title,
+
+            html:lunarTab5Content
+
+        },
+
+        {
+
+            visible:lunarTab6Visible,
+
+            title:lunarTab6Title,
+
+            html:lunarTab6Content
+
+        },
+
+        {
+
+            visible:lunarTab7Visible,
+
+            title:lunarTab7Title,
+
+            html:lunarTab7Content
+
+        }
+
+    ]
+
+);
+
+
+
+/*********************************************
+Guide Helpers
+**********************************************/
+
+function enabledGuides(){
+
+    return Object.keys(GuideDB).filter(
+
+        name=>GuideDB[name].enabled
+
+    );
+
+}
+
+
+
+function firstEnabledGuide(){
+
+    const list=enabledGuides();
+
+    return list.length
+        ?list[0]
+        :null;
+
+}
+
+
+
+function getGuide(name){
+
+    return GuideDB[name];
+
+}
+
+
+
+/*********************************************
+Current Guide
+**********************************************/
+
+function setGuide(name){
+
+    if(!GuideDB[name])
+        return;
+
+    Engine.guide=name;
+
+    saveCurrentGuide(name);
+
+}
+
+
+
+function initializeGuide(){
+
+    const saved=loadCurrentGuide();
+
+    if(
+
+        saved
+
+        &&
+
+        GuideDB[saved]
+
+        &&
+
+        GuideDB[saved].enabled
+
+    ){
+
+        Engine.guide=saved;
+
+        return;
+
+    }
+
+    Engine.guide=firstEnabledGuide();
+
+}
+
+/*********************************************
+Theme Switching
+**********************************************/
+
+function applyTheme(){
+
+    const app=$("#guideApp");
+
+    if(!app)
+        return;
+
+    app.classList.remove(
+
+        "theme-universal",
+
+        "theme-solar",
+
+        "theme-lunar"
+
+    );
+
+    app.classList.add(
+
+        "theme-"+Engine.guide
+
+    );
+
+}
+
+
+
+/*********************************************
+Realm Buttons
+**********************************************/
+
+function updateRealmButtons(){
+
+    const guides=[
+
+        "universal",
+
+        "solar",
+
+        "lunar"
+
+    ];
+
+
+
+    guides.forEach(name=>{
+
+        const button=$("#realm-"+name);
+
+        if(!button)
+            return;
+
+
+
+        button.disabled=!GuideDB[name].enabled;
+
+
+
+        button.classList.toggle(
+
+            "active",
+
+            Engine.guide===name
+
+        );
+
+    });
+
+}
+
+
+
+/*********************************************
+Guide Switching
+**********************************************/
+
+function switchGuide(name){
+
+    if(!GuideDB[name])
+        return;
+
+    if(!GuideDB[name].enabled)
+        return;
+
+    if(Engine.guide===name)
+        return;
+
+
+
+    Engine.guide=name;
+
+    saveCurrentGuide(name);
+
+    applyTheme();
+
+    updateRealmButtons();
+
+    renderGuide();
+
+}
+
+/*********************************************
+Realm Events
+**********************************************/
+
+function initializeRealmButtons(){
+
+    const guides=[
+
+        "universal",
+
+        "solar",
+
+        "lunar"
+
+    ];
+
+
+    guides.forEach(name=>{
+
+        const button=$("#realm-"+name);
+
+        if(!button)
+            return;
+
+
+
+        button.addEventListener(
+
+            "click",
+
+            ()=>switchGuide(name)
+
+        );
+
+    });
+
+}
+
+
+
+/*********************************************
+Introduction Panel
+**********************************************/
+
+function introductionHTML(){
+
+    return `
+
+${GuideDB[Engine.guide].intro}
+
+`;
+
+}
+
+
+
+/*********************************************
+Visible Tabs
+**********************************************/
+
+function visibleTabs(){
+
+    return GuideDB[Engine.guide]
+
+        .tabs
+
+        .filter(tab=>tab.visible);
+
+}
+
+
+
+/*********************************************
+Current Tab
+**********************************************/
+
+function resetTab(){
+
+    Engine.tab=-1;
+
+}
+
+  /*********************************************
+Render Tab Bar
+**********************************************/
+
+function renderTabs(){
+
+    const bar=$("#tabBar");
+
+    if(!bar)
+        return;
+
+    const tabs=visibleTabs();
+
+    bar.innerHTML="";
+
+
+
+    tabs.forEach((tab,index)=>{
+
+        const button=document.createElement("button");
+
+        button.className="guide-tab";
+
+        button.textContent=tab.title;
+
+
+
+        if(index===Engine.tab)
+
+            button.classList.add("active");
+
+
+
+        button.onclick=()=>{
+
+            Engine.tab=index;
+
+            renderTabs();
+
+            renderContent();
+
+        };
+
+
+
+        bar.appendChild(button);
+
+    });
+
+}
+
+
+
+/*********************************************
+Render Content
+**********************************************/
+
+function renderContent(){
+
+    const panel=$("#guideContent");
+
+    if(!panel)
+        return;
+
+    const tabs=visibleTabs();
+
+    if(
+
+        Engine.tab<0
+
+        ||
+
+        Engine.tab>=tabs.length
+
+    ){
+
+        panel.innerHTML=introductionHTML();
+
+        return;
+
+    }
+
+
+
+    panel.innerHTML=tabs[Engine.tab].html;
+
+}
+
+
+
+/*********************************************
+Related Guides
+**********************************************/
+
+function renderRelatedGuides(){
+
+    const section=$("#relatedGuides");
+
+
+
+    if(!section)
+        return;
+
+
+
+    const guide=GuideDB[Engine.guide];
+
+
+
+    if(!guide.relatedVisible){
+
+        section.style.display="none";
+
+        return;
+
+    }
+
+
+
+    const links=guide.related.filter(item=>
+
+        item.title.trim()!=="" &&
+
+        item.file.trim()!==""
+
+    );
+
+
+
+    if(links.length===0){
+
+        section.style.display="none";
+
+        return;
+
+    }
+
+
+
+    section.style.display="block";
+
+
+
+    section.innerHTML=`
+
+<h3 class="block-title">
+
+Related Guides
+
+</h3>
+
+<div class="related-grid">
+
+${links.map(link=>`
+
+<a
+
+class="related-guide"
+
+href="${link.file}"
+
+>
+
+${link.title}
+
+</a>
+
+`).join("")}
+
+</div>
+
+`;
+
+}
+
+
+
+/*********************************************
+Footer
+**********************************************/
+
+function renderFooter(){
+
+    const footer=$("#guideFooter");
+
+
+
+    if(!footer)
+
+        return;
+
+
+
+    const guide=GuideDB[Engine.guide];
+
+
+
+    footer.innerHTML=`
+
+<div class="guide-footer">
+
+<div>
+
+Author:
+
+${guide.author}
+
+</div>
+
+<div>
+
+Version:
+
+${guide.version}
+
+</div>
+
+<div>
+
+Last Updated:
+
+${guide.updated}
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+
+/*********************************************
+Complete Guide Rendering
+**********************************************/
+
+function renderGuide(){
+
+    const guide=GuideDB[Engine.guide];
+
+    const title=$("#guideTitle");
+    const subtitle=$("#guideSubtitle");
+
+if(title){
+
+    title.textContent=guideTitle;
+
+}
+
+if(subtitle){
+
+    if(guideSubtitle.trim()===""){
+        subtitle.style.display="none";
+    }else{
+        subtitle.style.display="block";
+        subtitle.textContent=guideSubtitle;
+    }
+}
+
+    applyTheme();
+
+    updateRealmButtons();
+
+    renderTabs();
+
+    renderContent();
+
+    renderRelatedGuides();
+
+    renderFooter();
+
+}
+
+  /*********************************************
+Validation
+**********************************************/
+
+function validateGuideConfiguration(){
+
+    const enabled=enabledGuides();
+
+    if(enabled.length===0){
+
+        document.body.innerHTML=`
+
+<div class="engine-error">
+
+<h1>
+
+Guide Configuration Error
+
+</h1>
+
+<p>
+
+At least one guide must be enabled.
+
+</p>
+
+</div>
+
+`;
+
+        return false;
+
+    }
+
+    return true;
+
+}
+
+
+
+/*********************************************
+Tab Visibility
+**********************************************/
+
+function updateTabBar(){
+
+    const bar=$("#tabBar");
+
+    if(!bar)
+        return;
+
+    const count=visibleTabs().length;
+
+    if(count===0){
+
+        bar.style.display="none";
+
+        Engine.tab=-1;
+
+    }
+
+    else{
+
+        bar.style.display="flex";
+
+    }
+
+}
+
+
+
+/*********************************************
+Initial Guide
+**********************************************/
+
+function initializeCurrentGuide(){
+
+    initializeGuide();
+
+    if(!Engine.guide){
+
+        Engine.guide=firstEnabledGuide();
+
+    }
+
+}
+
+
+
+/*********************************************
+Application Startup
+**********************************************/
+
+function initializeEngine(){
+
+    if(Engine.initialized)
+
+        return;
+
+
+
+    if(!validateGuideConfiguration())
+
+        return;
+
+
+
+    initializeCurrentGuide();
+
+    initializeRealmButtons();
+
+    resetTab();
+
+    updateTabBar();
+
+    renderGuide();
+
+
+
+    Engine.initialized=true;
+
+}
+
+
+
+/*********************************************
+Page Ready
+**********************************************/
+
+document.addEventListener(
+
+    "DOMContentLoaded",
+
+    initializeEngine
+
+);
+
+
+
+/*********************************************
+Horizontal Tab Scrolling
+**********************************************/
+
+document.addEventListener(
+
+    "DOMContentLoaded",
+
+    ()=>{
+
+        const bar=$("#tabBar");
+
+        if(!bar)
+
+            return;
+
+
+
+        bar.addEventListener(
+
+            "wheel",
+
+            event=>{
+
+                if(
+
+                    Math.abs(event.deltaY)
+
+                    >
+
+                    Math.abs(event.deltaX)
+
+                ){
+
+                    event.preventDefault();
+
+                    bar.scrollLeft+=event.deltaY;
+
+                }
+
+            },
+
+            {
+
+                passive:false
+
+            }
+
+        );
+
+    }
+
+);
+
+/*********************************************
+END OF JAVASCRIPT ENGINE
+**********************************************/
+
+</script>
+  
+
+  <style>
+
+/*********************************************
+GUIDE ENGINE V4
+CORE LAYOUT
+**********************************************/
+
+:root{
+
+    --background:#040609;
+
+    --surface:#0b0f19;
+
+    --surface2:#121829;
+
+    --border:#1e293b;
+
+    --text:#f1f5f9;
+
+    --muted:#94a3b8;
+
+    --accent:#38bdf8;
+
+    --accent2:#ffcc00;
+
+    --success:#10b981;
+
+    --warning:#ef4444;
+
+    --radius:8px;
+
+    --transition:.20s ease;
+
+}
+
+
+
+/*********************************************
+Themes
+**********************************************/
+
+.theme-universal{
+
+    --background:#040609;
+
+    --surface:#0b0f19;
+
+    --surface2:#121829;
+
+    --border:#1e293b;
+
+    --text:#f1f5f9;
+
+    --muted:#8fa6c6;
+
+    --accent:#38bdf8;
+
+    --accent2:#ffcc00;
+
+}
+
+
+
+.theme-solar{
+
+    --background:#050608;
+
+    --surface:#0d111e;
+
+    --surface2:#161b2c;
+
+    --border:#3a2f08;
+
+    --text:#f3f4f6;
+
+    --muted:#a5acba;
+
+    --accent:#ffcc00;
+
+    --accent2:#ffcc00;
+
+}
+
+
+
+.theme-lunar{
+
+    --background:#040609;
+
+    --surface:#0c0d18;
+
+    --surface2:#17162b;
+
+    --border:#3a2854;
+
+    --text:#f1f5f9;
+
+    --muted:#a3a3b7;
+
+    --accent:#a855f7;
+
+    --accent2:#ffcc00;
+
+}
+
+/*********************************************
+Global
+**********************************************/
+
+*{
+
+    box-sizing:border-box;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font-family:
+
+        "Segoe UI",
+
+        Arial,
+
+        sans-serif;
+
+    line-height:1.6;
+
+}
+
+
+
+/*********************************************
+Application
+**********************************************/
+
+#guideApp{
+
+    max-width:1450px;
+
+    margin:auto;
+
+    padding:10px;
+
+}
+
+
+/*********************************************
+HEADER
+**********************************************/
+
+#guideHeader{
+
+    background:
+      linear-gradient(
+      180deg,
+      #1b3158 0%,
+      #132344 45%,
+      #090d18 100%
+    );
+
+    border:2px solid var(--border);
+
+    border-bottom:5px solid var(--accent);
+
+    border-radius:10px;
+
+    padding:22px 18px;
+
+    margin-bottom:12px;
+
+    text-align:center;
+
+    box-shadow:
+        0 4px 16px rgba(0,0,0,.45),
+        inset 0 1px 0 rgba(255,255,255,.04);
+
+}
+
+#guideHeader h1{
+
+    margin:0;
+
+    color:var(--accent2);
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+}
+
+#guideSubtitle{
+
+    margin-top:8px;
+
+    color:var(--muted);
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+/*********************************************
+Realm Selector
+**********************************************/
+
+#realmSelector{
+
+    display:flex;
+
+    gap:8px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+#realmSelector button{
+
+    flex:1;
+
+    padding:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#12192a;
+
+    color:var(--muted);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+#realmSelector button.active{
+
+    background:var(--accent);
+
+    border:1px solid var(--accent);
+
+    color:#fff;
+
+    box-shadow:
+        0 0 12px rgba(0,0,0,.30);
+
+}
+
+.theme-solar #realmSelector button.active{
+
+    color:#111;
+
+}
+
+
+.theme-lunar #realmSelector button.active{
+
+    color:#fff;
+
+}
+
+
+.theme-universal #realmSelector button.active{
+
+    color:#fff;
+
+}
+    
+#realmSelector button:disabled{
+
+    opacity:.35;
+
+    cursor:default;
+
+}
+
+/*********************************************
+Tab Bar
+**********************************************/
+
+#tabBar{
+
+    display:flex;
+
+    overflow-x:auto;
+
+    gap:6px;
+
+    padding-bottom:8px;
+
+    margin-bottom:12px;
+
+    scrollbar-width:none;
+
+}
+
+
+
+#tabBar::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+
+.guide-tab{
+
+    flex:0 0 auto;
+
+    border:none;
+
+    border-radius:6px;
+
+    padding:10px 18px;
+
+    background:#12192a;
+
+    color:var(--muted);
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+}
+
+.guide-tab.active{
+
+    background:var(--accent);
+
+    color:white;
+
+    border-color:var(--accent);
+
+    box-shadow:0 0 10px rgba(0,0,0,.25);
+
+}
+
+.theme-solar .guide-tab.active{
+
+    color:#111;
+
+}
+
+/*********************************************
+CONTENT PANELS
+**********************************************/
+
+#guideContent{
+
+    background:#12192a;
+
+    border:2px solid var(--border);
+
+    border-radius:10px;
+
+    padding:18px;
+
+    min-height:450px;
+
+    animation:fadeIn .18s ease;
+
+}
+
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(3px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*********************************************
+HEADINGS
+**********************************************/
+
+.section-title{
+
+    color:var(--accent2);
+
+    font-size:1.55rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.section-subtitle{
+
+    color:var(--accent);
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.block-title{
+
+    margin:22px 0 12px;
+
+    padding-left:12px;
+
+    border-left:5px solid var(--accent);
+
+    color:var(--accent2);
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+}
+
+
+
+/*********************************************
+TEXT
+**********************************************/
+
+p{
+
+    margin-bottom:14px;
+
+}
+
+
+
+ul,
+
+ol{
+
+    margin-left:24px;
+
+    margin-bottom:16px;
+
+}
+
+
+
+li{
+
+    margin-bottom:8px;
+
+}
+
+
+
+/*********************************************
+DIVIDER
+**********************************************/
+
+.guide-divider{
+
+    height:2px;
+
+    margin:22px 0;
+
+    background:var(--accent);
+
+    border-radius:2px;
+
+}
+
+
+
+/*********************************************
+STANDARD CARD
+**********************************************/
+
+.guide-card{
+
+    background:var(--surface2);
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    padding:16px;
+
+    margin:16px 0;
+
+}
+
+
+
+/*********************************************
+INFO BOX
+**********************************************/
+
+.guide-info{
+
+    background:rgba(56,189,248,.07);
+
+    border-left:5px solid #38bdf8;
+
+    border-radius:6px;
+
+    padding:14px;
+
+    margin:16px 0;
+
+}
+
+/*********************************************
+SUCCESS BOX
+**********************************************/
+
+.guide-success{
+
+    background:rgba(16,185,129,.08);
+
+    border-left:5px solid var(--success);
+
+    border-radius:6px;
+
+    padding:14px;
+
+    margin:16px 0;
+
+}
+
+
+
+/*********************************************
+WARNING BOX
+**********************************************/
+
+.guide-warning{
+
+    background:rgba(239,68,68,.08);
+
+    border-left:5px solid var(--warning);
+
+    border-radius:6px;
+
+    padding:14px;
+
+    margin:16px 0;
+
+}
+
+
+
+/*********************************************
+NOTE BOX
+**********************************************/
+
+.guide-note{
+
+    background:rgba(255,204,0,.06);
+
+    border-left:5px solid var(--accent2);
+
+    border-radius:6px;
+
+    padding:14px;
+
+    margin:16px 0;
+
+}
+
+
+
+/*********************************************
+QUOTE
+**********************************************/
+
+.guide-quote{
+
+    margin:16px 0;
+
+    padding:16px;
+
+    border-left:5px solid var(--accent);
+
+    background:var(--surface2);
+
+    font-style:italic;
+
+    border-radius:0 8px 8px 0;
+
+}
+/*********************************************
+TABLES
+**********************************************/
+
+.table-responsive{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    margin:18px 0;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+}
+
+.guide-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:var(--surface2);
+
+}
+
+.guide-table th{
+
+    background:#12192a;
+
+    color:var(--accent2);
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    padding:12px 10px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.guide-table td{
+
+    padding:12px 10px;
+
+    border-bottom:1px solid var(--border);
+
+    vertical-align:top;
+
+}
+
+.guide-table tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+.guide-table tbody tr:hover{
+
+    background:rgba(255,255,255,.03);
+
+}
+
+
+
+/*********************************************
+GRID LAYOUTS
+**********************************************/
+
+.guide-grid{
+
+    display:grid;
+
+    gap:14px;
+
+    margin:18px 0;
+
+}
+
+
+
+.guide-two-column{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:14px;
+
+    margin:18px 0;
+
+}
+
+
+
+@media(min-width:900px){
+
+    .guide-two-column{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+/*********************************************
+HERO CARD
+**********************************************/
+
+.guide-hero{
+
+    background:var(--surface2);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:18px;
+    margin:18px 0;
+}
+
+.hero-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    margin-bottom:12px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--border);
+}
+
+.hero-name{
+
+    color:var(--accent2);
+    font-size:1.1rem;
+    font-weight:700;
+}
+
+.hero-type{
+
+    color:var(--accent);
+    font-size:.78rem;
+    text-transform:uppercase;
+    font-weight:700;
+
+}
+
+/*********************************************
+BADGES
+**********************************************/
+
+.guide-badge{
+
+    display:inline-block;
+
+    padding:4px 9px;
+
+    border-radius:5px;
+
+    font-size:.72rem;
+
+    font-weight:700;
+
+}
+
+
+
+.badge-inf{
+
+    background:#153149;
+
+    color:#38bdf8;
+
+}
+
+
+
+.badge-cav{
+
+    background:#3b2b10;
+
+    color:#fb923c;
+
+}
+
+
+
+.badge-bow{
+
+    background:#2a1839;
+
+    color:#c084fc;
+
+}
+
+
+
+/*********************************************
+RELATED GUIDES
+**********************************************/
+
+#relatedGuides{
+
+    margin-top:22px;
+
+}
+
+
+
+.related-grid{
+
+    display:grid;
+
+    gap:10px;
+
+}
+
+
+
+.related-guide{
+
+    display:block;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    background:var(--surface2);
+
+    border:1px solid var(--border);
+
+    color:var(--accent);
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+
+
+.related-guide:hover{
+
+    border-color:var(--accent);
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/*********************************************
+FOOTER
+**********************************************/
+
+#guideFooter{
+
+    margin-top:24px;
+
+    border-top:2px solid var(--accent);
+
+    padding:14px;
+
+}
+
+
+
+.guide-footer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+    color:var(--muted);
+
+    text-align:center;
+
+}
+
+
+
+/*********************************************
+HELPERS
+**********************************************/
+
+.center{
+
+    text-align:center;
+
+}
+
+
+
+.right{
+
+    text-align:right;
+
+}
+
+
+
+.bold{
+
+    font-weight:700;
+
+}
+
+
+
+.hidden{
+
+    display:none!important;
+
+}
+
+
+
+.small{
+
+    font-size:.85rem;
+
+}
+
+/*********************************************
+RESPONSIVE
+**********************************************/
+
+@media (max-width:900px){
+
+    #guideApp{
+
+        padding:8px;
+
+    }
+
+    #guideHeader{
+
+        padding:14px;
+
+    }
+
+    #guideHeader h1{
+
+        font-size:1.55rem;
+
+    }
+
+    #realmSelector{
+
+        flex-wrap:wrap;
+
+    }
+
+    #realmSelector button{
+
+        min-width:120px;
+
+    }
+
+    .guide-tab{
+
+        padding:10px 14px;
+
+        font-size:.82rem;
+
+    }
+
+    #guideContent{
+
+        padding:14px;
+
+    }
+
+    .section-title{
+
+        font-size:1.35rem;
+
+    }
+
+}
+
+
+
+@media (max-width:600px){
+
+    #guideHeader{
+
+        margin-bottom:8px;
+
+    }
+
+    #guideHeader h1{
+
+        font-size:1.25rem;
+
+    }
+
+    .guide-card,
+
+    .guide-info,
+
+    .guide-success,
+
+    .guide-warning,
+
+    .guide-note,
+
+    .guide-hero{
+
+        padding:12px;
+
+    }
+
+    .guide-table th,
+
+    .guide-table td{
+
+        padding:8px;
+
+        font-size:.82rem;
+
+    }
+
+}
+
+
+
+/*********************************************
+IMAGES
+**********************************************/
+
+.guide-image{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+    margin:18px auto;
+
+    border-radius:10px;
+
+    border:1px solid var(--border);
+
+}
+
+
+
+.image-caption{
+
+    margin-top:8px;
+
+    color:var(--muted);
+
+    text-align:center;
+
+    font-size:.82rem;
+
+}
+
+
+
+/*********************************************
+CODE
+**********************************************/
+
+pre{
+
+    overflow-x:auto;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    background:var(--surface2);
+
+    border:1px solid var(--border);
+
+    margin:18px 0;
+
+}
+
+
+
+code{
+
+    font-family:
+
+        Consolas,
+
+        monospace;
+
+}
+
+
+
+/*********************************************
+CHECKLIST
+**********************************************/
+
+.guide-checklist{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:16px 0;
+
+}
+
+
+
+.guide-checklist li{
+
+    position:relative;
+
+    padding:8px 0 8px 28px;
+
+}
+
+
+
+.guide-checklist li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:8px;
+
+    color:var(--success);
+
+    font-weight:700;
+
+}
+
+
+
+/*********************************************
+ANIMATIONS
+**********************************************/
+
+.guide-card,
+
+.guide-info,
+
+.guide-success,
+
+.guide-warning,
+
+.guide-note,
+
+.related-guide,
+
+.guide-tab,
+
+#realmSelector button{
+
+    transition:
+
+        background-color .18s ease,
+
+        color .18s ease,
+
+        border-color .18s ease,
+
+        transform .18s ease,
+
+        box-shadow .18s ease;
+
+}
+
+
+
+.guide-card:hover,
+
+.guide-hero:hover{
+
+    box-shadow:
+
+        0 4px 12px rgba(0,0,0,.22);
+
+}
+
+
+
+/*********************************************
+SCROLLBARS
+**********************************************/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#12192a;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--border);
+
+    border-radius:10px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--accent);
+
+}
+
+
+
+/*********************************************
+ACCESSIBILITY
+**********************************************/
+
+button:focus-visible,
+
+a:focus-visible{
+
+    outline:2px solid var(--accent);
+
+    outline-offset:2px;
+
+}
+
+
+
+::selection{
+
+    background:var(--accent);
+
+    color:#fff;
+
+}
+
+
+
+/*********************************************
+PRINT
+**********************************************/
+
+@media print{
+
+    #realmSelector,
+
+    #tabBar,
+
+    #relatedGuides,
+
+    #guideFooter{
+
+        display:none!important;
+
+    }
+
+}
+
+/*********************************************
+TEXT FORMATTING
+**********************************************/
+
+/* Standard text colors */
+
+.white{
+
+    color:#ffffff;
+
+}
+
+.gray{
+
+    color:var(--muted);
+
+}
+
+.gold{
+
+    color:#ffcc00;
+
+}
+
+.blue{
+
+    color:#38bdf8;
+
+}
+
+.purple{
+
+    color:#c084fc;
+
+}
+
+.green{
+
+    color:#22c55e;
+
+}
+
+.red{
+
+    color:#ef4444;
+
+}
+
+/* Common emphasis */
+
+.small{
+
+    font-size:.85rem;
+
+}
+
+.large{
+
+    font-size:1.2em;
+
+}
+
+.bold{
+
+    font-weight:700;
+
+}
+
+.italic{
+
+    font-style:italic;
+
+}
+
+.uppercase{
+
+    text-transform:uppercase;
+
+}
+
+.center{
+
+    text-align:center;
+
+}
+
+.right{
+
+    text-align:right;
+
+}
+
+
+
+/* Quick utility */
+
+.hidden{
+
+    display:none!important;
+
+}
+
+/*********************************************
+END CSS
+**********************************************/
+
+</style>
+
+  </head>
+
+<body>
+
+<div id="guideApp" class="theme-universal">
+
+    <!-- Header -->
+    <header id="guideHeader">
+
+      <h1 id="guideTitle"></h1>
+
+      <div id="guideSubtitle"></div>
+
+    </header>
+
+    <!-- Universal / Solar / Lunar -->
+
+    <nav id="realmSelector">
+
+        <button
+            id="realm-universal"
+            type="button">
+            Universal
+        </button>
+
+        <button
+            id="realm-solar"
+            type="button">
+            Solar
+        </button>
+
+        <button
+            id="realm-lunar"
+            type="button">
+            Lunar
+        </button>
+
+    </nav>
+
+    <!-- Tabs -->
+
+    <nav id="tabBar">
+    </nav>
+
+    <!-- Main Guide -->
+
+    <main
+        id="guideContent"
+        role="main">
+    </main>
+
+    <!-- Related Guides -->
+
+    <section
+        id="relatedGuides">
+    </section>
+
+    <!-- Footer -->
+
+    <footer
+        id="guideFooter">
+    </footer>
+  
+</div>
+</body>
+</html>
