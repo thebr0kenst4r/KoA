@@ -166,6 +166,13 @@ Contributing Mods:
         status: "complete"
     },
     {
+        title: "Damages Info",
+        keywords: "combat damage solar info attack power",
+        realm: "solar",
+        file: "docx-guides/docx-viewer.html?file=solar-damages_info.docx&realm=solar",
+        status: "complete"
+    },
+    {
         title: "Stats Priority Guide",
         keywords: "stats priority equipment gems statues runes hero",
         realm: "universal",
