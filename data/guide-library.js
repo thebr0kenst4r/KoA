@@ -169,8 +169,7 @@ Contributing Mods:
         title: "Damages Information",
         keywords: "combat damage info attack power",
         realm: "solar",
-        file: "docx-guides/docx-viewer.html?file=solar-damages_info
-        docx&realm=universal",
+        file: "docx-guides/docx-viewer.html?file=solar-damages_info.docx&realm=universal",
         status: "complete"
     },
     {
