@@ -235,6 +235,13 @@ Contributing Mods:
         status: "complete"
     },
     {
+        title: "Dragonfire Relay",
+        keywords: "daily dragonfire relay",
+        realm: "solar",
+        file: "docx-guides/docx-viewer.html?file=solar-dragonfire_relay.docx&realm=solar",
+        status: "complete"
+    },
+    {
         title: "Uther's Underworld",
         keywords: "uther underworld event challenge ranking rewards",
         realm: "universal",
