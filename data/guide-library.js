@@ -71,7 +71,13 @@ Contributing Mods:
         realm: "universal",
         file: "data/under-construction.html",
         status: "draft"
-    }
+    },
+	{
+       title: "Skyloft Garden Calculator & Optimizer",
+       file: "guides/skyloft-garden-calculator.html",
+       realm: "universal",
+       status: "complete"
+     }
 ],
 
 /**********************************************************************
